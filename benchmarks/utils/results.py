@@ -95,7 +95,7 @@ class Results:
         '''
         Parses the given test and test_type from the raw_file.
         '''
-        results = dict()
+        results = {}
         results['results'] = []
         stats = []
 
