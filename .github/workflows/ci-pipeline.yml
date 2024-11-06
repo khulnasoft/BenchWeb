@@ -142,7 +142,7 @@ jobs:
         if: ${{ env.RUN_TESTS }}
         uses: mattes/cached-docker-build-action@v1
         with:
-          args: " --file ./Dockerfile --build-arg USER_ID=$(id -u) --build-arg GROUP_ID=$(id -g) --tag khulnasoft/bw ."
+          args: " --file ./infrastructure/docker/Dockerfile --build-arg USER_ID=$(id -u) --build-arg GROUP_ID=$(id -g) --tag khulnasoft/bw ."
           cache_key: "${{ hashFiles('./Dockerfile') }}"
       - name: Stop services
         # Stop services that would claim ports we may need
