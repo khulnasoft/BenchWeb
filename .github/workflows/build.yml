@@ -1,0 +1,164 @@
+name: build
+on: [ push, pull_request ]
+
+jobs:
+  setup:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Save PR number
+        if: github.event_name == 'pull_request'
+        run: |
+          mkdir -p ./pr
+          echo ${{ github.event.number }} > ./pr/NR
+      - uses: actions/upload-artifact@v4
+        if: github.event_name == 'pull_request'
+        with:
+          name: pr
+          path: pr/
+
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 10
+
+      - name: Get commit branch and commit message from push
+        if: github.event_name == 'push'
+        run: |
+          echo "BRANCH_NAME=$(echo ${GITHUB_REF##*/})" >> $GITHUB_ENV
+          echo "COMMIT_MESSAGE<<EOF" >> $GITHUB_ENV
+          echo "$(git log --format=%B -n 1 HEAD)" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+          echo "PREVIOUS_COMMIT=$(git log --format=%H -n 1 HEAD~1)" >> $GITHUB_ENV
+
+      - name: Get commit branch and commit message from PR
+        if: github.event_name == 'pull_request'
+        run: |
+          echo "BRANCH_NAME=$GITHUB_HEAD_REF" >> $GITHUB_ENV
+          echo "TARGET_BRANCH_NAME=$(echo ${GITHUB_BASE_REF##*/})" >> $GITHUB_ENV
+          echo "COMMIT_MESSAGE<<EOF" >> $GITHUB_ENV
+          echo "$(git log --format=%B -n 1 HEAD^2)" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+          echo "PREVIOUS_COMMIT=$(git log --format=%H -n 1 HEAD^2~1)" >> $GITHUB_ENV
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          architecture: 'x64'
+
+      - name: Get all changes vs master
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          echo "DIFF<<EOF" >> $GITHUB_ENV
+          echo "$(./benchmarks/github_actions/github_actions_diff.py)" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
+      - name: Determine which (if any) tests need to be run
+        run: |
+          echo "RUN_TESTS<<EOF" >> $GITHUB_ENV
+          echo "$(grep -oP "github-actions-run-tests \K(.*)" <<< $DIFF || true)" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
+      - id: event_out
+        name: Write event outputs
+        run: |
+          delimiter="$(openssl rand -hex 8)"
+          {
+            echo "commit_message<<${delimiter}"
+            echo "$COMMIT_MESSAGE"
+            echo "${delimiter}"
+          } >> $GITHUB_OUTPUT
+          echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
+          echo "target_branch_name=$TARGET_BRANCH_NAME" >> $GITHUB_OUTPUT
+          echo "previous_commit=$PREVIOUS_COMMIT" >> $GITHUB_OUTPUT
+
+      - id: verify_out
+        name: Write verify job matrix
+        run: |
+          VERIFY_MATRIX=$(find frameworks -maxdepth 1 -mindepth 1 -type d -printf '%f\n' | \
+            jq -Rc --arg tests "$RUN_TESTS" '.+"/" | select(inside($tests)) | rtrimstr("/")' | \
+            jq -sc '{include: map({TESTLANG: .})}' || echo '{"include": []}')
+          echo "verify_matrix=$VERIFY_MATRIX" >> $GITHUB_OUTPUT
+
+    outputs:
+      commit_message: ${{ steps.event_out.outputs.commit_message }}
+      branch_name: ${{ steps.event_out.outputs.branch_name }}
+      target_branch_name: ${{ steps.event_out.outputs.target_branch_name }}
+      previous_commit: ${{ steps.event_out.outputs.previous_commit }}
+      verify_matrix: ${{ steps.verify_out.outputs.verify_matrix }}
+
+  verify:
+    needs: setup
+    if: ${{ !contains(needs.setup.outputs.commit_message, '[ci skip]') && contains(needs.setup.outputs.verify_matrix, 'TESTLANG') }}
+    runs-on: ubuntu-22.04
+    strategy:
+      matrix: ${{ fromJSON(needs.setup.outputs.verify_matrix) }}
+      fail-fast: false
+    env:
+      TESTLANG: ${{ matrix.TESTLANG }}
+      TESTDIR: ${{ matrix.TESTDIR }}
+      COMMIT_MESSAGE: ${{ needs.setup.outputs.commit_message }}
+      BRANCH_NAME: ${{ needs.setup.outputs.branch_name }}
+      TARGET_BRANCH_NAME: ${{ needs.setup.outputs.target_branch_name }}
+      PREVIOUS_COMMIT: ${{ needs.setup.outputs.previous_commit }}
+      PR_NUMBER: ${{ github.event.pull_request.number }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 10
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          architecture: 'x64'
+
+      - name: Get all changes vs master
+        run: |
+          echo "DIFF<<EOF" >> $GITHUB_ENV
+          echo "$(./benchmarks/github_actions/github_actions_diff.py)" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
+      - id: should_run_tests
+        name: Determine which (if any) tests need to be run
+        run: |
+          echo "RUN_TESTS<<EOF" >> $GITHUB_ENV
+          echo "$(grep -oP "github-actions-run-tests \K(.*)" <<< $DIFF || true)" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
+      - name: Log status
+        run: |
+          if [ "$RUN_TESTS" ]; then echo "Proceeding to run tests."; else echo 'Skipping test verification.'; fi
+
+      - name: Build bw dockerfile
+        if: ${{ env.RUN_TESTS }}
+        uses: mattes/cached-docker-build-action@v1
+        with:
+          args: " --file infrastructure/docker/Dockerfile --build-arg USER_ID=$(id -u) --build-arg GROUP_ID=$(id -g) --tag khulnasoft/bw ."
+          cache_key: "${{ hashFiles('infrastructure/docker/Dockerfile') }}"
+
+      - name: Stop services
+        run: |
+          sudo service mysql stop || true
+          sudo service postgresql stop || true
+
+      - name: Run tests if needed
+        if: ${{ env.RUN_TESTS }}
+        run: |
+          docker network create bw > /dev/null 2>&1 && docker run --network=bw -e USER_ID=$(id -u) -v /var/run/docker.sock:/var/run/docker.sock --mount type=bind,source=`pwd`,target=/BenchWeb khulnasoft/bw --mode verify --test-dir $RUN_TESTS --results-environment Github-Actions;
+
+  dependabot:
+    needs: verify
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: write
+    if: ${{ github.actor == 'dependabot[bot]' }}
+    steps:
+      - name: Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v1.1.1
+        with:
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+      - name: Enable auto-merge for Dependabot PRs
+        run: gh pr merge --auto --merge "$PR_URL"
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

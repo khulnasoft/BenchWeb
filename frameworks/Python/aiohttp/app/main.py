@@ -40,7 +40,7 @@ def pg_dsn(dialect=None) -> str:
 
 async def db_ctx(app: web.Application):
     # number of gunicorn workers = multiprocessing.cpu_count() as per gunicorn_conf.py
-    # max_connections = 2000 as per toolset/setup/linux/databases/postgresql/postgresql.conf:64
+    # max_connections = 2000 as per benchmarks/setup/linux/databases/postgresql/postgresql.conf:64
     # give 10% leeway
     max_size = min(1800 / multiprocessing.cpu_count(), 160)
     max_size = max(int(max_size), 1)

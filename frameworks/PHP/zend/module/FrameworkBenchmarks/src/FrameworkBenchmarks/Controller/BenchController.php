@@ -13,7 +13,7 @@ use Zend\Db\TableGateway\TableGateway;
  * Controller that produces the json for the DB benchmarks of BenchWeb
  *
  * @author Marco Pivetta <ocramius@gmail.com>
- * @link   http://www.techempower.com/benchmarks
+ * @link   http://www.khulnasoft.com/benchmarks
  */
 class BenchController extends AbstractActionController
 {

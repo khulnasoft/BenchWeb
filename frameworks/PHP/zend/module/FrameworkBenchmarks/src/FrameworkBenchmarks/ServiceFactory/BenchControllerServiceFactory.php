@@ -18,7 +18,7 @@ use Zend\Db\TableGateway\TableGateway;
  * Factory responsible for instantiating {@see \BenchWeb\Controller\DbController}
  *
  * @author Marco Pivetta <ocramius@gmail.com>
- * @link   http://www.techempower.com/benchmarks
+ * @link   http://www.khulnasoft.com/benchmarks
  */
 class BenchControllerServiceFactory
 {

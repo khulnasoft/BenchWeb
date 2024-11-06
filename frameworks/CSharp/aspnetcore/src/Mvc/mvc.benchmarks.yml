@@ -23,9 +23,9 @@ jobs:
     source:
       repository: https://github.com/KhulnaSoft/BenchWeb.git
       branchOrCommit: master
-      dockerFile: infrastructure/docker/databases/postgres/postgres.dockerfile
+      dockerFile: benchmarks/databases/postgres/postgres.dockerfile
       dockerImageName: postgres_te
-      dockerContextDirectory: infrastructure/docker/databases/postgres
+      dockerContextDirectory: benchmarks/databases/postgres
     readyStateText: ready to accept connections
     noClean: true
 
