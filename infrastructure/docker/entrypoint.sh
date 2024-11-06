@@ -11,8 +11,8 @@ if [[ -z "${FWROOT:-}" ]]; then
 fi
 
 PYTHON_SCRIPT="${FWROOT}/benchmarks/run-tests.py"
-if [ ! -f "$PYTHON_SCRIPT" ]; then
-    echo "Error: Python script not found at: $PYTHON_SCRIPT"
+if [ ! -f "${PYTHON_SCRIPT}" ]; then
+    echo "Error: Python script not found at: ${PYTHON_SCRIPT}"
     exit 1
 fi
 
