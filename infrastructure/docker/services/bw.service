@@ -1,0 +1,37 @@
+#
+# Put this in /lib/systemd/system/bw.service.
+#
+# Useful commands:
+#
+#   sudo service bw start
+#   sudo service bw stop
+#   sudo service bw restart
+#   sudo journalctl -u bw -f
+#
+
+[Service]
+Environment=BW_SERVER_HOST=127.0.0.1
+Environment=BW_CLIENT_HOST=127.0.0.1
+Environment=BW_DATABASE_HOST=127.0.0.1
+Environment=BW_REPOPARENT=/home/khulnasoft
+Environment=BW_REPONAME=BenchWeb
+Environment=BW_REPOURI=https://github.com/KhulnaSoft/BenchWeb.git
+Environment=BW_REPOBRANCH=master
+Environment=BW_UPLOAD_URI=http://localhost/changeme
+Environment=BW_ENVIRONMENT=ChangeMe
+Environment="BW_RUN_NAME=Continuous Benchmarking Run %%Y-%%m-%%d %%H:%%M:%%S"
+Environment=HOME=/home/khulnasoft
+Environment=LANG=en_US.UTF-8
+User=khulnasoft
+Group=khulnasoft
+WorkingDirectory=/home/khulnasoft
+LimitNOFILE=1048576
+LimitNPROC=1048576
+UMask=0002
+ExecStart=/home/khulnasoft/bw-startup.sh
+ExecStopPost=/home/khulnasoft/bw-shutdown.sh
+Restart=on-success
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
