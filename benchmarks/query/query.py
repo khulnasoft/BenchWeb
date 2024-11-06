@@ -1,5 +1,5 @@
-from benchmarks.test_types.abstract_test_type import AbstractTestType
-from benchmarks.test_types.verifications import verify_query_cases
+from benchmarks.abstract_test_type import AbstractTestType
+from benchmarks.verifications import verify_query_cases
 
 
 class TestType(AbstractTestType):

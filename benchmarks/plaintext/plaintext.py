@@ -1,5 +1,5 @@
-from benchmarks.test_types.verifications import basic_body_verification, verify_headers
-from benchmarks.test_types.abstract_test_type import AbstractTestType
+from benchmarks.verifications import basic_body_verification, verify_headers
+from benchmarks.abstract_test_type import AbstractTestType
 
 
 class TestType(AbstractTestType):

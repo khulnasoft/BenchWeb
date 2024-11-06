@@ -1,6 +1,6 @@
-from benchmarks.test_types.abstract_test_type import AbstractTestType
-from benchmarks.test_types.fortune.fortune_html_parser import FortuneHTMLParser
-from benchmarks.test_types.verifications import basic_body_verification, verify_headers, verify_queries_count
+from benchmarks.abstract_test_type import AbstractTestType
+from benchmarks.fortune.fortune_html_parser import FortuneHTMLParser
+from benchmarks.verifications import basic_body_verification, verify_headers, verify_queries_count
 
 
 class TestType(AbstractTestType):

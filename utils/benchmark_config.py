@@ -1,5 +1,5 @@
 from utils.output_helper import QuietOutputStream
-from benchmarks.test_types import test_types
+from benchmarks import test_types
 
 import os
 import time
