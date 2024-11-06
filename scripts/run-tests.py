@@ -4,7 +4,7 @@ import sys
 import signal
 import traceback
 from benchmarks.benchmark.benchmarker import Benchmarker
-from utils.pre-benchmarks import Scaffolding
+from utils.scaffolding import Scaffolding
 from utils.audit import Audit
 from utils.benchmark_config import BenchmarkConfig
 from utils.output_helper import log
