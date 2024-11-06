@@ -58,4 +58,4 @@ RUN if ! getent passwd "$USER_ID"; then \
 ENV FWROOT=/BenchWeb USER_ID="$USER_ID"
 ENV PYTHONPATH="$FWROOT"
 
-ENTRYPOINT ["/BenchWeb/entrypoint.sh"]
+ENTRYPOINT ["/BenchWeb/infrastructure/docker/entrypoint.sh"]
