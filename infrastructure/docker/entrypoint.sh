@@ -27,4 +27,7 @@ check_command gosu
 check_command python3
 fi
 
-gosu "$USER_ID" python3 "$PYTHON_SCRIPT" "$@"
+if ! gosu "$USER_ID" python3 "$PYTHON_SCRIPT" "$@"; then
+    echo "Error: Failed to execute $PYTHON_SCRIPT"
+    exit 1
+fi
