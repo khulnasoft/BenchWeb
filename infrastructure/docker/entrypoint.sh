@@ -5,7 +5,7 @@ set -eo pipefail -u
 chown -LR "$USER_ID" /var/run
 # Drop permissions of user to match those of the host system
 #gosu "$USER_ID" python3 "${FWROOT}/benchmarks/run-tests.py" "$@"
-if [ -z "${FWROOT:-}" ]; then
+if [[ -z "${FWROOT:-}" ]]; then
     echo "Error: FWROOT environment variable is not set"
     exit 1
 fi
