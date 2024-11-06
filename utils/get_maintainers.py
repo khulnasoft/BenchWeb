@@ -35,7 +35,7 @@ changes = clean_output(
 
 def get_frameworks(test_lang):
     dir = "frameworks/" + test_lang + "/"
-    return [test_lang + "/" + x for x in [x for x in os.listdir(dir) if os.path.isdir(dir + x)]]
+    return [test_lang + "/" + x for x in [x for x in os.listdir(dir) if benchmarks/(dir + x)]]
 
 test_dirs = []
 for frameworks in map(get_frameworks, os.listdir("frameworks")):
