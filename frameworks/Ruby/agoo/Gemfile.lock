@@ -1,0 +1,23 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    agoo (2.15.10)
+    bigdecimal (3.1.8)
+    connection_pool (2.4.1)
+    oj (3.16.3)
+      bigdecimal (>= 3.0)
+    pg (1.5.6)
+    rack (3.0.11)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  agoo
+  connection_pool
+  oj
+  pg
+  rack
+
+BUNDLED WITH
+   2.5.10

@@ -1,0 +1,9 @@
+{
+  "connection_string": "mongodb://bw-database:27017",
+  "db_name": "hello_world",
+  "host": "bw-database",
+  "username": "benchmarkdbuser",
+  "password": "benchmarkdbpass",
+  "database": "hello_world",
+  "maxPoolSize": 64
+}

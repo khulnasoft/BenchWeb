@@ -1,0 +1,5 @@
+singletons:
+ - com.networknt.handler.HandlerProvider:
+   - com.networknt.khulnasoft.PathHandlerProvider
+ - com.networknt.server.StartupHookProvider:
+   - com.networknt.khulnasoft.db.postgres.PostgresStartupHookProvider

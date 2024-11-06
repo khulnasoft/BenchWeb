@@ -1,0 +1,16 @@
+{
+  "name": "khulnasoft",
+  "version": "0.1",
+  "devMode": false,
+  "dataSources": [
+    {
+      "name": "mongo",
+      "engine": "MONGODB",
+      "hostname": "bw-database",
+      "port": 27017,
+      "database": "hello_world",
+      "username": "",
+      "password": ""
+    }
+  ]
+}
