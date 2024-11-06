@@ -21,6 +21,6 @@ extension System {
     // 2000 / (28 * 2) = 35.7 (theoretical max)
     //
     // https://github.com/KhulnaSoft/BenchWeb/wiki/Project-Information-Environment#citrine-self-hosted
-    // https://github.com/KhulnaSoft/BenchWeb/blob/master/toolset/databases/postgres/postgresql.conf#L64
+    // https://github.com/KhulnaSoft/BenchWeb/blob/master/infrastructure/docker/databases/postgres/postgresql.conf#L64
     static var maxConnectionsPerEventLoop: Int { 32 }
 }

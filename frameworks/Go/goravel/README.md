@@ -1,6 +1,6 @@
 # Goravel Benchmarking Test
 
-[Goravel](https://www.goravel.dev/) is a web application framework with complete functions and excellent scalability. As a starting scaffolding to help Gopher quickly build their own applications.
+[Goravel](https://www.goravel.dev/) is a web application framework with complete functions and excellent scalability. As a starting pre-benchmarks to help Gopher quickly build their own applications.
 
 The framework's design is consistent with [Laravel](https://github.com/laravel/laravel), simplifying the learning curve for PHPers. Kudos to Laravel!
 

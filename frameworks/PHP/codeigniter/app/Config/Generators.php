@@ -19,7 +19,7 @@ class Generators extends BaseConfig
      * curly braces `{...}`. These placeholders are used internally by the
      * generator commands in processing replacements, thus you are warned
      * not to delete them or modify the names. If you will do so, you may
-     * end up disrupting the scaffolding process and throw errors.
+     * end up disrupting the pre-benchmarks process and throw errors.
      *
      * YOU HAVE BEEN WARNED!
      *
