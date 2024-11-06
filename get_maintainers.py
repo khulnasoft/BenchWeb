@@ -35,7 +35,7 @@ changes = clean_output(
 def get_frameworks(test_lang):
     dir_path = os.path.join("frameworks", test_lang)
     # Simplified list comprehension
-    return [f"{test_lang}/{x}" for x in os.listdir(dir_path) if os.path.isdir(os.path.join(dir_path, x))]
+    return [f"{test_lang}/{x}" for x in os.listdir(dir_path) if benchmarks/(os.path.join(dir_path, x))]
 
 test_dirs = []
 # Gather affected frameworks
