@@ -74,7 +74,9 @@ jobs:
       - id: verify_out
         name: Write verify job matrix
         run: |
-          VERIFY_MATRIX=$(ls -1 frameworks | jq -Rc '.+"/" | select(inside(env.RUN_TESTS))  | rtrimstr("/")' | jq -sc '{include: map({TESTLANG: .})}')
+          VERIFY_MATRIX=$(find frameworks -maxdepth 1 -mindepth 1 -type d -printf '%f\n' | \
+            jq -Rc --arg tests "$RUN_TESTS" '.+"/" | select(inside($tests)) | rtrimstr("/")' | \
+            jq -sc '{include: map({TESTLANG: .})}' || echo '{"include": []}')
           echo "verify_matrix=$VERIFY_MATRIX" >> $GITHUB_OUTPUT
 
     outputs:
