@@ -2,6 +2,8 @@ FROM ubuntu:24.04
 
 ARG DEBIAN_FRONTEND=noninteractive
 # WARNING: DON'T PUT A SPACE AFTER ANY BACKSLASH OR APT WILL BREAK
+# One -q produces output suitable for logging (mostly hides
+# progress indicators)
 RUN apt-get -yqq update && \
     apt-get -yqq install \
       -o Dpkg::Options::="--force-confdef" \
@@ -11,6 +13,7 @@ RUN apt-get -yqq update && \
       gcc \
       git-core \
       gosu \
+      # Needed for mysqlclient
       libmysqlclient-dev \
       libpq-dev \
       pkg-config \
@@ -25,6 +28,7 @@ RUN apt-get -yqq update && \
       python3-requests \
       siege \
       software-properties-common && \
+    # Ubuntu's equivalent packages are too old and/or broken.
     pip3 install \
       --break-system-packages \
       docker==7.0.0 \
@@ -35,17 +39,18 @@ RUN apt-get -yqq update && \
 ARG DOOL_VERSION=v1.3.1
 
 WORKDIR /tmp
-RUN curl -LSs "https://github.com/scottchiefbaker/dool/archive/${DOOL_VERSION}.tar.gz" -o dool.tar.gz && \
-    echo "ACTUAL_CHECKSUM  dool.tar.gz" | sha256sum -c - && \
-    tar --strip-components=1 -xz -f dool.tar.gz && \
+RUN curl -LSs "https://github.com/scottchiefbaker/dool/archive/${DOOL_VERSION}.tar.gz" | \
+      tar --strip-components=1 -xz && \
     ./install.py
 
-ARG GROUP_ID=1000
+# Check if the group ID is already created
+ARG GROUP_ID
 RUN if ! getent group "$GROUP_ID"; then \
       addgroup --gid "$GROUP_ID" user; \
     fi
 
-ARG USER_ID=1000
+# Check if the user ID is already created
+ARG USER_ID
 RUN if ! getent passwd "$USER_ID"; then \
       adduser --disabled-password --gecos '' --gid "$GROUP_ID" --uid "$USER_ID" user; \
     fi
