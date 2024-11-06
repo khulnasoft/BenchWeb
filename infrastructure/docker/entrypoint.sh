@@ -16,16 +16,15 @@ if [ ! -f "$PYTHON_SCRIPT" ]; then
     exit 1
 fi
 
-# Check if gosu is available
-if ! command -v gosu >/dev/null 2>&1; then
-    echo "Error: gosu command not found"
-    exit 1
-fi
+check_command() {
+    if ! command -v "$1" >/dev/null 2>&1; then
+        echo "Error: $1 command not found"
+        exit 1
+    fi
+}
 
-# Check if python3 is available
-if ! command -v python3 >/dev/null 2>&1; then
-    echo "Error: python3 command not found"
-    exit 1
+check_command gosu
+check_command python3
 fi
 
 gosu "$USER_ID" python3 "$PYTHON_SCRIPT" "$@"
