@@ -4,7 +4,7 @@ import PostgresNIO
 
 // postgresql.conf specifies max_connections = 2000
 // https://github.com/KhulnaSoft/BenchWeb/wiki/Project-Information-Environment#citrine-self-hosted
-// https://github.com/KhulnaSoft/BenchWeb/blob/master/infrastructure/docker/databases/postgres/postgresql.conf#L64
+// https://github.com/KhulnaSoft/BenchWeb/blob/master/benchmarks/databases/postgres/postgresql.conf#L64
 
 extension Int {
     func bound(_ minValue: Int, _ maxValue: Int) -> Int {

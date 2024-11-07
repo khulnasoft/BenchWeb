@@ -8,7 +8,7 @@ import PostgresNIO
 // 2000 / (28 * 2) = 35.7 (theoretical max)
 //
 // https://github.com/KhulnaSoft/BenchWeb/wiki/Project-Information-Environment#citrine-self-hosted
-// https://github.com/KhulnaSoft/BenchWeb/blob/master/infrastructure/docker/databases/postgres/postgresql.conf#L64
+// https://github.com/KhulnaSoft/BenchWeb/blob/master/benchmarks/databases/postgres/postgresql.conf#L64
 let maxConnectionsPerEventLoop = 32
 
 extension Int {

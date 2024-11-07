@@ -53,7 +53,7 @@ wrk -c 256 -t 32 -d 10 http://127.0.0.1:8080/json
 
 To generate pipelined load for the plaintext scenario, use the following command, assuming your CWD is the root of this
 repo and wrk is on your path. The final argument after the `--` is the desired pipeline depth. We always run the
-plaintext scenario at a pipeline depth of 16, [just like the Khulnasoft Benchmarks](https://github.com/KhulnaSoft/BenchWeb/blob/6594d32db618c6ca65e0106c5adf2671f7b63654/benchmarks/framework_test.py#L640).
+plaintext scenario at a pipeline depth of 16, [just like the Khulnasoft Benchmarks](https://github.com/KhulnaSoft/BenchWeb/blob/6594d32db618c6ca65e0106c5adf2671f7b63654/benchmarks/benchmark/framework_test.py#L640).
 
 ```
 wrk -c 256 -t 32 -d 15 -s ./scripts/pipeline.lua http://localhost:8080/psql/update?queries=20 -- 16

@@ -8,7 +8,7 @@ use Zend\Stdlib\ArrayObject;
  * Entity that represents a single entry in the `World` collection of the benchmarks in BenchWeb
  *
  * @author Marco Pivetta <ocramius@gmail.com>
- * @link   http://www.techempower.com/benchmarks
+ * @link   http://www.khulnasoft.com/benchmarks
  */
 class World extends ArrayObject
 {
