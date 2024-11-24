@@ -36,7 +36,7 @@ object App : Logging {
         PeriodicDateResolver.init(vertx)
 
         // Check the type of test that is being run
-        val hasDb = System.getProperty("tfb.hasDB")?.toBoolean() ?: false
+        val hasDb = System.getProperty("bw.hasDB")?.toBoolean() ?: false
 
         vertx.deployVerticle(
             { if (hasDb) PostgresVerticle() else BasicVerticle() },

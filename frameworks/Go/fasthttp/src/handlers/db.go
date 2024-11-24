@@ -8,7 +8,7 @@ import (
 )
 
 const (
-	dbHost  = "tfb-database"
+	dbHost  = "bw-database"
 	dbPort  = 5432
 	dbUser  = "benchmarkdbuser"
 	dbPaswd = "benchmarkdbpass"

@@ -56,7 +56,7 @@ RUN luarocks install lapis
 
 EXPOSE 8080
 
-CMD export DBIP=`getent hosts tfb-database | awk '{ print $1 }'` && \
+CMD export DBIP=`getent hosts bw-database | awk '{ print $1 }'` && \
     sed -i "s|DBHOSTNAME|$DBIP|g" nginx.conf && \
     sed -i "s|DBHOSTNAME|$DBIP|g" config.moon && \
     sed -i "s|DBHOSTNAME|$DBIP|g" config.lua && \

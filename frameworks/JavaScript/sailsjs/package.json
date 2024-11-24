@@ -2,7 +2,7 @@
   "name": "sailsjs",
   "private": true,
   "version": "0.0.0",
-  "description": "a Sails application for TFB testing",
+  "description": "a Sails application for BW testing",
   "keywords": [],
   "dependencies": {
     "async": "1.5.2",

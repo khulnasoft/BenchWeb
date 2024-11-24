@@ -6,14 +6,14 @@ import org.http4k.server.Http4kServer
 import org.http4k.server.ServerConfig
 
 fun main() {
-    Http4kBenchmarkServer(PostgresDatabase()).start(TfbApacheServer(9000))
+    Http4kBenchmarkServer(PostgresDatabase()).start(BwApacheServer(9000))
 }
 
 /**
- * we need a custom config here because of how virtual hosting is required in the TFB
+ * we need a custom config here because of how virtual hosting is required in the BW
  * environment. Normally we would just call the inbuilt ApacheServer(9000) function
  */
-class TfbApacheServer(val port: Int) : ServerConfig {
+class BwApacheServer(val port: Int) : ServerConfig {
     override fun toServer(http: HttpHandler): Http4kServer = object : Http4kServer {
         val handler = Http4kRequestHandler(http)
 
@@ -28,7 +28,7 @@ class TfbApacheServer(val port: Int) : ServerConfig {
             .apply {
                 register("*", handler) // standard hosting
                 registerVirtual("10.0.0.1", "*", handler) // for virtual hosting
-                setCanonicalHostName("tfb-server")
+                setCanonicalHostName("bw-server")
             }.create()
 
         override fun start() = apply { server.start() }

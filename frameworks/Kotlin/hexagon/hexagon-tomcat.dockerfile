@@ -15,7 +15,7 @@ RUN ./gradlew --quiet -x test war
 FROM docker.io/tomcat:11.0.0-jre21-temurin-noble
 ARG MODULE=/hexagon/hexagon_tomcat_postgresql
 
-ENV POSTGRESQL_DB_HOST tfb-database
+ENV POSTGRESQL_DB_HOST bw-database
 ENV JDK_JAVA_OPTIONS -XX:+AlwaysPreTouch -XX:+UseParallelGC -XX:+UseNUMA
 ENV maximumPoolSize 300
 

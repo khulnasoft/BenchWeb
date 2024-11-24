@@ -7,7 +7,7 @@ const http = require('@http')
 const socket = require('@socket')
 
 const util = require('util.js')
-const config = require('tfb.config.js')
+const config = require('bw.config.js')
 
 const { getIPAddress } = dns
 const { createSocket } = socket

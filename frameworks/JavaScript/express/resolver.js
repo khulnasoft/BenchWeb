@@ -7,7 +7,7 @@ const connection = {
     database: 'hello_world',
     username: 'benchmarkdbuser',
     password: 'benchmarkdbpass',
-    host: 'tfb-database',
+    host: 'bw-database',
     dialect: 'mysql'
 }
 

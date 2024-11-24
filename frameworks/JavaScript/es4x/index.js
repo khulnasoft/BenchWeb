@@ -37,7 +37,7 @@ const SELECT_FORTUNE = "SELECT id, message from FORTUNE";
 
 let connectOptions = new PgConnectOptions()
   .setCachePreparedStatements(true)
-  .setHost('tfb-database')
+  .setHost('bw-database')
   .setUser('benchmarkdbuser')
   .setPassword('benchmarkdbpass')
   .setDatabase('hello_world');

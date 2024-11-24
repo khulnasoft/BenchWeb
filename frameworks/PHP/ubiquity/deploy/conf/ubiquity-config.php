@@ -5,7 +5,7 @@ return array(
 			"wrapper" => "\\Ubiquity\\db\\providers\\pdo\\PDOWrapper",
 			"type" => "mysql",
 			"dbName" => "hello_world",
-			"serverName" => "tfb-database", // tfb-database
+			"serverName" => "bw-database", // bw-database
 			"port" => 3306,
 			"user" => "benchmarkdbuser", // benchmarkdbuser
 			"password" => "benchmarkdbpass", // benchmarkdbpass

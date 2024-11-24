@@ -6,7 +6,7 @@ RUN mvn compile assembly:single -q
 
 FROM openjdk:11.0.3-jdk-slim
 WORKDIR /bayou
-COPY --from=maven /bayou/target/bayou_TFB-0.1-jar-with-dependencies.jar app.jar
+COPY --from=maven /bayou/target/bayou_BW-0.1-jar-with-dependencies.jar app.jar
 
 EXPOSE 8080
 

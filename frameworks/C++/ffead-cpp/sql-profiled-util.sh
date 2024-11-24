@@ -62,8 +62,8 @@ if [ "$3" = "async" ]
 then
 	sed -i 's|add_subdirectory(${PROJECT_SOURCE_DIR}/web/t3)||g' CMakeLists.txt
 	sed -i 's|install(FILES ${PROJECT_BINARY_DIR}/web/t3/libt3${LIB_EXT} DESTINATION ${PROJECT_NAME}-bin/lib)||g' CMakeLists.txt
-	sed -i 's|tfb-database|localhost|g' $IROOT/ffead-cpp-src/web/t4/config/sdorm.xml
-	sed -i 's|tfb-database|localhost|g' $IROOT/ffead-cpp-src/web/t5/config/sdorm.xml
+	sed -i 's|bw-database|localhost|g' $IROOT/ffead-cpp-src/web/t4/config/sdorm.xml
+	sed -i 's|bw-database|localhost|g' $IROOT/ffead-cpp-src/web/t5/config/sdorm.xml
 	rm -rf web/t3
 	if [ "$4" = "pool" ]
 	then
@@ -76,6 +76,6 @@ else
 	sed -i 's|install(FILES ${PROJECT_BINARY_DIR}/web/t4/libt4${LIB_EXT} DESTINATION ${PROJECT_NAME}-bin/lib)||g' CMakeLists.txt
 	sed -i 's|add_subdirectory(${PROJECT_SOURCE_DIR}/web/t5)||g' CMakeLists.txt
 	sed -i 's|install(FILES ${PROJECT_BINARY_DIR}/web/t5/libt5${LIB_EXT} DESTINATION ${PROJECT_NAME}-bin/lib)||g' CMakeLists.txt
-	sed -i 's|tfb-database|localhost|g' $IROOT/ffead-cpp-src/web/t3/config/sdorm.xml
+	sed -i 's|bw-database|localhost|g' $IROOT/ffead-cpp-src/web/t3/config/sdorm.xml
 	rm -rf web/t4 web/t5
 fi

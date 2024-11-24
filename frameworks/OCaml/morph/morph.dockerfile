@@ -8,7 +8,7 @@ ENV OCAMLRUNPARAM a=2,o=240
 RUN sudo apk update && sudo apk add openssl-dev && \
     opam depext dune conf-libev httpaf httpaf-lwt-unix lwt yojson conf-postgresql conf-libffi
 
-COPY src/morph-tfb.opam src/dune-project src/morph-tfb.opam.template ./
+COPY src/morph-bw.opam src/dune-project src/morph-bw.opam.template ./
 
 RUN opam install --yes --deps-only .
 
@@ -20,8 +20,8 @@ COPY ./src/server_io_nproc ./server_io_nproc
 ENV SERVER_IO=NPROC
 
 RUN sudo chown -R opam ./bin && sudo chown -R opam ./server_*
-RUN opam exec -- dune build --profile release bin/tfb.exe
+RUN opam exec -- dune build --profile release bin/bw.exe
 
 EXPOSE 8080
 
-ENTRYPOINT _build/default/bin/tfb.exe
+ENTRYPOINT _build/default/bin/bw.exe

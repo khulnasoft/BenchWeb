@@ -18,7 +18,7 @@ class DB
     public static function instance(): Database
     {
         if (!isset(self::$instance)) {
-            $dsn = 'mysql:host=tfb-database;dbname=hello_world';
+            $dsn = 'mysql:host=bw-database;dbname=hello_world';
             $username = 'benchmarkdbuser';
             $password = 'benchmarkdbpass';
             $db = new Database($dsn, $username, $password, [

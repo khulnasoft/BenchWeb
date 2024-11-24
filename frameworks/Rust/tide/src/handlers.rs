@@ -124,11 +124,11 @@ pub async fn updates(request: Request<Pool>) -> Result<Response> {
     // This line is required to pass test verification otherwise we get:
     //
     // ```
-    // FAIL for http://tfb-server:8080/updates/20
+    // FAIL for http://bw-server:8080/updates/20
     //   Only 20470 executed queries in the database out of roughly 20480 expected.
-    // PASS for http://tfb-server:8080/updates/20
+    // PASS for http://bw-server:8080/updates/20
     //   Rows read: 10128/10240
-    // FAIL for http://tfb-server:8080/updates/20
+    // FAIL for http://bw-server:8080/updates/20
     //   Only 10118 rows updated in the database out of roughly 10240 expected.
     // ```
     //

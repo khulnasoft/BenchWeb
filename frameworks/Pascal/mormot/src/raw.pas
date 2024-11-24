@@ -169,9 +169,9 @@ constructor TRawAsyncServer.Create(
 begin
   inherited Create;
   fDbPool := TSqlDBPostgresConnectionProperties.Create(
-    'tfb-database:5432', 'hello_world', 'benchmarkdbuser', 'benchmarkdbpass');
+    'bw-database:5432', 'hello_world', 'benchmarkdbuser', 'benchmarkdbpass');
   fDbPool.ArrayParamsAsBinary := true;
-  // customize JSON serialization for TFB expectations
+  // customize JSON serialization for BW expectations
   TOrmWorld.OrmProps.Fields.JsonRenameProperties([
     'ID',           'id',
     'RandomNumber', 'randomNumber']);
@@ -208,7 +208,7 @@ begin
      {$ifdef WITH_LOGS}
      hsoLogVerbose,
      {$endif WITH_LOGS}
-     hsoIncludeDateHeader  // required by TFB General Test Requirements #5
+     hsoIncludeDateHeader  // required by BW General Test Requirements #5
     ] + flags);
   if pin2Core <> -1 then
     fHttpServer.Async.SetCpuAffinity(pin2Core);
@@ -565,7 +565,7 @@ end;
 // asynchronous PostgreSQL pipelined DB access
 
 const
-  // follow TFB requirements, and potential patched libpq
+  // follow BW requirements, and potential patched libpq
   ASYNC_OPT = [asoForceConnectionFlush, asoForcePipelineSync];
 
 function TRawAsyncServer.asyncdb(ctxt: THttpServerRequest): cardinal;
@@ -752,14 +752,14 @@ begin
     servers := cpuCount;
     threads := 8;
     pinServers2Cores := true;
-    if GetEnvironmentVariable('TFB_TEST_NAME') = 'mormot-postgres-async' then
+    if GetEnvironmentVariable('BW_TEST_NAME') = 'mormot-postgres-async' then
     begin
       // asynchronus test
       servers := cpuCount;
       threads := 8;
     end
     else
-    if GetEnvironmentVariable('TFB_TEST_NAME') = 'mormot-postgres-async2' then
+    if GetEnvironmentVariable('BW_TEST_NAME') = 'mormot-postgres-async2' then
     begin
       // asynchronus test with single listener socket and no CPU pinning
       servers := 1;
@@ -778,14 +778,14 @@ begin
   // parse command line parameters
   with Executable.Command do
   begin
-    ExeDescription := 'TFB Server using mORMot 2';
+    ExeDescription := 'BW Server using mORMot 2';
     if Option(['p', 'pin'], 'pin each server to a CPU') then
       pinServers2Cores := true;
     if Option('nopin', 'disable the CPU pinning') then
       pinServers2Cores := false; // no option would keep the default boolean
     Get(['s', 'servers'], servers, '#count of servers (listener sockets)', servers);
     Get(['t', 'threads'], threads, 'per-server thread pool #size', threads);
-    if ConsoleHelpFailed('TFB Server using mORMot 2') then
+    if ConsoleHelpFailed('BW Server using mORMot 2') then
       exit;
   end;
 

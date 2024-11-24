@@ -1,6 +1,6 @@
 database:
   schema: hello_world
-  host: tfb-database
+  host: bw-database
   port: 5432
   username: benchmarkdbuser
   password: benchmarkdbpass

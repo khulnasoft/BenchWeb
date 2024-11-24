@@ -6,7 +6,7 @@ init() ->
     PoolSize = 256,
     User = "benchmarkdbuser",
     Password = "benchmarkdbpass",
-    Host = "tfb-database",
+    Host = "bw-database",
     Port = 3306,
     Database = "hello_world",
 

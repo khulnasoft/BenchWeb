@@ -10,8 +10,8 @@ RUN sbt assembly
 
 EXPOSE 8080
 
-CMD export DBIP=`getent hosts tfb-database | awk '{ print $1 }'` && \
-    sed -i "s|tfb-database|$DBIP|g" /vertx/src/main/conf/config.json && \
+CMD export DBIP=`getent hosts bw-database | awk '{ print $1 }'` && \
+    sed -i "s|bw-database|$DBIP|g" /vertx/src/main/conf/config.json && \
     java \
       -Xms2G \
       -Xmx2G \

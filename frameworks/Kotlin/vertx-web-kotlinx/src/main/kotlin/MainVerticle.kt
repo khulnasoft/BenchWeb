@@ -52,7 +52,7 @@ class MainVerticle(val hasDb: Boolean) : CoroutineVerticle(), CoroutineRouterSup
                 vertx,
                 pgConnectOptionsOf(
                     database = "hello_world",
-                    host = "tfb-database",
+                    host = "bw-database",
                     user = "benchmarkdbuser",
                     password = "benchmarkdbpass",
                     cachePreparedStatements = true,

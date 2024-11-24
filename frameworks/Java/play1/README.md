@@ -18,7 +18,7 @@ The tests were run with:
  * [Oracle Java 10](https://www.oracle.com/java/)
  * [MySQL 5.7](http://www.mysql.com/)
 
-Please check the versions in the install and build scripts of TFB project.
+Please check the versions in the install and build scripts of BW project.
 
 ## Test URLs
 

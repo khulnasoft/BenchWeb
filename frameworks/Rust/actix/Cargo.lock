@@ -2250,7 +2250,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "tfb-actix"
+name = "bw-actix"
 version = "3.0.0"
 dependencies = [
  "actix",

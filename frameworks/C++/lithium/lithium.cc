@@ -1,8 +1,8 @@
 #include "lithium_http_server.hh"
 
-#if TFB_MYSQL
+#if BW_MYSQL
   #include "lithium_mysql.hh"
-#elif TFB_PGSQL
+#elif BW_PGSQL
   #include "lithium_pgsql.hh"
 #endif
 
@@ -97,10 +97,10 @@ int main(int argc, char* argv[]) {
   int nthreads = nprocs;
 #endif
 
-#if TFB_MYSQL
+#if BW_MYSQL
   auto sql_db = mysql_database(s::host = argv[1], s::database = "hello_world", s::user = "benchmarkdbuser",
                 s::password = "benchmarkdbpass", s::port = 3306, s::charset = "utf8");
-#elif TFB_PGSQL
+#elif BW_PGSQL
   auto sql_db = pgsql_database(s::host = argv[1], s::database = "hello_world", s::user = "benchmarkdbuser",
                                s::password = "benchmarkdbpass", s::port = 5432, s::charset = "utf8");
 #endif
@@ -114,12 +114,12 @@ int main(int argc, char* argv[]) {
     s::randomNumber = int());
 
 #ifndef N_SQL_CONNECTIONS
-  #if TFB_MYSQL
+  #if BW_MYSQL
     int db_nconn = 5;
     int queries_nconn = 4;
     int fortunes_nconn = 5;
     int updates_nconn = 2;
-  #elif TFB_PGSQL
+  #elif BW_PGSQL
     int db_nconn = 5;
     int queries_nconn = 3;
     int fortunes_nconn = 7;
@@ -182,7 +182,7 @@ int main(int argc, char* argv[]) {
       auto& raw_c = c.backend_connection();
 
       
-#if TFB_MYSQL
+#if BW_MYSQL
       raw_c("START TRANSACTION");
 #endif
       for (int i = 0; i < N; i++)
@@ -195,7 +195,7 @@ int main(int argc, char* argv[]) {
 
       c.bulk_update(numbers);
 
-#if TFB_MYSQL
+#if BW_MYSQL
       raw_c("COMMIT");
 #endif
     }

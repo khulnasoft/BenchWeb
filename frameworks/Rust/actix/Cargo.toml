@@ -1,30 +1,30 @@
 [package]
-name = "tfb-actix"
+name = "bw-actix"
 version = "3.0.0"
 edition = "2018"
 
 [[bin]]
-name = "tfb-web"
+name = "bw-web"
 path = "src/main_web.rs"
 
 [[bin]]
-name = "tfb-web-diesel"
+name = "bw-web-diesel"
 path = "src/main_web_diesel.rs"
 
 [[bin]]
-name = "tfb-http"
+name = "bw-http"
 path = "src/main_http.rs"
 
 [[bin]]
-name = "tfb-server"
+name = "bw-server"
 path = "src/main_server.rs"
 
 [[bin]]
-name = "tfb-web-mongodb"
+name = "bw-web-mongodb"
 path = "src/main_mongodb.rs"
 
 [[bin]]
-name = "tfb-web-pg-deadpool"
+name = "bw-web-pg-deadpool"
 path = "src/main_pg_deadpool.rs"
 
 [dependencies]

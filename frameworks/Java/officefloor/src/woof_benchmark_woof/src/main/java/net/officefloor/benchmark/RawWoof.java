@@ -91,7 +91,7 @@ public abstract class RawWoof {
 
 		// Indicate details
 		String server = System.getProperty("OFFICE.net_officefloor_jdbc_DataSourceManagedObjectSource.server",
-				"tfb-database");
+				"bw-database");
 		System.out.println("Starting server on port " + port + " talking to database " + server);
 
 		// Create the server location

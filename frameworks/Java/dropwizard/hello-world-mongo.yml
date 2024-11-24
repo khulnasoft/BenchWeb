@@ -19,7 +19,7 @@ logging:
     - type: console
 
 mongo:
-  host: tfb-database
+  host: bw-database
   port: 27017
   db: hello_world
   connections: 256

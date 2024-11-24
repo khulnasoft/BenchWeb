@@ -40,7 +40,7 @@ func runApp() async throws {
     let serverPort = env.get("SERVER_PORT", as: Int.self) ?? 8080
 
     var postgresConfiguration = PostgresClient.Configuration(
-        host: "tfb-database", 
+        host: "bw-database", 
         username: "benchmarkdbuser", 
         password: "benchmarkdbpass", 
         database: "hello_world", 

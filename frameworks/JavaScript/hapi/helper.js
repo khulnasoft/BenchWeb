@@ -1,5 +1,5 @@
 module.exports = {
-  randomTfbNumber: () => Math.floor(Math.random() * 10000) + 1,
+  randomBwNumber: () => Math.floor(Math.random() * 10000) + 1,
 
   getQueries: (req) => {
     let queries = ~~(req.query.queries) || 1;

@@ -6,7 +6,7 @@ const cluster = require('cluster');
 const numCPUs = require('os').cpus().length;
 const express = require('express');
 const mongoose = require('mongoose');
-const connection = mongoose.createConnection('mongodb://tfb-database/hello_world');
+const connection = mongoose.createConnection('mongodb://bw-database/hello_world');
 
 // Middleware
 const bodyParser = require('body-parser');
@@ -43,7 +43,7 @@ if (cluster.isPrimary) {
 } else {
   const app = module.exports = express();
 
-  const randomTfbNumber = () => Math.floor(Math.random() * 10000) + 1;
+  const randomBwNumber = () => Math.floor(Math.random() * 10000) + 1;
   const toClientWorld = (world) => {
     if (world) {
       world.id = world._id;
@@ -65,7 +65,7 @@ if (cluster.isPrimary) {
   app.set('views', __dirname + '/views');
 
   async function getRandomWorld() {
-    return toClientWorld(await MWorld.findOne({_id: randomTfbNumber()}).lean().exec());
+    return toClientWorld(await MWorld.findOne({_id: randomBwNumber()}).lean().exec());
   }
 
   // Routes
@@ -81,7 +81,7 @@ if (cluster.isPrimary) {
   });
 
   app.get('/mongoose', async (req, res) => {
-    const result = await MWorld.findOne({_id: randomTfbNumber()}).lean().exec();
+    const result = await MWorld.findOne({_id: randomBwNumber()}).lean().exec();
 
     res.send(toClientWorld(result));
   });
@@ -97,8 +97,8 @@ if (cluster.isPrimary) {
 
   async function getUpdateRandomWorld() {
     // it would be nice to use findOneAndUpdate here, but for some reason the test fails with it.
-    const world = await MWorld.findOne({_id: randomTfbNumber()}).lean().exec();
-    world.randomNumber = randomTfbNumber();
+    const world = await MWorld.findOne({_id: randomBwNumber()}).lean().exec();
+    world.randomNumber = randomBwNumber();
     await MWorld.updateOne({
       _id: world._id
     }, {

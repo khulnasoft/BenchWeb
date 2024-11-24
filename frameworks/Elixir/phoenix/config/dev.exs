@@ -26,7 +26,7 @@ config :hello, Hello.Repo,
   username: "benchmarkdbuser",
   password: "benchmarkdbpass",
   database: "hello_world",
-  hostname: "tfb-database"
+  hostname: "bw-database"
 
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"

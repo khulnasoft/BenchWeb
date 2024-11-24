@@ -4,7 +4,7 @@ members = [
 ]
 
 [package]
-name = "tfb-anansi"
+name = "bw-anansi"
 version = "0.1.0"
 edition = "2021"
 

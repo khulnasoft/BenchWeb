@@ -1,7 +1,7 @@
 with-compiler: ghc-8.6.5
 index-state:   2019-09-28T11:54:13Z
 optimization:  True
-packages:      servant-tfb/
+packages:      servant-bw/
 
 allow-newer: beam-core-0.8.0.0:hashable
 allow-newer: beam-core-0.8.0.0:vector-sized

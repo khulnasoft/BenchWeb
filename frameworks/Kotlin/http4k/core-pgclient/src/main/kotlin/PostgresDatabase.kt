@@ -13,7 +13,7 @@ class PostgresDatabase : Database {
         val connectOptions = PgConnectOptions().apply {
             port = 5432
             cachePreparedStatements = true
-            host = "tfb-database"
+            host = "bw-database"
             database = "hello_world"
             user = "benchmarkdbuser"
             password = "benchmarkdbpass"

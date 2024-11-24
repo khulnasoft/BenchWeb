@@ -6,7 +6,7 @@
     {
       "name": "pgsql",
       "engine": "PGSQL",
-      "hostname": "tfb-database",
+      "hostname": "bw-database",
       "port": 5432,
       "database": "hello_world",
       "username": "benchmarkdbuser",

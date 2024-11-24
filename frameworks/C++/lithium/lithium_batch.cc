@@ -1,8 +1,8 @@
 #include "lithium_http_backend.hh"
 
-#if TFB_MYSQL
+#if BW_MYSQL
   #include "lithium_mysql.hh"
-#elif TFB_PGSQL
+#elif BW_PGSQL
   #include "lithium_pgsql.hh"
 #endif
 
@@ -78,10 +78,10 @@ int main(int argc, char* argv[]) {
   int nthreads = nprocs;
 #endif
 
-#if TFB_MYSQL
+#if BW_MYSQL
   auto sql_db = mysql_database(s::host = argv[1], s::database = "hello_world", s::user = "benchmarkdbuser",
                 s::password = "benchmarkdbpass", s::port = 3306, s::charset = "utf8");
-#elif TFB_PGSQL
+#elif BW_PGSQL
   auto sql_db = pgsql_database(s::host = argv[1], s::database = "hello_world", s::user = "benchmarkdbuser",
                                s::password = "benchmarkdbpass", s::port = 5432, s::charset = "utf8", s::max_async_connections_per_thread = N_SQL_CONNECTIONS);
 #endif

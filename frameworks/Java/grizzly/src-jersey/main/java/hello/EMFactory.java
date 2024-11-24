@@ -13,7 +13,7 @@ public class EMFactory implements Factory<EntityManagerFactory> {
 
 	@Inject
 	public EMFactory() {
-		emf = Persistence.createEntityManagerFactory("0-TFB");
+		emf = Persistence.createEntityManagerFactory("0-BW");
 	}
 
 	@Override

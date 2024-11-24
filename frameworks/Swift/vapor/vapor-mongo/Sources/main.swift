@@ -28,7 +28,7 @@ app.logger.notice("System.maxConnectionsPerEventLoop: \(System.maxConnectionsPer
 
 let options: MongoClientOptions = MongoClientOptions(maxPoolSize: 56, threadPoolSize: System.maxConnectionsPerEventLoop)
 
-try app.mongoDB.configure("mongodb://tfb-database:27017", options: options)
+try app.mongoDB.configure("mongodb://bw-database:27017", options: options)
 
 extension Request {
     var worldCollection: MongoCollection<World> {

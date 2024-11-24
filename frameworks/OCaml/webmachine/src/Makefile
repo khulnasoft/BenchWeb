@@ -1,4 +1,4 @@
-BINARY = tfb
+BINARY = bw
 PROFILE ?= release
 
 .PHONY: install build run gen-opam

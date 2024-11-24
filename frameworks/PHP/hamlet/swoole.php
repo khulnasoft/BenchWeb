@@ -8,7 +8,7 @@ use Hamlet\Http\Swoole\Bootstraps\SwooleBootstrap;
 require_once __DIR__ . '/vendor/autoload.php';
 
 $database = new MySQLSwooleDatabase(
-    'tfb-database',
+    'bw-database',
     'benchmarkdbuser',
     'benchmarkdbpass',
     'hello_world',

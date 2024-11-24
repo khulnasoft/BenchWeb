@@ -1,6 +1,6 @@
 const { MongoClient } = require("mongodb");
 
-const mongoUrl = "mongodb://tfb-database:27017";
+const mongoUrl = "mongodb://bw-database:27017";
 const dbName = "hello_world";
 
 let client;

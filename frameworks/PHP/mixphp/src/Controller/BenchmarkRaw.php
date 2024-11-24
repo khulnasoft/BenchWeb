@@ -15,7 +15,7 @@ class BenchmarkRaw
         }
 
         $pdo = new \PDO(
-            'pgsql:host=tfb-database;dbname=hello_world',
+            'pgsql:host=bw-database;dbname=hello_world',
             'benchmarkdbuser',
             'benchmarkdbpass',
             [

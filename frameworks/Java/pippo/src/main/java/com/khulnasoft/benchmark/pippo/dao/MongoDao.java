@@ -92,7 +92,7 @@ public class MongoDao implements Dao {
 														 }
 													 )
 													 .build();
-					client = new MongoClient(new ServerAddress("tfb-database", 27017), options);
+					client = new MongoClient(new ServerAddress("bw-database", 27017), options);
 				}
 			} finally {
 				clientLock.unlock();

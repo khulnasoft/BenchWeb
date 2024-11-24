@@ -59,7 +59,7 @@ func processWorld(tx *gorm.DB) (World, error) {
 func main() {
 	/* SETUP DB AND WEB SERVER */
 
-	dsn := "host=tfb-database user=benchmarkdbuser password=benchmarkdbpass dbname=hello_world port=5432 sslmode=disable"
+	dsn := "host=bw-database user=benchmarkdbuser password=benchmarkdbpass dbname=hello_world port=5432 sslmode=disable"
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{
 		PrepareStmt: true,                                  // use prep statements
 		Logger:      logger.Default.LogMode(logger.Silent), // new, not inserted in original submission 2x on query

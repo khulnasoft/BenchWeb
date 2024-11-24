@@ -72,7 +72,7 @@ public class FrameworkTest implements GreenApp {
     		 Integer.parseInt(System.getProperty("port","8080")),    	//default port for test 
     		 c,         //pipes per track 
     		 Integer.parseInt(System.getProperty("telemetry.port", "-1")),
-    		 "tfb-database", // jdbc:postgresql://tfb-database:5432/hello_world
+    		 "bw-database", // jdbc:postgresql://bw-database:5432/hello_world
     		 "hello_world",
     		 "benchmarkdbuser",
     		 "benchmarkdbpass",

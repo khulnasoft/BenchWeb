@@ -15,7 +15,7 @@ RUN ./gradlew --quiet -x test installDist
 FROM docker.io/bellsoft/liberica-runtime-container:jre-21-musl
 ARG PROJECT=hexagon_nettyepoll_pgclient
 
-ENV POSTGRESQL_DB_HOST tfb-database
+ENV POSTGRESQL_DB_HOST bw-database
 ENV JDK_JAVA_OPTIONS -XX:+AlwaysPreTouch -XX:+UseParallelGC -XX:+UseNUMA
 ENV maximumPoolSize 300
 

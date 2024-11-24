@@ -11,7 +11,7 @@ use warp::http::header;
 use warp::{Filter, Rejection, Reply};
 use yarte::Template;
 
-const DATABASE_URL: &str = "postgres://benchmarkdbuser:benchmarkdbpass@tfb-database/hello_world";
+const DATABASE_URL: &str = "postgres://benchmarkdbuser:benchmarkdbpass@bw-database/hello_world";
 
 // SmallRng is not a CSPRNG. It's used specifically to match performance of
 // benchmarks in other programming languages where the default RNG algorithm

@@ -20,6 +20,6 @@ EXPOSE 8080
 
 ENV HANAMI_ENV=production
 ENV HANAMI_PORT=8080
-ENV DATABASE_URL=postgres://benchmarkdbuser:benchmarkdbpass@tfb-database:5432/hello_world
+ENV DATABASE_URL=postgres://benchmarkdbuser:benchmarkdbpass@bw-database:5432/hello_world
 
 CMD bundle exec hanami server

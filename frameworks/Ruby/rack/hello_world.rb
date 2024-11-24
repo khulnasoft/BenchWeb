@@ -8,11 +8,11 @@ require 'rack'
 
 if RUBY_PLATFORM == 'java'
   require 'json'
-  DEFAULT_DATABASE_URL = 'jdbc:postgresql://tfb-database/hello_world?user=benchmarkdbuser&password=benchmarkdbpass'
+  DEFAULT_DATABASE_URL = 'jdbc:postgresql://bw-database/hello_world?user=benchmarkdbuser&password=benchmarkdbpass'
 else
   require 'oj'
   Oj.mimic_JSON
-  DEFAULT_DATABASE_URL = 'postgresql://tfb-database/hello_world?user=benchmarkdbuser&password=benchmarkdbpass'
+  DEFAULT_DATABASE_URL = 'postgresql://bw-database/hello_world?user=benchmarkdbuser&password=benchmarkdbpass'
 end
 
 class HelloWorld

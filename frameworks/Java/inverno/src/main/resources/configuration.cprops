@@ -11,7 +11,7 @@ com.khulnasoft.inverno.benchmark.appConfiguration {
 		ws_enabled = false
 	}
 	db_database = "hello_world"
-	db_host = "tfb-database"
+	db_host = "bw-database"
 	db_port = 5432
 	db_username = "benchmarkdbuser"
 	db_password = "benchmarkdbpass"

@@ -99,7 +99,7 @@ namespace Benchmarks
             mApiServer.Options.LogLevel = BeetleX.EventArgs.LogType.Error;
             mApiServer.Options.LogToConsole = true;
             mApiServer.Register(typeof(Program).Assembly);
-            HeaderTypeFactory.SERVAR_HEADER_BYTES = Encoding.ASCII.GetBytes("Server: TFB\r\n");
+            HeaderTypeFactory.SERVAR_HEADER_BYTES = Encoding.ASCII.GetBytes("Server: BW\r\n");
             mApiServer.HttpConnected += (o, e) =>
             {
                 e.Session["DB"] = new RawDb(new ConcurrentRandom(), Npgsql.NpgsqlFactory.Instance);
@@ -109,7 +109,7 @@ namespace Benchmarks
                 mComplete.TrySetResult(new object());
             };
             mApiServer.Open();
-            RawDb._connectionString = "Server=tfb-database;Database=hello_world;User Id=benchmarkdbuser;Password=benchmarkdbpass;SSL Mode=Disable;Maximum Pool Size=64;NoResetOnClose=true;Enlist=false;Max Auto Prepare=4;Multiplexing=true;Write Coalescing Buffer Threshold Bytes=1000";
+            RawDb._connectionString = "Server=bw-database;Database=hello_world;User Id=benchmarkdbuser;Password=benchmarkdbpass;SSL Mode=Disable;Maximum Pool Size=64;NoResetOnClose=true;Enlist=false;Max Auto Prepare=4;Multiplexing=true;Write Coalescing Buffer Threshold Bytes=1000";
             //RawDb._connectionString = "Server=localhost;Database=hello_world;User Id=benchmarkdbuser;Password=benchmarkdbpass;Maximum Pool Size=256;NoResetOnClose=true;Enlist=false;Max Auto Prepare=3";
             await mComplete.Task;
         }

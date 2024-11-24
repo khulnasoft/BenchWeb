@@ -204,7 +204,7 @@ fun Application.module(exposedMode: ExposedMode) {
 }
 
 fun HikariConfig.configurePostgres(poolSize: Int) {
-    jdbcUrl = "jdbc:postgresql://tfb-database/hello_world?useSSL=false"
+    jdbcUrl = "jdbc:postgresql://bw-database/hello_world?useSSL=false"
     driverClassName = org.postgresql.Driver::class.java.name
 
     configureCommon(poolSize)

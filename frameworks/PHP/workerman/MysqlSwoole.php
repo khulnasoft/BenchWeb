@@ -11,7 +11,7 @@ class MysqlSwoole
     {
         $config = (new PDOConfig())
             ->withDriver('mysql')
-            ->withHost('tfb-database')
+            ->withHost('bw-database')
             ->withPort(3306)
             ->withDbName('hello_world')
             ->withUsername('benchmarkdbuser')

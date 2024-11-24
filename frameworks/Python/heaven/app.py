@@ -29,7 +29,7 @@ async def up_database(app: Application):
         user=getenv("PGUSER", "benchmarkdbuser"),
         password=getenv("PGPASS", "benchmarkdbpass"),
         database="hello_world",
-        host="tfb-database",
+        host="bw-database",
         port=5432,
         min_size=MIN_POOL_SIZE,
         max_size=MAX_POOL_SIZE,

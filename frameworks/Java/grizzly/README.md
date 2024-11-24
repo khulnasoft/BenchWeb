@@ -20,7 +20,7 @@ The tests were run with:
  * [Oracle Java 10](https://www.oracle.com/java/)
  * [Jackson](https://github.com/FasterXML/jackson/wiki/Jackson-Releases)
 
-Please check the versions in the install and build scripts of TFB project.
+Please check the versions in the install and build scripts of BW project.
 
 ## Test URLs
 
@@ -56,7 +56,7 @@ The tests were run with:
  * [Hibernate ORM](https://hibernate.org/orm/)
  * [mustache.java](https://github.com/spullara/mustache.java)
 
-Please check the versions in the install and build scripts of TFB project.
+Please check the versions in the install and build scripts of BW project.
 
 ## Test URLs
 

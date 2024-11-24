@@ -107,8 +107,8 @@ COPY --from=compile /usr/local/lib/libmustache_c.so "${H2O_APP_PREFIX}/lib/"
 ENV LD_LIBRARY_PATH="${H2O_APP_PREFIX}/lib"
 EXPOSE 8080
 ARG BENCHMARK_ENV
-ARG TFB_TEST_DATABASE
-ARG TFB_TEST_NAME
+ARG BW_TEST_DATABASE
+ARG BW_TEST_NAME
 
 CMD ["taskset", \
      "-c", \
@@ -116,7 +116,7 @@ CMD ["taskset", \
      "/opt/h2o_app/bin/h2o_app", \
      "-a20", \
      "-d", \
-     "dbname=hello_world host=tfb-database password=benchmarkdbpass sslmode=disable user=benchmarkdbuser", \
+     "dbname=hello_world host=bw-database password=benchmarkdbpass sslmode=disable user=benchmarkdbuser", \
      "-f", \
      "/opt/h2o_app/share/h2o_app/template", \
      "-m1"]

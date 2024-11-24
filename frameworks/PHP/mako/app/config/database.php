@@ -31,7 +31,7 @@ return
 	[
 		'test' =>
 		[
-			'dsn'         => 'mysql:dbname=hello_world;host=tfb-database;',
+			'dsn'         => 'mysql:dbname=hello_world;host=bw-database;',
 			'username'    => 'benchmarkdbuser',
 			'password'    => 'benchmarkdbpass',
 			'persistent'  => true,

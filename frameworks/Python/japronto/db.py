@@ -38,7 +38,7 @@ class Pool:
 
 
 async def init_db(app):
-    app.db_pool = await Pool("postgresql://%s:%s@tfb-database:5432/hello_world" % (os.getenv("PGUSER", "benchmarkdbuser"), os.getenv("PSPASS", "benchmarkdbpass")), connection_class=asyncpg.Connection)
+    app.db_pool = await Pool("postgresql://%s:%s@bw-database:5432/hello_world" % (os.getenv("PGUSER", "benchmarkdbuser"), os.getenv("PSPASS", "benchmarkdbpass")), connection_class=asyncpg.Connection)
 
 
 async def close_db(app):

@@ -29,7 +29,7 @@ func main() {
 	child := flag.Bool("child", false, "is child proc")
 	dbDriver := flag.String("db", "none", "db connection driver [values: pq || pgx || mysql || mgo || none]")
 	dbConnectionString := flag.String("db_connection_string",
-		"host=tfb-database user=benchmarkdbuser password=benchmarkdbpass dbname=hello_world sslmode=disable",
+		"host=bw-database user=benchmarkdbuser password=benchmarkdbpass dbname=hello_world sslmode=disable",
 		"db connection string")
 	flag.Parse()
 

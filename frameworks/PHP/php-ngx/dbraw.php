@@ -14,7 +14,7 @@ class DbRaw
     public static function init()
     {
         $pdo = new PDO(
-            'pgsql:host=tfb-database;dbname=hello_world',
+            'pgsql:host=bw-database;dbname=hello_world',
             'benchmarkdbuser',
             'benchmarkdbpass',
             [

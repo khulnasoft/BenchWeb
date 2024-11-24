@@ -29,7 +29,7 @@ def connect(dbtype)
     :adapter=>(dbtype == :mysql ? 'mysql2' : 'postgresql'),
     :username=>'benchmarkdbuser',
     :password=>'benchmarkdbpass',
-    :host=>'tfb-database',
+    :host=>'bw-database',
     :database=>'hello_world'
   }
 

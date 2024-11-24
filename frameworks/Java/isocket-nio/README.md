@@ -4,8 +4,8 @@
 This is the isocket-nio portion of a [benchmarking test suite](../) comparing a variety of web development platforms.
 
 ### JSON Encoding Test
-* [Plaintext test source](src/main/java/cn/ibaijia/tfb/HttpBootstrap.java)
-* [JSON test source](src/main/java/cn/ibaijia/tfb/HttpBootstrap.java)
+* [Plaintext test source](src/main/java/cn/ibaijia/bw/HttpBootstrap.java)
+* [JSON test source](src/main/java/cn/ibaijia/bw/HttpBootstrap.java)
 
 ## Versions
 

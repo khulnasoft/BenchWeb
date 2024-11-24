@@ -152,7 +152,7 @@ func initDatabase() {
 	}
 
 	var err error
-	db, err = pgxpool.Connect(context.Background(), fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s pool_max_conns=%d", "tfb-database", 5432, "benchmarkdbuser", "benchmarkdbpass", "hello_world", maxConn))
+	db, err = pgxpool.Connect(context.Background(), fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s pool_max_conns=%d", "bw-database", 5432, "benchmarkdbuser", "benchmarkdbpass", "hello_world", maxConn))
 	if err != nil {
 		panic(err)
 	}

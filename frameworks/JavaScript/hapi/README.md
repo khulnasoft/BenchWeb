@@ -21,34 +21,34 @@ The tests were run with:
 ## Test URLs
 ### JSON Encoding Test
 
-http://TFB-server:8080/json
+http://BW-server:8080/json
 
 ### Data-Store/Database Mapping Test
 
 MongoDB:
-http://TFB-server:8080/mongoose/
+http://BW-server:8080/mongoose/
 
 MySQL:
-http://TFB-server:8080/mysql-orm/
+http://BW-server:8080/mysql-orm/
 
 ### Variable Query Test
 
 MongoDB:
-http://TFB-server:8080/mongoose/2
+http://BW-server:8080/mongoose/2
 
 MySQL:
-http://TFB-server:8080/mysql-orm/2
+http://BW-server:8080/mysql-orm/2
 
 ### Fortune Test
 
 MySQL:
-http://TFB-server:8080/fortune
+http://BW-server:8080/fortune
 
 ### Database Update Test
 
 MongoDB:
-http://TFB-server:8080/mongoose-update/2
+http://BW-server:8080/mongoose-update/2
 
 MySQL:
-http://TFB-server:8080/mysql-orm-update/2
+http://BW-server:8080/mysql-orm-update/2
 

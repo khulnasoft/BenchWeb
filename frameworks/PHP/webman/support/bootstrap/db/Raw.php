@@ -43,7 +43,7 @@ class Raw implements Bootstrap
      */
     public static function start($worker)
     {
-        $pdo = new PDO('pgsql:host=tfb-database;dbname=hello_world',
+        $pdo = new PDO('pgsql:host=bw-database;dbname=hello_world',
             'benchmarkdbuser', 'benchmarkdbpass',
             [PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
                 PDO::ATTR_EMULATE_PREPARES    => false]

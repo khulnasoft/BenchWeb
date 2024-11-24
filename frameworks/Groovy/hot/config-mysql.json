@@ -6,7 +6,7 @@
     {
       "name": "mysql",
       "engine": "MYSQL",
-      "hostname": "tfb-database",
+      "hostname": "bw-database",
       "port": 3306,
       "database": "hello_world",
       "username": "benchmarkdbuser",

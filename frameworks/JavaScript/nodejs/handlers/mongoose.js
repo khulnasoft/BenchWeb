@@ -1,6 +1,6 @@
 const h = require('../helper');
 const Mongoose = require('mongoose');
-const connection = Mongoose.createConnection('mongodb://tfb-database/hello_world', {
+const connection = Mongoose.createConnection('mongodb://bw-database/hello_world', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
@@ -40,7 +40,7 @@ const toClientWorld = (world) => {
 
 const mongooseRandomWorld = async () => {
   return toClientWorld(await Worlds.findOne({
-    _id: h.randomTfbNumber()
+    _id: h.randomBwNumber()
   }).lean().exec());
 };
 
@@ -51,8 +51,8 @@ const mongooseGetAllFortunes = async () => {
 
 async function getUpdateRandomWorld() {
   // it would be nice to use findOneAndUpdate here, but for some reason the test fails with it.
-  const world = await Worlds.findOne({_id: h.randomTfbNumber()}).lean().exec();
-  world.randomNumber = h.randomTfbNumber();
+  const world = await Worlds.findOne({_id: h.randomBwNumber()}).lean().exec();
+  world.randomNumber = h.randomBwNumber();
   await Worlds.updateOne({
     _id: world._id
   }, {
@@ -67,7 +67,7 @@ module.exports = {
 
   SingleQuery: async (req, res) => {
     const result = await mongooseRandomWorld();
-    h.addTfbHeaders(res, 'json');
+    h.addBwHeaders(res, 'json');
     res.end(JSON.stringify(result));
   },
 
@@ -78,7 +78,7 @@ module.exports = {
     }
     const results = await Promise.all(queryFunctions);
 
-    h.addTfbHeaders(res, 'json');
+    h.addBwHeaders(res, 'json');
     res.end(JSON.stringify(results));
   },
 
@@ -88,7 +88,7 @@ module.exports = {
     fortunes.sort((a, b) => {
       return a.message.localeCompare(b.message);
     });
-    h.addTfbHeaders(res, 'html');
+    h.addBwHeaders(res, 'html');
     res.end(h.fortunesTemplate({fortunes}));
   },
 
@@ -99,7 +99,7 @@ module.exports = {
       promises.push(getUpdateRandomWorld());
     }
 
-    h.addTfbHeaders(res, 'json');
+    h.addBwHeaders(res, 'json');
     res.end(JSON.stringify(await Promise.all(promises)));
   }
 

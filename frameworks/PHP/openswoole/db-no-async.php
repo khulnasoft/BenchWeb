@@ -9,7 +9,7 @@ class Db
     public static function init()
     {
         $pdo = new PDO(
-            "mysql:host=tfb-database;dbname=hello_world",
+            "mysql:host=bw-database;dbname=hello_world",
             "benchmarkdbuser",
             "benchmarkdbpass",
             [

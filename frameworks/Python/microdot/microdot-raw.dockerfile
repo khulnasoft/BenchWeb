@@ -8,7 +8,7 @@ ADD ./ /microdot
 WORKDIR /microdot
 
 ENV PYTHONUNBUFFERED 1
-ENV DATABASE_URL postgresql://benchmarkdbuser:benchmarkdbpass@tfb-database:5432/hello_world
+ENV DATABASE_URL postgresql://benchmarkdbuser:benchmarkdbpass@bw-database:5432/hello_world
 
 EXPOSE 8080
 

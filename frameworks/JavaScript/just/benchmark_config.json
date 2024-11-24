@@ -9,7 +9,7 @@
         "query_url": "/query?q=",
         "cached_query_url": "/cached-world?q=",
         "update_url": "/update?q=",
-        "network": "tfb",
+        "network": "bw",
         "fortune_url": "/fortunes",
         "port": 8080,
         "approach": "Realistic",

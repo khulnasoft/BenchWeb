@@ -1,5 +1,5 @@
 {
-  "name": "fastify-tfb",
+  "name": "fastify-bw",
   "version": "0.0.2",
   "description": "Fastify tests for KhulnaSoft Framework Benchmarks.",
   "main": "app.js",

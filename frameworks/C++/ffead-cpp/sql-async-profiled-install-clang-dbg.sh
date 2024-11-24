@@ -18,6 +18,6 @@ apt update -yqq && apt install -yqq vim gdb net-tools telnet iputils-ping
 ./install_ffead-cpp-sql-raw-profiled.sh async-qw
 
 #mv $IROOT/ffead-cpp-sql-raw $IROOT/ffead-cpp-6.0-sql
-#sed -i 's|localhost|tfb-database|g' $IROOT/ffead-cpp-6.0-sql/web/t4/config/sdorm.xml
-#sed -i 's|localhost|tfb-database|g' $IROOT/ffead-cpp-6.0-sql/web/t5/config/sdorm.xml
+#sed -i 's|localhost|bw-database|g' $IROOT/ffead-cpp-6.0-sql/web/t4/config/sdorm.xml
+#sed -i 's|localhost|bw-database|g' $IROOT/ffead-cpp-6.0-sql/web/t5/config/sdorm.xml
 

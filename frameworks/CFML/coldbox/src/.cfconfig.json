@@ -3,7 +3,7 @@
         "world":{
             "database":"hello_world",
             "dbdriver":"PostgreSQL",
-            "host":"tfb-database",
+            "host":"bw-database",
             "password":"benchmarkdbpass",
             "port":"5432",
             "username":"benchmarkdbuser"

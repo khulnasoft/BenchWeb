@@ -73,7 +73,7 @@ impl ServiceFactory<Request> for AppFactory {
 
     async fn create(&self, _: ()) -> Result<Self::Service, Self::InitError> {
         const DB_URL: &str =
-            "postgres://benchmarkdbuser:benchmarkdbpass@tfb-database/hello_world";
+            "postgres://benchmarkdbuser:benchmarkdbpass@bw-database/hello_world";
 
         Ok(App(db::PgConnection::connect(DB_URL).await))
     }

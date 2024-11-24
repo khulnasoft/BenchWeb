@@ -150,7 +150,7 @@ async fn main() -> io::Result<()> {
     // start http server
     Server::build()
         .backlog(1024)
-        .bind("tfb-actix-server", "0.0.0.0:8080", || {
+        .bind("bw-actix-server", "0.0.0.0:8080", || {
             fn_service(|io: TcpStream| App {
                 io: BufReader::new(io),
                 read_buf: BytesMut::with_capacity(32_768),

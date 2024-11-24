@@ -8,7 +8,7 @@ header("Content-type: application/json");
 
 function updateraw(int $query_count) {
   // Database connection // TODO: use PDO instead
-  $link = mysql_pconnect('tfb-database', 'benchmarkdbuser', 'benchmarkdbpass');
+  $link = mysql_pconnect('bw-database', 'benchmarkdbuser', 'benchmarkdbpass');
   mysql_select_db('hello_world', $link);
 
   // Create an array with the response string.
