@@ -10,27 +10,27 @@ v0.1.2 : [https://github.com/pronghorn-tech/server/releases/tag/0.1.2](https://g
 ## Test Types
 
 ### Plaintext
-url : `http://TFB-server:8080/plaintext` 
+url : `http://BW-server:8080/plaintext` 
 source code : [TestServer.kt](src/main/kotlin/pronghorn/TestServer.kt)
 
 ### Json Serialization
-url : `http://TFB-server:8080/json`
+url : `http://BW-server:8080/json`
 source code : [JsonHandler.kt](src/main/kotlin/pronghorn/handlers/JsonHandler.kt)
 
 ### Single Query
-url : `http://TFB-server:8080/db`
+url : `http://BW-server:8080/db`
 source code : [MongoDBRequestSingleHandler.kt](src/main/kotlin/pronghorn/handlers/MongoDBRequestSingleHandler.kt)
 
 ### Multiple Query
-url : `http://TFB-server:8080/queries`
+url : `http://BW-server:8080/queries`
 source code : [MongoDBRequestMultiHandler.kt](src/main/kotlin/pronghorn/handlers/MongoDBRequestMultiHandler.kt)
 
 ### Data Updates
-url : `http://TFB-server:8080/updates`
+url : `http://BW-server:8080/updates`
 source code : [MongoDBRequestUpdatesHandler.kt](src/main/kotlin/pronghorn/handlers/MongoDBRequestUpdatesHandler.kt)
 
 ### Fortunes
-url : `http://TFB-server:8080/fortunes`
+url : `http://BW-server:8080/fortunes`
 source code : [MongoDBRequestFortunesHandler.kt](src/main/kotlin/pronghorn/handlers/MongoDBRequestFortunesHandler.kt)
 
 ## Additional Dependencies

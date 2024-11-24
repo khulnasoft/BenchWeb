@@ -22,6 +22,6 @@ di:
 		tags: no
 
 database:
-	dsn: 'mysql:host=tfb-database;port=3306;dbname=hello_world'
+	dsn: 'mysql:host=bw-database;port=3306;dbname=hello_world'
 	user: 'benchmarkdbuser'
 	password: 'benchmarkdbpass'

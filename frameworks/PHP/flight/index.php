@@ -3,7 +3,7 @@ require_once 'vendor/autoload.php';
 
 error_reporting(-1);
 
-Flight::register('db', PDO::class, [ 'mysql:host=tfb-database;port=3306;dbname=hello_world', 'benchmarkdbuser', 'benchmarkdbpass', [ \PDO::ATTR_PERSISTENT => TRUE ] ]);
+Flight::register('db', PDO::class, [ 'mysql:host=bw-database;port=3306;dbname=hello_world', 'benchmarkdbuser', 'benchmarkdbpass', [ \PDO::ATTR_PERSISTENT => TRUE ] ]);
 
 // JSON test
 Flight::route('/json', function() {

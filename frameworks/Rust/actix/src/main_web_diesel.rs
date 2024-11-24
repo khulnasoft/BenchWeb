@@ -115,7 +115,7 @@ async fn fortune(db: web::Data<Addr<db_diesel::DbExecutor>>) -> Result<HttpRespo
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
-    let db_url = "postgres://benchmarkdbuser:benchmarkdbpass@tfb-database/hello_world";
+    let db_url = "postgres://benchmarkdbuser:benchmarkdbpass@bw-database/hello_world";
 
     // start DB executor actors
     let addr = SyncArbiter::start(num_cpus::get() * 3, move || {

@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 return [
-    'host' => 'tfb-database',
+    'host' => 'bw-database',
     'port' => 3306,
     'database' => 'hello_world',
     'username' => 'benchmarkdbuser',

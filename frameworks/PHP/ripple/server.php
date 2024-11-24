@@ -99,7 +99,7 @@ $worker  = new class() extends \Ripple\Worker {
         repeat(static fn () => Setup::dateRefresh(), 1);
 
         Setup::$pdo = new \PDO(
-            'mysql:host=tfb-database;port=3306;dbname=hello_world',
+            'mysql:host=bw-database;port=3306;dbname=hello_world',
             'benchmarkdbuser',
             'benchmarkdbpass',
             [

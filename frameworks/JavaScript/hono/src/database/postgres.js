@@ -1,7 +1,7 @@
 import postgres from "postgres";
 
 const sql = postgres({
-  host: "tfb-database",
+  host: "bw-database",
   user: "benchmarkdbuser",
   password: "benchmarkdbpass",
   database: "hello_world",

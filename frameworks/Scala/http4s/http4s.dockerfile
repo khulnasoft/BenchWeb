@@ -31,4 +31,4 @@ CMD java \
       -Dcats.effect.stackTracingMode=disabled \
       -jar \
       http4s-assembly-1.0.jar \
-      tfb-database
+      bw-database

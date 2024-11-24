@@ -30,7 +30,7 @@ namespace Benchmarks
 #if DEBUG
             var host = "127.0.0.1";
 #else
-            var host = "tfb-server";
+            var host = "bw-server";
 #endif
 
             using var server = new Server(host, 8080, false, DefaultRoute);

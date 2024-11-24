@@ -18,7 +18,7 @@ module.exports = http.createServer(function (req, res) {
   if (basicHandler.has(route)) {
     return basicHandler.handle(route, req, res);
   } else {
-    // naive: only works if there is one query param, as is the case in TFB
+    // naive: only works if there is one query param, as is the case in BW
     let queries = url.query && url.query.split('=')[1];
     queries = ~~(queries) || 1;
     queries = Math.min(Math.max(queries, 1), 500);

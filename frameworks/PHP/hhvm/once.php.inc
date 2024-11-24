@@ -6,7 +6,7 @@ class Benchmark {
     public function setup_db()
     {
         $this->pdo = new PDO(
-            'mysql:host=tfb-database;dbname=hello_world;charset=utf8',
+            'mysql:host=bw-database;dbname=hello_world;charset=utf8',
             'benchmarkdbuser',
             'benchmarkdbpass',
             array(PDO::ATTR_PERSISTENT => true));

@@ -34,21 +34,21 @@ executable warp-hasql
   main-is:
     Main.hs
   build-depends:
-      tfb-types
-    , tfb-hasql
+      bw-types
+    , bw-hasql
 
 executable warp-mysql-haskell
   import: deps
   main-is:
     Main.hs
   build-depends:
-      tfb-types
-    , tfb-mysql-haskell
+      bw-types
+    , bw-mysql-haskell
 
 executable warp-postgres-wire
   import: deps
   main-is:
     Main.hs
   build-depends:
-      tfb-types
-    , tfb-postgres-wire
+      bw-types
+    , bw-postgres-wire

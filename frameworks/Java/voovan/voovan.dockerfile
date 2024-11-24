@@ -25,4 +25,4 @@ CMD java -DCheckTimeout=false \
     -XX:-RestrictContended \
     -XX:+UseParallelGC -XX:+UseNUMA \
     -XX:+AggressiveOpts -XX:+UseBiasedLocking \
-    -cp ./config:voovan.jar:app.jar org.voovan.VoovanTFB
+    -cp ./config:voovan.jar:app.jar org.voovan.VoovanBW

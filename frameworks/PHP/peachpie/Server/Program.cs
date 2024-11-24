@@ -22,7 +22,7 @@ namespace PeachpieBenchmarks.Server
             new WebHostBuilder()
                 .UseKestrel(options =>
                 {
-                    options.AddServerHeader = true; // tfb requires "Server" header
+                    options.AddServerHeader = true; // bw requires "Server" header
                     //options.Limits.KeepAliveTimeout = Timeout.InfiniteTimeSpan; // default 2:00
                     //options.Limits.MaxConcurrentConnections = 1000;
                 })

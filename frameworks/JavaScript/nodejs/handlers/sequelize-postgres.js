@@ -2,7 +2,7 @@ const h = require('../helper');
 
 const Sequelize = require('sequelize');
 const sequelize = new Sequelize('hello_world', 'benchmarkdbuser', 'benchmarkdbpass', {
-  host: 'tfb-database',
+  host: 'bw-database',
   dialect: 'postgres',
   logging: false,
   pool: {
@@ -36,7 +36,7 @@ const Fortunes = sequelize.define('fortune', {
 
 const randomWorldPromise = () => {
   return Worlds.findOne({
-    where: { id: h.randomTfbNumber() }
+    where: { id: h.randomBwNumber() }
   }).then((results) => {
     return results;
   }).catch((err) => process.exit(1));
@@ -46,7 +46,7 @@ module.exports = {
 
   SingleQuery: (req, res) => {
     randomWorldPromise().then((world) => {
-      h.addTfbHeaders(res, 'json');
+      h.addBwHeaders(res, 'json');
       res.end(JSON.stringify(world));
     });
   },
@@ -59,7 +59,7 @@ module.exports = {
     }
 
     Promise.all(worldPromises).then((worlds) => {
-      h.addTfbHeaders(res, 'json');
+      h.addBwHeaders(res, 'json');
       res.end(JSON.stringify(worlds));
     });
   },
@@ -69,7 +69,7 @@ module.exports = {
       fortunes.push(h.additionalFortune());
       fortunes.sort((a, b) => a.message.localeCompare(b.message));
 
-      h.addTfbHeaders(res, 'html');
+      h.addBwHeaders(res, 'html');
       res.end(h.fortunesTemplate({
         fortunes: fortunes
       }));
@@ -84,7 +84,7 @@ module.exports = {
     }
 
     const worldUpdate = (world) => {
-      world.randomnumber = h.randomTfbNumber();
+      world.randomnumber = h.randomBwNumber();
 
       return Worlds.update({
         randomnumber: world.randomnumber
@@ -100,7 +100,7 @@ module.exports = {
       const updates = worlds.map((e) => worldUpdate(e));
 
       Promise.all(updates).then((updated) => {
-        h.addTfbHeaders(res, 'json');
+        h.addBwHeaders(res, 'json');
         res.end(JSON.stringify(updated));
       });
     });

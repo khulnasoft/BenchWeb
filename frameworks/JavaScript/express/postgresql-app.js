@@ -11,7 +11,7 @@ const bodyParser = require('body-parser');
 
 const Sequelize = require('sequelize');
 const sequelize = new Sequelize('hello_world', 'benchmarkdbuser', 'benchmarkdbpass', {
-  host: 'tfb-database',
+  host: 'bw-database',
   dialect: 'postgres',
   logging: false,
   pool: {

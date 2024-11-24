@@ -6,7 +6,7 @@
     {
       "name": "mongo",
       "engine": "MONGODB",
-      "hostname": "tfb-database",
+      "hostname": "bw-database",
       "port": 27017,
       "database": "hello_world",
       "username": "",

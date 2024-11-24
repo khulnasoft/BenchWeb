@@ -66,7 +66,7 @@
                        ;; thread local pool provider
                        (thread-local
                          (async/pool
-                           {:uri "postgresql://tfb-database:5432/hello_world"
+                           {:uri "postgresql://bw-database:5432/hello_world"
                             :user "benchmarkdbuser"
                             :password "benchmarkdbpass"
                             :size 1})))
@@ -76,7 +76,7 @@
                        (sync-db-handler
                          (jdbc/context {:row (jdbc/rs->compiled-record)})
                          (hikari/make-datasource
-                           {:jdbc-url "jdbc:postgresql://tfb-database:5432/hello_world"
+                           {:jdbc-url "jdbc:postgresql://bw-database:5432/hello_world"
                             :username "benchmarkdbuser"
                             :password "benchmarkdbpass"
                             :maximum-pool-size (* 8 cpus)})))

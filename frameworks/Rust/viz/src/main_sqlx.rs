@@ -17,7 +17,7 @@ use models_sqlx::{Fortune, World};
 use utils::RANGE;
 
 const DB_URL: &str =
-    "postgres://benchmarkdbuser:benchmarkdbpass@tfb-database/hello_world";
+    "postgres://benchmarkdbuser:benchmarkdbpass@bw-database/hello_world";
 
 async fn db(mut req: Request) -> Result<Response> {
     let (State(mut rng), DatabaseConnection(mut conn)) =

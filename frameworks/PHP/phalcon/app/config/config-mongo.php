@@ -5,14 +5,14 @@ use Phalcon\Config\Config;
 return new Config([
     'database'     => [
         'adapter'  => 'Mysql',
-        'host'     => 'tfb-database',
+        'host'     => 'bw-database',
         'username' => 'benchmarkdbuser',
         'password' => 'benchmarkdbpass',
         'name'     => 'hello_world',
         'persistent' => true,
     ],
     'mongodb'     => [
-        'url'     => 'mongodb://tfb-database:27017',
+        'url'     => 'mongodb://bw-database:27017',
         'db'      => 'hello_world'
     ],
     'application' => [

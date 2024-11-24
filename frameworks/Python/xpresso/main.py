@@ -29,7 +29,7 @@ async def get_db_pool() -> AsyncIterable[asyncpg.Pool]:
         user=os.getenv('PGUSER', 'benchmarkdbuser'),
         password=os.getenv('PGPASS', 'benchmarkdbpass'),
         database=os.getenv('PGDB', 'hello_world'),
-        host=os.getenv('PGHOST', 'tfb-database'),
+        host=os.getenv('PGHOST', 'bw-database'),
         port=5432,
     ) as pool:
         yield pool

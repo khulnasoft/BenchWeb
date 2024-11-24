@@ -11,7 +11,7 @@ var Sequelize = require('sequelize')
 var sequelize = new Sequelize(
   'hello_world', 'benchmarkdbuser', 'benchmarkdbpass',
   {
-    host: 'tfb-database',
+    host: 'bw-database',
     dialect: 'mysql',
     pool: {
       max: 5000,
@@ -54,7 +54,7 @@ var Fortunes = sequelize.define('Fortune', {
 var randomWorldPromise = function () {
   var promise = Worlds
     .findOne({
-      where: { id: h.randomTfbNumber() }
+      where: { id: h.randomBwNumber() }
     })
     .then(function (world) {
       return world
@@ -66,7 +66,7 @@ var randomWorldPromise = function () {
 }
 
 var updateWorld = function (world) {
-  world.randomNumber = h.randomTfbNumber()
+  world.randomNumber = h.randomBwNumber()
   var promise = Worlds
     .update(
       { randomNumber: world.randomNumber },

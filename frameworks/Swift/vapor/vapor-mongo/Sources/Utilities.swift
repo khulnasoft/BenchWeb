@@ -15,7 +15,7 @@ extension Int {
 
 
 extension System {
-    // tfb-server (aka, citrine) uses 28 hyper-threaded cores
+    // bw-server (aka, citrine) uses 28 hyper-threaded cores
     // postgresql.conf specifies max_connections = 2000
     //
     // 2000 / (28 * 2) = 35.7 (theoretical max)

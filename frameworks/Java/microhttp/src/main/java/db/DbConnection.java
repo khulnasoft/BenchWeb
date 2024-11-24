@@ -11,7 +11,7 @@ import java.util.Properties;
 public class DbConnection {
 
     private static final Properties PROPERTIES = getProperties();
-    private static final String URL = "jdbc:mysql://tfb-database:3306/hello_world";
+    private static final String URL = "jdbc:mysql://bw-database:3306/hello_world";
     private static final String SELECT = "select id, randomNumber from world where id = ?";
 
     private static Properties getProperties() {

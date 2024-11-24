@@ -8,4 +8,4 @@ COPY ./ ./
 
 EXPOSE 8080
 
-CMD ./compile.sh TFB_MYSQL
+CMD ./compile.sh BW_MYSQL

@@ -8,7 +8,7 @@
         </encoder>
     </appender>
 
-    <logger name="com.gitlab.zloster.tfb.servlet3" level="ERROR"/>
+    <logger name="com.gitlab.zloster.bw.servlet3" level="ERROR"/>
 
     <root level="INFO">
         <appender-ref ref="FILE" />

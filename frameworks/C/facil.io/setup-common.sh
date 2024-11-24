@@ -15,7 +15,7 @@ if [[ (! -d facil_app) ||  (-n "${FIO_EDGE}") ]] ; then
 
 	# Download source selection
 	# Setting FIO_EDGE will test against the master branch on the development machine. i.e.:
-	#     $ FIO_EDGE=1 tfb --mode verify --test facil.io
+	#     $ FIO_EDGE=1 bw --mode verify --test facil.io
 	if [[ -z "${FIO_EDGE}" ]]; then
 		echo "INFO: loading facil.io version 0.7.0.beta7"
 	  FIO_URL="https://api.github.com/repos/boazsegev/facil.io/tarball/0.7.0.beta7"

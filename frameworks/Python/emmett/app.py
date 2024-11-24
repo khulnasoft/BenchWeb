@@ -28,7 +28,7 @@ class Fortune(Model):
 
 app.config.handle_static = False
 app.config.db.adapter = 'postgres:psycopg2'
-app.config.db.host = 'tfb-database'
+app.config.db.host = 'bw-database'
 app.config.db.user = 'benchmarkdbuser'
 app.config.db.password = 'benchmarkdbpass'
 app.config.db.database = 'hello_world'

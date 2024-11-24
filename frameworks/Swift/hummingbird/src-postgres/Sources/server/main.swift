@@ -2,7 +2,7 @@ import Hummingbird
 import HummingbirdFoundation
 import PostgresNIO
 
-// tfb-server (aka, citrine) uses 28 hyper-threaded cores
+// bw-server (aka, citrine) uses 28 hyper-threaded cores
 // postgresql.conf specifies max_connections = 2000
 //
 // 2000 / (28 * 2) = 35.7 (theoretical max)
@@ -42,7 +42,7 @@ func runApp() throws {
     app.postgresConnectionGroup = .init(
         source: .init(
             configuration: .init(
-                connection: .init(host: "tfb-database"),
+                connection: .init(host: "bw-database"),
                 authentication: .init(username: "benchmarkdbuser", database: "hello_world", password: "benchmarkdbpass"),
                 tls: .disable
             )

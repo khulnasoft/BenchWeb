@@ -3,7 +3,7 @@
 
 const helper = require('../helper');
 const Mongoose = require('mongoose');
-Mongoose.connect('mongodb://tfb-database/hello_world', { useNewUrlParser: true, useUnifiedTopology: true });
+Mongoose.connect('mongodb://bw-database/hello_world', { useNewUrlParser: true, useUnifiedTopology: true });
 
 const WorldSchema = new Mongoose.Schema({
   id: Number,
@@ -22,7 +22,7 @@ const FortuneSchema = new Mongoose.Schema({
 const Worlds = Mongoose.model('world', WorldSchema);
 const Fortunes = Mongoose.model('fortune', FortuneSchema);
 
-const randomWorld = () => Worlds.findOne({ id: helper.randomTfbNumber() });
+const randomWorld = () => Worlds.findOne({ id: helper.randomBwNumber() });
 
 const updateWorld = async (world) =>
   await Worlds.updateOne(
@@ -66,7 +66,7 @@ module.exports = {
 
     for (let i = 0; i < queries; i++) {
       const world = await randomWorld();
-      world.randomNumber = helper.randomTfbNumber();
+      world.randomNumber = helper.randomBwNumber();
       await updateWorld(world);
       results.push(world);
     }

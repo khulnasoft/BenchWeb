@@ -50,15 +50,15 @@ sed -i 's|EVH_SINGLE=true|EVH_SINGLE=false|g' resources/server.prop
 
 rm -rf web/default web/oauthApp web/flexApp web/markers web/te-benchmark web/peer-server
 
-sed -i 's|localhost|tfb-database|g' web/t1/config/sdormmongo.xml
-sed -i 's|localhost|tfb-database|g' web/t1/config/sdormmysql.xml
-sed -i 's|localhost|tfb-database|g' web/t1/config/sdormpostgresql.xml
-sed -i 's|localhost|tfb-database|g' web/t3/config/sdorm.xml
-sed -i 's|localhost|tfb-database|g' web/t2/config/sdorm.xml
-sed -i 's|localhost|tfb-database|g' web/t4/config/sdorm.xml
-sed -i 's|localhost|tfb-database|g' web/t5/config/sdorm.xml
-sed -i 's|127.0.0.1|tfb-database|g' resources/sample-odbcinst.ini
-sed -i 's|127.0.0.1|tfb-database|g' resources/sample-odbc.ini
+sed -i 's|localhost|bw-database|g' web/t1/config/sdormmongo.xml
+sed -i 's|localhost|bw-database|g' web/t1/config/sdormmysql.xml
+sed -i 's|localhost|bw-database|g' web/t1/config/sdormpostgresql.xml
+sed -i 's|localhost|bw-database|g' web/t3/config/sdorm.xml
+sed -i 's|localhost|bw-database|g' web/t2/config/sdorm.xml
+sed -i 's|localhost|bw-database|g' web/t4/config/sdorm.xml
+sed -i 's|localhost|bw-database|g' web/t5/config/sdorm.xml
+sed -i 's|127.0.0.1|bw-database|g' resources/sample-odbcinst.ini
+sed -i 's|127.0.0.1|bw-database|g' resources/sample-odbc.ini
 sed -i 's|add_subdirectory(${PROJECT_SOURCE_DIR}/web/default)||g' CMakeLists.txt
 sed -i 's|add_subdirectory(${PROJECT_SOURCE_DIR}/web/flexApp)||g' CMakeLists.txt
 sed -i 's|add_subdirectory(${PROJECT_SOURCE_DIR}/web/oauthApp)||g' CMakeLists.txt

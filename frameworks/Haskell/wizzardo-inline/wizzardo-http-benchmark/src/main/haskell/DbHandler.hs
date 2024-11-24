@@ -113,7 +113,7 @@ createPgPoolRef =
       public PgPool initialValue() {
         WizzardoPgPoolOptions options = new WizzardoPgPoolOptions();
         options.setDatabase("hello_world");
-        options.setHost("tfb-database");
+        options.setHost("bw-database");
         options.setPort(5432);
         options.setUser("benchmarkdbuser");
         options.setPassword("benchmarkdbpass");

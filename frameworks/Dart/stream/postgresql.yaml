@@ -1,4 +1,4 @@
-host: tfb-database
+host: bw-database
 port: 5432
 user: benchmarkdbuser
 password: benchmarkdbpass

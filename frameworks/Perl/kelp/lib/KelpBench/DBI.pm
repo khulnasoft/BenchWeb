@@ -6,7 +6,7 @@ use DBI;
 
 attr dbh => sub {
 	DBI->connect(
-		"dbi:MariaDB:database=hello_world;host=tfb-database;port=3306",
+		"dbi:MariaDB:database=hello_world;host=bw-database;port=3306",
 		'benchmarkdbuser',
 		'benchmarkdbpass',
 		{ RaiseError => 1, PrintError => 0 }

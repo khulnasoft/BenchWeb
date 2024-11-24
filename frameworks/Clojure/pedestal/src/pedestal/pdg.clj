@@ -61,7 +61,7 @@
                  (.setAllowPoolSuspension false)
                  (.setUsername "benchmarkdbuser")
                  (.setPassword "benchmarkdbpass")
-                 (.setJdbcUrl "jdbc:mysql://tfb-database:3306/hello_world?useSSL=false&useServerPrepStmts=true&cachePrepStmts=true")
+                 (.setJdbcUrl "jdbc:mysql://bw-database:3306/hello_world?useSSL=false&useServerPrepStmts=true&cachePrepStmts=true")
                  (.setRegisterMbeans false))]
     (HikariDataSource. config)))
 

@@ -29,7 +29,7 @@ async def setup_database():
         user=os.getenv('PGUSER', 'benchmarkdbuser'),
         password=os.getenv('PGPASS', 'benchmarkdbpass'),
         database='hello_world',
-        host='tfb-database',
+        host='bw-database',
         port=5432
     )
 

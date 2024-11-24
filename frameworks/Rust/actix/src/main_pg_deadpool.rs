@@ -183,7 +183,7 @@ async fn main() -> Result<()> {
     println!("Starting http server: 0.0.0.0:8080");
 
     let mut cfg = Config::new();
-    cfg.host = Some("tfb-database".to_string());
+    cfg.host = Some("bw-database".to_string());
     cfg.dbname = Some("hello_world".to_string());
     cfg.user = Some("benchmarkdbuser".to_string());
     cfg.password = Some("benchmarkdbpass".to_string());

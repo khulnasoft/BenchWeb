@@ -1,6 +1,6 @@
 database:
   name: hello_world
-  host: tfb-database
+  host: bw-database
   port: 5432
   username: benchmarkdbuser
   password: benchmarkdbpass
@@ -29,5 +29,5 @@ spring:
 
   data:
     mongodb:
-      uri: mongodb://tfb-database:27017/?waitQueueMultiple=200
+      uri: mongodb://bw-database:27017/?waitQueueMultiple=200
       database: hello_world

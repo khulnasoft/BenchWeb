@@ -1,6 +1,6 @@
 FROM rust:1.76-slim
 
-ENV ROCKET_BENCHMARK_DATABASE_URL=postgres://benchmarkdbuser:benchmarkdbpass@tfb-database/hello_world
+ENV ROCKET_BENCHMARK_DATABASE_URL=postgres://benchmarkdbuser:benchmarkdbpass@bw-database/hello_world
 
 WORKDIR /rocket-diesel
 COPY ./rocket-diesel ./rocket-diesel

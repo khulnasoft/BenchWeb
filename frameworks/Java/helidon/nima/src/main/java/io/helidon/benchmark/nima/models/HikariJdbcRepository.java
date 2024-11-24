@@ -26,7 +26,7 @@ public class HikariJdbcRepository implements DbRepository {
     public HikariJdbcRepository(Config config) {
         // hikari connection configuration
         String url = "jdbc:postgresql://" +
-                config.get("host").asString().orElse("tfb-database") +
+                config.get("host").asString().orElse("bw-database") +
                 ":" + config.get("port").asString().orElse("5432") +
                 "/" + config.get("db").asString().orElse("hello_world");
         hikariConfig = new HikariConfig();

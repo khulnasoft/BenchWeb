@@ -154,7 +154,7 @@ impl ServiceFactory<Request> for AppFactory {
 
     fn new_service(&self, _: ()) -> Self::Future {
         const DB_URL: &str =
-            "postgres://benchmarkdbuser:benchmarkdbpass@tfb-database/hello_world";
+            "postgres://benchmarkdbuser:benchmarkdbpass@bw-database/hello_world";
 
         Box::pin(async move {
             let db = PgConnection::connect(DB_URL).await;
@@ -174,7 +174,7 @@ fn main() -> std::io::Result<()> {
     actix_rt::System::new().block_on(
         Server::build()
             .backlog(1024)
-            .bind("tfb-actix-http", "0.0.0.0:8080", || {
+            .bind("bw-actix-http", "0.0.0.0:8080", || {
                 HttpService::build()
                     .keep_alive(KeepAlive::Os)
                     .client_request_timeout(Duration::ZERO)

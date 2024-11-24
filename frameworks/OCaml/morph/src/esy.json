@@ -1,5 +1,5 @@
 {
-  "name": "morph-tfb",
+  "name": "morph-bw",
   "version": "0.0.0",
   "description": "Benchmarks for morph",
   "esy": {
@@ -7,7 +7,7 @@
     "buildDev": "dune build --root=. --promote-install-file"
   },
   "scripts": {
-    "start": "redemon -p ./src dune exec src/tfb.exe",
+    "start": "redemon -p ./src dune exec src/bw.exe",
     "test": "dune runtest --no-buffer",
     "watch:test": "redemon -p ./oidc -p ./oidc-client -p ./test esy x RunTests.exe",
     "docs": "dune build @doc --root .",

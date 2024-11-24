@@ -58,7 +58,7 @@ The tests were run with:
  * [Dropwizard](http://dropwizard.io/)
  * [MongoJack](http://mongojack.org/)
 
-Please check the versions in the install scripts of TFB project.
+Please check the versions in the install scripts of BW project.
 
 ## Test URLs
 

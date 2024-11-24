@@ -56,7 +56,7 @@ def connect(dbtype)
                    {
                      adapter:
                        adapters.fetch(dbtype).fetch(:mri),
-                     host: "tfb-database",
+                     host: "bw-database",
                      database: "hello_world",
                      user: "benchmarkdbuser",
                      password: "benchmarkdbpass"

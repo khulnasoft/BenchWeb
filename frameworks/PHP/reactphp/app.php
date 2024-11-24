@@ -14,7 +14,7 @@ use function React\Promise\all;
 /** @return Closure(Request):ResponseInterface */
 function requestHandler(): Closure
 {
-    $connection = establishDbConnection('benchmarkdbuser:benchmarkdbpass@tfb-database/hello_world?idle=0.5');
+    $connection = establishDbConnection('benchmarkdbuser:benchmarkdbpass@bw-database/hello_world?idle=0.5');
 
     $world = static function (int $id) use ($connection): PromiseInterface {
         return $connection->query('SELECT id,randomNumber FROM World WHERE id=?', [$id]);

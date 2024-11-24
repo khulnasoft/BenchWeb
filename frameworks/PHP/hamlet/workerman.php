@@ -8,7 +8,7 @@ use Hamlet\Http\Workerman\Bootstraps\WorkermanBootstrap;
 require_once __DIR__ . '/vendor/autoload.php';
 
 $database = new PDODatabase(
-    'mysql:host=tfb-database;dbname=hello_world',
+    'mysql:host=bw-database;dbname=hello_world',
     'benchmarkdbuser',
     'benchmarkdbpass'
 );

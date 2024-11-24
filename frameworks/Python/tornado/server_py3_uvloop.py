@@ -24,7 +24,7 @@ sort_fortunes_key = itemgetter(1)
 
 async def init_db_pool():
     return await asyncpg.create_pool(
-        host="tfb-database",
+        host="bw-database",
         user="benchmarkdbuser",
         password="benchmarkdbpass",
         database="hello_world")
@@ -130,7 +130,7 @@ async def setup_database():
         user=getenv('PGUSER', 'benchmarkdbuser'),
         password=getenv('PGPASS', 'benchmarkdbpass'),
         database='hello_world',
-        host='tfb-database',
+        host='bw-database',
         port=5432
     )
 

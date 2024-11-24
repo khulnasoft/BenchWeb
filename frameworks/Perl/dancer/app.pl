@@ -8,7 +8,7 @@ use JSON::XS;  # Ensure that the fast implementation of the serializer is instal
 
 set serializer => 'JSON';
 
-my $dsn = "dbi:MariaDB:database=hello_world;host=tfb-database;port=3306";
+my $dsn = "dbi:MariaDB:database=hello_world;host=bw-database;port=3306";
 my $dbh = DBI->connect( $dsn, 'benchmarkdbuser', 'benchmarkdbpass' );
 my $sth = $dbh->prepare("SELECT * FROM World where id = ?");
 

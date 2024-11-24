@@ -44,7 +44,7 @@ class JasyncRepository() : Repository {
     }
 
     private val dbConfig: ConnectionPoolConfiguration = ConnectionPoolConfiguration(
-        "tfb-database",
+        "bw-database",
         database = "hello_world",
         username = "benchmarkdbuser",
         password = "benchmarkdbpass",

@@ -1,7 +1,7 @@
 use std::error::Error;
 use cargo_px_env::generated_pkg_manifest_path;
 use pavex_cli_client::Client;
-use tfb_pavex_bp::blueprint;
+use bw_pavex_bp::blueprint;
 
 /// Generate the `api_server_sdk` crate using `pavex`'s CLI.
 /// 

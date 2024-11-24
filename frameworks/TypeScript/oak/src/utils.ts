@@ -34,7 +34,7 @@ export async function getDbClient() {
     type: "postgres",
     port: 5432,
     database: "hello_world",
-    hostname: "tfb-database",
+    hostname: "bw-database",
     username: "benchmarkdbuser",
     password: "benchmarkdbpass",
   });

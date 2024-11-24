@@ -59,7 +59,7 @@ exec ros -Q -- $0 "$@"
 
 (function-cache:defcached db-host ()
   (or (uiop:getenv "DB_HOST")
-      "tfb-database"))
+      "bw-database"))
 
 (function-cache:defcached db-port ()
   (parse-integer (or (uiop:getenv "DB_PORT")

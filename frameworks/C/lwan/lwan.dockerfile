@@ -25,7 +25,7 @@ ENV USE_MYSQL=1
 ENV MYSQL_USER=benchmarkdbuser
 ENV MYSQL_PASS=benchmarkdbpass
 ENV MYSQL_DB=hello_world
-ENV MYSQL_HOST=tfb-database
+ENV MYSQL_HOST=bw-database
 ENV LD_PRELOAD=/usr/local/lib/libmimalloc.so
 
 EXPOSE 8080

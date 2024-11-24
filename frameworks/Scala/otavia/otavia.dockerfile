@@ -13,5 +13,5 @@ CMD java -server \
     -Dio.netty5.noKeySetOptimization=true \
     -jar \
     out/benchmark/assembly.dest/out.jar \
-    jdbc:postgresql://tfb-database:5432/hello_world \
+    jdbc:postgresql://bw-database:5432/hello_world \
     benchmarkdbuser benchmarkdbpass 56

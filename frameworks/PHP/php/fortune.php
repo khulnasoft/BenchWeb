@@ -5,7 +5,7 @@
 
 // Database connection
 // http://www.php.net/manual/en/ref.pdo-mysql.php
-$pdo = new PDO('mysql:host=tfb-database;dbname=hello_world', 'benchmarkdbuser', 'benchmarkdbpass', [
+$pdo = new PDO('mysql:host=bw-database;dbname=hello_world', 'benchmarkdbuser', 'benchmarkdbpass', [
     PDO::ATTR_PERSISTENT => true
 ]);
   

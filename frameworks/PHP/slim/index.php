@@ -14,7 +14,7 @@ use Slim\Views\PhpRenderer;
 $container = new Container();
 
 $container->set('db', new PDO(
-                'mysql:host=tfb-database;dbname=hello_world;charset=utf8', 
+                'mysql:host=bw-database;dbname=hello_world;charset=utf8', 
             'benchmarkdbuser', 
             'benchmarkdbpass',
             [

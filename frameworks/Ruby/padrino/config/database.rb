@@ -13,5 +13,5 @@ DataMapper.logger = logger
 DataMapper::Property::String.length(255)
 
 case Padrino.env
-  when :production  then DataMapper.setup(:default, "mysql://benchmarkdbuser:benchmarkdbpass@tfb-database/hello_world")
+  when :production  then DataMapper.setup(:default, "mysql://benchmarkdbuser:benchmarkdbpass@bw-database/hello_world")
 end

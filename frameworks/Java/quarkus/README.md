@@ -11,7 +11,7 @@ There are currently 2 implementations:
 
 ## Testing
 
-    ./tfb --mode verify --test quarkus quarkus-hibernate-reactive
+    ./bw --mode verify --test quarkus quarkus-hibernate-reactive
 
 ## Versions
 

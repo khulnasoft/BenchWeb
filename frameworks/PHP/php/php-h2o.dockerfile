@@ -71,8 +71,8 @@ COPY deploy/h2o.conf "${H2O_PREFIX}/etc/"
 COPY *.php /var/www/
 EXPOSE 8080
 ARG BENCHMARK_ENV
-ARG TFB_TEST_DATABASE
-ARG TFB_TEST_NAME
+ARG BW_TEST_DATABASE
+ARG BW_TEST_NAME
 
 CMD sed -i "s/num-threads: x/num-threads: $((2 * $(nproc)))/g" /opt/h2o/etc/h2o.conf && \
     service php8.3-fpm start && \

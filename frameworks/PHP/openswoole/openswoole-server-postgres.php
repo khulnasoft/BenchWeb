@@ -25,7 +25,7 @@ $pool = null;
  */
 $server->on('workerStart', function () use (&$pool) {
     $config = (new PostgresConfig())
-        ->withHost('tfb-database')
+        ->withHost('bw-database')
         ->withDbname('hello_world')
         ->withUsername('benchmarkdbuser')
         ->withPassword('benchmarkdbpass');

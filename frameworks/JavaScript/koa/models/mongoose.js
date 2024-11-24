@@ -5,7 +5,7 @@ Mongoose.Promise = Bluebird;
 
 const { SchemaTypes } = Mongoose;
 
-Mongoose.connect('mongodb://tfb-database/hello_world')
+Mongoose.connect('mongodb://bw-database/hello_world')
   .catch(error => {
     console.error(error);
     process.exit(1);

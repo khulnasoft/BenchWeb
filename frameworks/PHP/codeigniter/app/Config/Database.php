@@ -26,7 +26,7 @@ class Database extends Config
      */
     public array $default = [
         'DSN'          => '',
-        'hostname'     => 'tfb-database',
+        'hostname'     => 'bw-database',
         'username'     => 'benchmarkdbuser',
         'password'     => 'benchmarkdbpass',
         'database'     => 'hello_world',

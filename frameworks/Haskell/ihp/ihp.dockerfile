@@ -11,7 +11,7 @@ RUN cachix use digitallyinduced
 RUN nix-build -j auto --cores 0
 
 # Setup
-ENV DATABASE_URL=postgres://benchmarkdbuser:benchmarkdbpass@tfb-database:5432/hello_world
+ENV DATABASE_URL=postgres://benchmarkdbuser:benchmarkdbpass@bw-database:5432/hello_world
 ENV PORT=8080
 EXPOSE 8080
 

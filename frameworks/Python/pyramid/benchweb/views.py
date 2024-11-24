@@ -83,7 +83,7 @@ def test_5(request):
         obj = sess.get(World, num)
         obj.randomNumber = randint(1, 10000)
         # force sqlalchemy to UPDATE entry even if the value has not changed
-        # doesn't make sense in a real application, added only for pass `tfb verify`
+        # doesn't make sense in a real application, added only for pass `bw verify`
         flag_modified(obj, "randomNumber")
         resultset.append(obj.__json__())
     sess.commit()

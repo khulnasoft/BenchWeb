@@ -42,7 +42,7 @@ StructTypes.StructType(::Type{jsonObj}) = StructTypes.Struct()
     
         randNum = rand(1:10000)
 
-        conn = DBInterface.connect(MySQL.Connection, "tfb-database", "benchmarkdbuser", "benchmarkdbpass", db="hello_world")
+        conn = DBInterface.connect(MySQL.Connection, "bw-database", "benchmarkdbuser", "benchmarkdbpass", db="hello_world")
         sqlQuery = "SELECT * FROM World WHERE id = $randNum"
         results = DBInterface.execute(conn, sqlQuery)
         row = first(results)
@@ -75,7 +75,7 @@ StructTypes.StructType(::Type{jsonObj}) = StructTypes.Struct()
             end
         end
 
-        conn = DBInterface.connect(MySQL.Connection, "tfb-database", "benchmarkdbuser", "benchmarkdbpass", db="hello_world")
+        conn = DBInterface.connect(MySQL.Connection, "bw-database", "benchmarkdbuser", "benchmarkdbpass", db="hello_world")
 
         responseArray = Array{jsonObj}(undef, numQueries)
         for i in 1:numQueries
@@ -116,7 +116,7 @@ StructTypes.StructType(::Type{jsonObj}) = StructTypes.Struct()
             end
         end
 
-        conn = DBInterface.connect(MySQL.Connection, "tfb-database", "benchmarkdbuser", "benchmarkdbpass", db="hello_world")
+        conn = DBInterface.connect(MySQL.Connection, "bw-database", "benchmarkdbuser", "benchmarkdbpass", db="hello_world")
 
         responseArray = Array{jsonObj}(undef, numQueries)
         for i in 1:numQueries
@@ -144,7 +144,7 @@ StructTypes.StructType(::Type{jsonObj}) = StructTypes.Struct()
         fortunesList = []
         sqlQuery = "SELECT * FROM fortune"
         output = "<!DOCTYPE html><html><head><title>Fortunes</title></head><body><table><tr><th>id</th><th>message</th></tr>"
-        conn = DBInterface.connect(MySQL.Connection, "tfb-database", "benchmarkdbuser", "benchmarkdbpass", db="hello_world")
+        conn = DBInterface.connect(MySQL.Connection, "bw-database", "benchmarkdbuser", "benchmarkdbpass", db="hello_world")
         results = DBInterface.execute(conn, sqlQuery)
     
         for row in results

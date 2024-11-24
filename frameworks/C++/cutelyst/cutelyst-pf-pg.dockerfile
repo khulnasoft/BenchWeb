@@ -21,8 +21,8 @@ COPY config/config.ini /cutelyst.ini
 COPY config/config_socket.ini /cutelyst_socket.ini
 COPY nginx.conf /nginx.conf
 
-RUN sed -i "s|DatabaseHostName=.*|DatabaseHostName=tfb-database|g" /cutelyst.ini
-RUN sed -i "s|DatabaseHostName=.*|DatabaseHostName=tfb-database|g" /cutelyst_socket.ini
+RUN sed -i "s|DatabaseHostName=.*|DatabaseHostName=bw-database|g" /cutelyst.ini
+RUN sed -i "s|DatabaseHostName=.*|DatabaseHostName=bw-database|g" /cutelyst_socket.ini
 
 ENV C_THREADS 1
 ENV CPU_AFFINITY 1

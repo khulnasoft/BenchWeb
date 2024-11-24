@@ -31,7 +31,7 @@ def pg_dsn(dialect=None) -> str:
     return str(URL.create(
         database='hello_world',
         password=os.getenv('PGPASS', 'benchmarkdbpass'),
-        host='tfb-database',
+        host='bw-database',
         port='5432',
         username=os.getenv('PGUSER', 'benchmarkdbuser'),
         drivername='postgresql+{}'.format(dialect) if dialect else 'postgresql',

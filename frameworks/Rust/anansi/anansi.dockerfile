@@ -11,4 +11,4 @@ RUN RUSTFLAGS="-C target-cpu=native" cargo build --release
 EXPOSE 8080
 
 ENV RUST_LOG=off
-CMD service redis-server start && ./target/release/tfb-anansi 0.0.0.0:8080
+CMD service redis-server start && ./target/release/bw-anansi 0.0.0.0:8080

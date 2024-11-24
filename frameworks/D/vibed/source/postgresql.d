@@ -207,7 +207,7 @@ struct FortuneResponse {
 static this()
 {
 	import std.process : environment;
-	auto connectionInfo = "host=tfb-database port=5432 "
+	auto connectionInfo = "host=bw-database port=5432 "
 						~ "dbname=hello_world  user=benchmarkdbuser password=benchmarkdbpass";
 	client = new PostgresClient(connectionInfo, poolSize, (Connection cn){
 		cn.prepare("fortune_prpq", "SELECT id, message::text FROM Fortune");

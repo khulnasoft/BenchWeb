@@ -6,7 +6,7 @@
 return array(
 	'default' => array(
 		'connection'  => array(
-			'dsn'        => 'mysql:host=tfb-database;dbname=hello_world',
+			'dsn'        => 'mysql:host=bw-database;dbname=hello_world',
 			'username'   => 'benchmarkdbuser',
 			'password'   => 'benchmarkdbpass',
 			'persistent' => true,

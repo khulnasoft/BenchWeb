@@ -79,7 +79,7 @@ WORKDIR /ulib
 
 ENV ORM_DRIVER="pgsql"
 ENV UMEMPOOL="96,0,0,97,16417,-14,-20,-18,26"
-ENV ORM_OPTION="host=tfb-database user=benchmarkdbuser password=benchmarkdbpass dbname=hello_world client_encoding=UTF8"
+ENV ORM_OPTION="host=bw-database user=benchmarkdbuser password=benchmarkdbpass dbname=hello_world client_encoding=UTF8"
 
 EXPOSE 8080
 

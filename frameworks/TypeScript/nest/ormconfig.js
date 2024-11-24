@@ -1,7 +1,7 @@
 let config = {
   synchronize: false,
   logging: false,
-  host: 'tfb-database',
+  host: 'bw-database',
   database: 'hello_world',
 };
 

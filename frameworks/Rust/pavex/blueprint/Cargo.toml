@@ -1,5 +1,5 @@
 [package]
-name = "tfb-pavex-bp"
+name = "bw-pavex-bp"
 version = "0.1.0"
 edition = "2021"
 
