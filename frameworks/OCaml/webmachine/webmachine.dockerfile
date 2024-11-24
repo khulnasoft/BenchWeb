@@ -1,6 +1,6 @@
-# https://github.com/rbjorklin/khulnasoft-ocaml-image
+# https://github.com/rbjorklin/techempower-ocaml-image
 # Use pre-built image with all dependencies for faster test times
-FROM rbjorklin/khulnasoft-ocaml-image:5.1.1-b58c72ee
+FROM rbjorklin/techempower-ocaml-image:5.1.1-b58c72ee
 
 ENV DIR project
 
