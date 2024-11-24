@@ -51,7 +51,7 @@ public class WorldRepository implements WorldDAO {
 				world.setRandomNumber(Helper.randomWorld());
 				updates[i] = world;
 			}
-			// Reason for sorting : https://github.com/KhulnaSoft/BenchWeb/pull/2684
+			// Reason for sorting : https://github.com/khulnasoft/BenchWeb/pull/2684
 			Arrays.sort(updates, Comparator.comparingInt(World::getId));
 			dao.update(updates);
 			handle.commit();

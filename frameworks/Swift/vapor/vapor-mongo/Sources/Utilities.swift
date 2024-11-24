@@ -15,12 +15,12 @@ extension Int {
 
 
 extension System {
-    // bw-server (aka, citrine) uses 28 hyper-threaded cores
+    // tfb-server (aka, citrine) uses 28 hyper-threaded cores
     // postgresql.conf specifies max_connections = 2000
     //
     // 2000 / (28 * 2) = 35.7 (theoretical max)
     //
-    // https://github.com/KhulnaSoft/BenchWeb/wiki/Project-Information-Environment#citrine-self-hosted
-    // https://github.com/KhulnaSoft/BenchWeb/blob/master/infrastructure/docker/databases/postgres/postgresql.conf#L64
+    // https://github.com/khulnasoft/BenchWeb/wiki/Project-Information-Environment#citrine-self-hosted
+    // https://github.com/khulnasoft/BenchWeb/blob/master/toolset/databases/postgres/postgresql.conf#L64
     static var maxConnectionsPerEventLoop: Int { 32 }
 }

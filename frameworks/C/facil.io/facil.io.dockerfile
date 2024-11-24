@@ -18,4 +18,4 @@ RUN cd facil_app && make -j build
 EXPOSE 8080
 
 # Run the app
-CMD ./facil_app/tmp/fioapp -p 8080 -db "bw-database" -w -2 -t 2
+CMD ./facil_app/tmp/fioapp -p 8080 -db "tfb-database" -w -2 -t 2

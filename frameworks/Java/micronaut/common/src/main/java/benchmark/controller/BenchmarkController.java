@@ -32,13 +32,13 @@ public class BenchmarkController extends AbstractBenchmarkController {
         fortuneRepository.initDb(createFortunes());
     }
 
-    // https://github.com/KhulnaSoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview#single-database-query
+    // https://github.com/khulnasoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview#single-database-query
     @Get("/db")
     public World db() {
         return worldRepository.findById(randomId());
     }
 
-    // https://github.com/KhulnaSoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview#multiple-database-queries
+    // https://github.com/khulnasoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview#multiple-database-queries
     @Get("/queries")
     public List<World> queries(@QueryValue String queries) {
         int count = parseQueryCount(queries);
@@ -49,13 +49,13 @@ public class BenchmarkController extends AbstractBenchmarkController {
         return worldRepository.findByIds(ids);
     }
 
-    // https://github.com/KhulnaSoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview#fortunes
+    // https://github.com/khulnasoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview#fortunes
     @Get(value = "/fortunes", produces = "text/html;charset=utf-8")
     public List<Fortune> fortune() {
         return prepareFortunes(fortuneRepository.findAll());
     }
 
-    // https://github.com/KhulnaSoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview#database-updates
+    // https://github.com/khulnasoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview#database-updates
     @Get("/updates")
     public List<World> updates(@QueryValue String queries) {
         List<World> worldList = queries(queries);

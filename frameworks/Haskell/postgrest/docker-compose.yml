@@ -1,6 +1,6 @@
 version: '3'
 services:
-  bw-database:
+  tfb-database:
     build: 
       dockerfile: postgresql.dockerfile
       context: .

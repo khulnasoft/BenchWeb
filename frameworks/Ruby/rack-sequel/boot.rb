@@ -53,7 +53,7 @@ def connect(dbtype)
   Sequel.connect \
     '%{adapter}://%{host}/%{database}?user=%{user}&password=%{password}' % {
       adapter: adapters.fetch(dbtype).fetch(defined?(JRUBY_VERSION) ? :jruby : :mri),
-      host: 'bw-database',
+      host: 'tfb-database',
       database: 'hello_world',
       user: 'benchmarkdbuser',
       password: 'benchmarkdbpass'

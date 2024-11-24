@@ -46,7 +46,7 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  // BW routes here
+  // TFB routes here
 
   'get /json':              'StaticTestController.Json',
   'get /plaintext':         'StaticTestController.Plaintext',

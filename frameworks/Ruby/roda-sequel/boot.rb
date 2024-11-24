@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 require "bundler/setup"
 require "time"
-require "rapidjson"
 MAX_PK = 10_000
 QUERY_RANGE = (1..MAX_PK).freeze
 ALL_IDS = QUERY_RANGE.to_a
@@ -57,7 +56,7 @@ def connect(dbtype)
                    {
                      adapter:
                        adapters.fetch(dbtype).fetch(:mri),
-                     host: "bw-database",
+                     host: "tfb-database",
                      database: "hello_world",
                      user: "benchmarkdbuser",
                      password: "benchmarkdbpass"

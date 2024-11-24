@@ -24,7 +24,7 @@ pub struct FortunesTemplate {
 }
 
 const DB_URL: &str =
-    "postgres://benchmarkdbuser:benchmarkdbpass@bw-database/hello_world";
+    "postgres://benchmarkdbuser:benchmarkdbpass@tfb-database/hello_world";
 
 async fn db(req: Request) -> Result<Response> {
     let conn = get_conn(req.state::<Arc<PgConnection>>())?;

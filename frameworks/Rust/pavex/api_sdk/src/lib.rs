@@ -93,7 +93,7 @@ async fn route_request(
 pub async fn route_handler_0() -> http::Response<
     http_body::combinators::BoxBody<bytes::Bytes, pavex_runtime::Error>,
 > {
-    let v0 = bw_pavex_bp::plaintext();
+    let v0 = tfb_pavex_bp::plaintext();
     <http::Response<
         http_body::combinators::BoxBody<bytes::Bytes, pavex_runtime::Error>,
     > as pavex_runtime::response::IntoResponse>::into_response(v0)

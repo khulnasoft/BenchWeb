@@ -9,7 +9,7 @@ function db() {
   header("Content-type: application/json");
 
   // Database connection (TODO: When it works, use PDO instead)
-  $link = mysql_pconnect('bw-database', 'benchmarkdbuser', 'benchmarkdbpass');
+  $link = mysql_pconnect('tfb-database', 'benchmarkdbuser', 'benchmarkdbpass');
   mysql_select_db('hello_world', $link);
 
   $id = mt_rand(1, 10000);

@@ -3,7 +3,7 @@ default: &default
   database: hello_world
   username: benchmarkdbuser
   password: benchmarkdbpass
-  host: bw-database
+  host: tfb-database
   timeout: 5000
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 3 } %>
 

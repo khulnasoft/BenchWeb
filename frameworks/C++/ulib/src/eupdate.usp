@@ -13,8 +13,8 @@ static void usp_fork_eupdate()
 
    if (WorldNoSql::es)
       {
-      (void) memcpy(WorldNoSql::es_buffer1,       U_CONSTANT_TO_PARAM("/bw/world/"));
-      WorldNoSql::pbuffer1 = WorldNoSql::es_buffer1 + U_CONSTANT_SIZE("/bw/world/");
+      (void) memcpy(WorldNoSql::es_buffer1,       U_CONSTANT_TO_PARAM("/tfb/world/"));
+      WorldNoSql::pbuffer1 = WorldNoSql::es_buffer1 + U_CONSTANT_SIZE("/tfb/world/");
 
       (void) memcpy(WorldNoSql::es_buffer2,       U_CONSTANT_TO_PARAM("{\"doc\":{\"_id\":\""));
       WorldNoSql::pbuffer2 = WorldNoSql::es_buffer2 + U_CONSTANT_SIZE("{\"doc\":{\"_id\":\"");

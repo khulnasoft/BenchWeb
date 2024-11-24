@@ -10,7 +10,7 @@
 {-# OPTIONS_GHC -Wno-name-shadowing #-}
 -- The code in Java here has been copied from the benchmark wizzardo-http
 -- in
--- https://github.com/KhulnaSoft/BenchWeb/blob/master/frameworks/wizzardo-http
+-- https://github.com/khulnasoft/BenchWeb/blob/master/frameworks/wizzardo-http
 module DbHandler (createDbHandler) where
 
 import qualified Control.Functor.Linear as Linear
@@ -113,7 +113,7 @@ createPgPoolRef =
       public PgPool initialValue() {
         WizzardoPgPoolOptions options = new WizzardoPgPoolOptions();
         options.setDatabase("hello_world");
-        options.setHost("bw-database");
+        options.setHost("tfb-database");
         options.setPort(5432);
         options.setUser("benchmarkdbuser");
         options.setPassword("benchmarkdbpass");

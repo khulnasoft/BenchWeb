@@ -14,6 +14,6 @@ EXPOSE 8080
 
 ENV PORT=8080
 ENV JAVA_OPTS="-XX:+UseContainerSupport -Dfile.encoding=UTF-8"
-ENV JDBC_URL="jdbc:postgresql://bw-database/hello_world?user=benchmarkdbuser&password=benchmarkdbpass"
+ENV JDBC_URL="jdbc:postgresql://tfb-database/hello_world?user=benchmarkdbuser&password=benchmarkdbpass"
 
 ENTRYPOINT exec java $JAVA_OPTS -jar /te-bench/te-bench-standalone.jar

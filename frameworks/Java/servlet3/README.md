@@ -11,13 +11,13 @@ Currently implemented test types are Plaintext and JSON. Their implementation co
 
 ### Plaintext
 
-* [Async](src/main/java/com/gitlab/zloster/bw/servlet3/async/Plaintext.java)
-* [Sync](src/main/java/com/gitlab/zloster/bw/servlet3/sync/Plaintext.java)
+* [Async](src/main/java/com/gitlab/zloster/tfb/servlet3/async/Plaintext.java)
+* [Sync](src/main/java/com/gitlab/zloster/tfb/servlet3/sync/Plaintext.java)
 
 ### JSON
 
-* [Async](src/main/java/com/gitlab/zloster/bw/servlet3/async/JSON.java)
-* [Sync](src/main/java/com/gitlab/zloster/bw/servlet3/sync/JSON.java)
+* [Async](src/main/java/com/gitlab/zloster/tfb/servlet3/async/JSON.java)
+* [Sync](src/main/java/com/gitlab/zloster/tfb/servlet3/sync/JSON.java)
 
 ## Test URLs
 

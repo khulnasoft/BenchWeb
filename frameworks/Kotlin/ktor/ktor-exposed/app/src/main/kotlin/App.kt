@@ -34,7 +34,7 @@ data class World(val id: Int, var randomNumber: Int)
 data class Fortune(val id: Int, var message: String)
 
 
-// see "infrastructure/docker/databases/postgres/create-postgres.sql"
+// see "toolset/databases/postgres/create-postgres.sql"
 
 object WorldTable : IdTable<Int>("World") {
     override val id = integer("id").entityId()
@@ -204,7 +204,7 @@ fun Application.module(exposedMode: ExposedMode) {
 }
 
 fun HikariConfig.configurePostgres(poolSize: Int) {
-    jdbcUrl = "jdbc:postgresql://bw-database/hello_world?useSSL=false"
+    jdbcUrl = "jdbc:postgresql://tfb-database/hello_world?useSSL=false"
     driverClassName = org.postgresql.Driver::class.java.name
 
     configureCommon(poolSize)

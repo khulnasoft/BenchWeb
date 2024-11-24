@@ -5,8 +5,8 @@ module Lib (
   , Db.Config(..)
 ) where
 
-import qualified BW.Types as Types
-import qualified BW.Db as Db
+import qualified TFB.Types as Types
+import qualified TFB.Db as Db
 import qualified Data.Either as Either
 import           Data.List (sortOn)
 import           Control.Monad (replicateM, join)

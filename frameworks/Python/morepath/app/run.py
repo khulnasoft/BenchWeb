@@ -7,7 +7,7 @@ from .model import db
 
 
 def setup_db():
-    DBHOST = 'bw-database'
+    DBHOST = 'tfb-database'
 
     db.bind(
         'postgres',

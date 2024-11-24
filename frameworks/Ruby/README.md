@@ -2,7 +2,7 @@
 
 The information below contains information specific to Ruby. 
 For further guidance, review the 
-[documentation](https://github.com/KhulnaSoft/BenchWeb/wiki).
+[documentation](https://github.com/khulnasoft/BenchWeb/wiki).
 
 ## Get Help
 

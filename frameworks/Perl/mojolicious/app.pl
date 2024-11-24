@@ -57,7 +57,7 @@ get '/plaintext' => { text => 'Hello, World!', format => 'txt' };
 
 helper pg => sub {
   state $pg = Mojo::Pg
-    ->new('postgresql://benchmarkdbuser:benchmarkdbpass@bw-database/hello_world')
+    ->new('postgresql://benchmarkdbuser:benchmarkdbpass@tfb-database/hello_world')
     ->max_connections(MAX_DB_CONCURRENCY + 1);
 };
 

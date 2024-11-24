@@ -3,7 +3,7 @@
 This is the [Microdot](https://github.com/miguelgrinberg/microdot) portion of a [benchmarking tests suite](../../) comparing a variety of web development platforms.
 
 The information below is specific to Microdot.
-For further guidance, review the [documentation](https://github.com/KhulnaSoft/BenchWeb/wiki).
+For further guidance, review the [documentation](https://github.com/khulnasoft/BenchWeb/wiki).
 Also note that there is additional information provided in the [Python README](../).
 
 ### Test Source Code

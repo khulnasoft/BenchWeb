@@ -1,6 +1,6 @@
 (defproject pedestal "0.1"
   :description "A Clojure-Pedestal server for testing in the Framework Benchmarks"
-  :url "https://github.com/KhulnaSoft/BenchWeb"
+  :url "https://github.com/khulnasoft/BenchWeb"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.9.0-alpha14"]

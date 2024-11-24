@@ -16,7 +16,7 @@ public class JsonResource  {
     @GET
     @NonBlocking
     public Message json() {
-        // https://github.com/KhulnaSoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview#json-serialization
+        // https://github.com/khulnasoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview#json-serialization
         return new Message(HELLO);
     }
 }

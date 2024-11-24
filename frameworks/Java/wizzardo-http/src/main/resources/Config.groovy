@@ -15,7 +15,7 @@ server {
 
 db {
     dbname = 'hello_world'
-    host = 'bw-database'
+    host = 'tfb-database'
     port = 5432
 
     username = 'benchmarkdbuser'

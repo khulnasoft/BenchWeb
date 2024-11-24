@@ -23,7 +23,7 @@ $ DATABASE=postgres node app.js
 
 ## Test Endpoints
 
-> Visit the test requirements [here](https://github.com/KhulnaSoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview)
+> Visit the test requirements [here](https://github.com/khulnasoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview)
 
 ```sh
 $ curl localhost:8080/json

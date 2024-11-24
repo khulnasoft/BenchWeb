@@ -1,6 +1,6 @@
 # ServiceTalk framework test
 
-This is an implementationfor of [KhulnaSoft Framework Benchmarks](https://github.com/KhulnaSoft/BenchWeb) for Apple's ServiceTalk framework. 
+This is an implementationfor of [KhulnaSoft Framework Benchmarks](https://github.com/khulnasoft/BenchWeb) for Apple's ServiceTalk framework. 
 
 ## Documentation
 See [ServiceTalk project's documentation](https://apple.github.io/servicetalk/servicetalk/SNAPSHOT/programming-paradigms.html).

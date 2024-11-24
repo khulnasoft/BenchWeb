@@ -49,13 +49,13 @@ http://localhost:8080/cached-world?q=
 docker build -t khulnasoft:latest -f just.dockerfile .
 ```
 
-## Running the BW Postgres Docker Container
+## Running the TFB Postgres Docker Container
 ```bash
-## docker network create -d bridge bw
-docker run -p 5432:5432 -d --rm --name bw-database --network bw khulnasoft/bw.database.postgres:latest
+## docker network create -d bridge tfb
+docker run -p 5432:5432 -d --rm --name tfb-database --network tfb khulnasoft/tfb.database.postgres:latest
 ```
 
 ## Running the Docker Container
 ```bash
-docker run -p 8080:8080 -d --rm --name bw-server --network bw khulnasoft:latest
+docker run -p 8080:8080 -d --rm --name tfb-server --network tfb khulnasoft:latest
 ```

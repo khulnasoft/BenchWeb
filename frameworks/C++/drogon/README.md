@@ -1,6 +1,6 @@
 # drogon Benchmarking Test
 
-This is the [Drogon](https://github.com/an-tao/drogon) portion of a [benchmarking test suite](https://github.com/KhulnaSoft/BenchWeb) comparing a variety of web development platforms.
+This is the [Drogon](https://github.com/an-tao/drogon) portion of a [benchmarking test suite](https://github.com/khulnasoft/BenchWeb) comparing a variety of web development platforms.
 
 ### Test Type Implementation Source Code
 

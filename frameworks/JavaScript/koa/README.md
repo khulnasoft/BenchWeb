@@ -18,34 +18,34 @@ Information about Koa can be found at https://github.com/koajs/koa
 ## Test URLs
 ### JSON Encoding Test
 
-http://BW-server:8080/json
+http://TFB-server:8080/json
 
 ### Data-Store/Database Mapping Test
 
 MongoDB:
-http://BW-server:8080/mongoose/
+http://TFB-server:8080/mongoose/
 
 MySQL:
-http://BW-server:8080/mysql-orm/
+http://TFB-server:8080/mysql-orm/
 
 ### Variable Query Test
 
 MongoDB:
-http://BW-server:8080/mongoose/2
+http://TFB-server:8080/mongoose/2
 
 MySQL:
-http://BW-server:8080/mysql-orm/2
+http://TFB-server:8080/mysql-orm/2
 
 ### Fortune Test
 
 MySQL:
-http://BW-server:8080/fortune
+http://TFB-server:8080/fortune
 
 ### Database Update Test
 
 MongoDB:
-http://BW-server:8080/mongoose-update/2
+http://TFB-server:8080/mongoose-update/2
 
 MySQL:
-http://BW-server:8080/mysql-orm-update/2
+http://TFB-server:8080/mysql-orm-update/2
 

@@ -1,2 +1,2 @@
-rootProject.name = "ktor-exposed-bw-benchmark"
+rootProject.name = "ktor-exposed-tfb-benchmark"
 include("app")

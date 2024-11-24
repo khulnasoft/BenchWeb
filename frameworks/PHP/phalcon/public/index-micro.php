@@ -12,7 +12,7 @@ try {
     // Setting up the database connection
     $app['db'] = function () {
         return new Mysql([
-            'host' => 'bw-database',
+            'host' => 'tfb-database',
             'dbname' => 'hello_world',
             'username' => 'benchmarkdbuser',
             'password' => 'benchmarkdbpass',

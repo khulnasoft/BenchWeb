@@ -120,7 +120,7 @@ func updates(c context.Context, ctx *app.RequestContext) {
 }
 func main() {
 	/* SETUP DB AND WEB SERVER */
-	dsn := "host=bw-database user=benchmarkdbuser password=benchmarkdbpass dbname=hello_world port=5432 sslmode=disable"
+	dsn := "host=tfb-database user=benchmarkdbuser password=benchmarkdbpass dbname=hello_world port=5432 sslmode=disable"
 	db, _ = gorm.Open(postgres.Open(dsn), &gorm.Config{
 		PrepareStmt: true,                                  // use prep statements
 		Logger:      logger.Default.LogMode(logger.Silent), // new, not inserted in original submission 2x on query

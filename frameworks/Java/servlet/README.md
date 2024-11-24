@@ -36,7 +36,7 @@ The tests were run with:
 * [Postgres](http://www.postgresql.org/)
 * [cache2k](https://cache2k.org/)
 
-Please confirm the versions data with the latest install scripts of BW project.
+Please confirm the versions data with the latest install scripts of TFB project.
 
 ## Test URLs
 

@@ -8,8 +8,8 @@ let server_io =
 
 let () = Jbuild_plugin.V1.send @@ {|
 (executable
- (name bw)
- (public_name bw)
+ (name tfb)
+ (public_name tfb)
  (ocamlopt_flags
   (:standard -O3 -unbox-closures))
  (libraries caqti caqti-lwt caqti-driver-postgresql lwt logs logs.fmt fmt.tty

@@ -1,7 +1,7 @@
 package benchmark
 
 import benchmark.data.Fortune
-import benchmark.data.BWRepository
+import benchmark.data.TFBRepository
 import com.fizzed.rocker.runtime.StringBuilderOutput
 import dev.pellet.logging.pelletLogger
 import dev.pellet.server.PelletBuilder.httpRouter
@@ -78,7 +78,7 @@ private fun handleJson(
         .build()
 }
 
-private val repository = BWRepository()
+private val repository = TFBRepository()
 
 private fun handleDb(
     context: PelletHTTPRouteContext

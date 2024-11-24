@@ -58,7 +58,7 @@ defmodule HelloWeb.PageController do
         #
         # If this is not sorted it will intermittently generate:
         #
-        #   FAIL for http://bw-server:8080/updates/20
+        #   FAIL for http://tfb-server:8080/updates/20
         #   Only 20470 executed queries in the database out of roughly 20480 expected.
         #
         |> Enum.map(fn id ->

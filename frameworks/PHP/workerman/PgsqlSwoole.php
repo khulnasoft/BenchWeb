@@ -11,7 +11,7 @@ class PgsqlSwoole extends MysqlSwoole
     {
         $config = (new PDOConfig())
             ->withDriver('pgsql')
-            ->withHost('bw-database')
+            ->withHost('tfb-database')
             ->withPort(5432)
             ->withDbName('hello_world')
             ->withUsername('benchmarkdbuser')

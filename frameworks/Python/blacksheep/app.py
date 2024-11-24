@@ -26,7 +26,7 @@ if _is_travis:
 #json_settings.use(dumps=jsonify)
 
 DBDRV  = "postgres"
-DBHOST = "bw-database"
+DBHOST = "tfb-database"
 DBUSER = "benchmarkdbuser"
 DBPSWD = "benchmarkdbpass"
 

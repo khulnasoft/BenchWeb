@@ -2,7 +2,7 @@ const h = require('../helper');
 const MongoClient = require('mongodb').MongoClient;
 let collectionsMaybe = null, connecting = false, connectionCallbacks = [];
 
-const mongoUrl = 'mongodb://bw-database:27017';
+const mongoUrl = 'mongodb://tfb-database:27017';
 const dbName = 'hello_world';
 
 /**
@@ -53,7 +53,7 @@ const toClientWorld = (world) => {
 const mongodbRandomWorld = async () => {
   const collections = await getCollections();
   return toClientWorld(await collections.World.findOne({
-    _id: h.randomBwNumber()
+    _id: h.randomTfbNumber()
   }));
 };
 
@@ -65,9 +65,9 @@ const mongodbGetAllFortunes = async () => {
 async function getUpdateRandomWorld() {
   const collections = await getCollections();
   const world = await collections.World.findOne({
-    _id: h.randomBwNumber()
+    _id: h.randomTfbNumber()
   });
-  world.randomNumber = h.randomBwNumber();
+  world.randomNumber = h.randomTfbNumber();
   await collections.World.updateOne({
     _id: world._id
   }, {
@@ -82,7 +82,7 @@ module.exports = {
 
   SingleQuery: async (req, res) => {
     const result = await mongodbRandomWorld();
-    h.addBwHeaders(res, 'json');
+    h.addTfbHeaders(res, 'json');
     res.end(JSON.stringify(result));
   },
 
@@ -93,7 +93,7 @@ module.exports = {
     }
     const results = await Promise.all(queryFunctions);
 
-    h.addBwHeaders(res, 'json');
+    h.addTfbHeaders(res, 'json');
     res.end(JSON.stringify(results));
   },
 
@@ -103,7 +103,7 @@ module.exports = {
     fortunes.sort(function (a, b) {
       return a.message.localeCompare(b.message);
     });
-    h.addBwHeaders(res, 'html');
+    h.addTfbHeaders(res, 'html');
     res.end(h.fortunesTemplate({fortunes}));
   },
 
@@ -114,7 +114,7 @@ module.exports = {
       promises.push(getUpdateRandomWorld());
     }
 
-    h.addBwHeaders(res, 'json');
+    h.addTfbHeaders(res, 'json');
     res.end(JSON.stringify(await Promise.all(promises)));
   }
 

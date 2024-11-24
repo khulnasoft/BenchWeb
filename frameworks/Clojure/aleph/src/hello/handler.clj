@@ -31,7 +31,7 @@
    :headers {"Content-Type" "text/html; charset=utf-8"}})
 
 (def db-spec
-  {:uri "postgresql://bw-database:5432/hello_world"
+  {:uri "postgresql://tfb-database:5432/hello_world"
    :user "benchmarkdbuser"
    :password "benchmarkdbpass"
    :size 1})

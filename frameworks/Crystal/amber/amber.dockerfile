@@ -21,7 +21,7 @@ FROM ubuntu:22.04
 WORKDIR /amber
 
 ENV AMBER_ENV production
-ENV DATABASE_URL postgres://benchmarkdbuser:benchmarkdbpass@bw-database:5432/hello_world
+ENV DATABASE_URL postgres://benchmarkdbuser:benchmarkdbpass@tfb-database:5432/hello_world
 
 RUN apt-get update
 RUN apt-get install -yqq libyaml-dev

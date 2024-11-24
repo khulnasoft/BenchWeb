@@ -1,14 +1,14 @@
 (lang dune 3.9)
-(name webmachine-bw)
+(name webmachine-tfb)
 
 (generate_opam_files true)
 
-(source (github KhulnaSoft/BenchWeb))
+(source (github khulnasoft/BenchWeb))
 (license MIT)
 (authors "Robin Björklin")
 
 (package
- (name bw)
+ (name tfb)
  (synopsis "Rudimentary implementation of the Tech Empower Benchmark suite")
  (depends
   (dune (>= 2.8.5))

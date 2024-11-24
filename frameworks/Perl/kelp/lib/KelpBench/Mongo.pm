@@ -6,7 +6,7 @@ use MongoDB;
 
 attr dbh => sub {
 	MongoDB::MongoClient->new(
-		host => 'bw-database',
+		host => 'tfb-database',
 		port => 27017
 	)->get_database('hello_world');
 };

@@ -7,10 +7,10 @@ of web development platforms. The test utilizes Hexagon routes and serialization
 ## Tests
 
 You can verify the benchmarks with the following command (from the project root):
-`./bw --mode verify --test hexagon hexagon-jetty hexagon-tomcat hexagon-netty hexagon-nettyepoll`
+`./tfb --mode verify --test hexagon hexagon-jetty hexagon-tomcat hexagon-netty hexagon-nettyepoll`
 
 To run the full benchmarks locally, on the project root (not this directory) execute:
-`./bw --mode benchmark --test hexagon hexagon-jetty hexagon-tomcat hexagon-netty hexagon-nettyepoll`
+`./tfb --mode benchmark --test hexagon hexagon-jetty hexagon-tomcat hexagon-netty hexagon-nettyepoll`
 
 ## Infrastructure Software Versions
 

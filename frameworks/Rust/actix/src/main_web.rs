@@ -56,7 +56,7 @@ async fn main() -> std::io::Result<()> {
     // start http server
     Server::build()
         .backlog(1024)
-        .bind("bw-actix-web", "0.0.0.0:8080", || {
+        .bind("tfb-actix-web", "0.0.0.0:8080", || {
             HttpService::build()
                 .keep_alive(KeepAlive::Os)
                 .client_request_timeout(Duration::ZERO)

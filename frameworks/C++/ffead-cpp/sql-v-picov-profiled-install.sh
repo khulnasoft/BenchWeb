@@ -1,7 +1,7 @@
 export FFEAD_CPP_PATH=${IROOT}/ffead-cpp-6.0-sql
 export LD_LIBRARY_PATH=${IROOT}/:${IROOT}/lib:${FFEAD_CPP_PATH}/lib:/usr/local/lib:$LD_LIBRARY_PATH
 
-sed -i 's|bw-database|localhost|g' ${FFEAD_CPP_PATH}/web/t3/config/sdorm.xml
+sed -i 's|tfb-database|localhost|g' ${FFEAD_CPP_PATH}/web/t3/config/sdorm.xml
 sed -i 's|"TeBkUmLpqRouter"|"TeBkUmLpqRouterPicoV"|g' ${FFEAD_CPP_PATH}/web/t3/config/application.xml
 
 cd $IROOT/lang-server-backends/v/pico.v
@@ -22,7 +22,7 @@ cd $IROOT/
 
 mv $IROOT/lang-server-backends/v/pico.v/main $IROOT/
 
-sed -i 's|localhost|bw-database|g' $IROOT/ffead-cpp-6.0-sql/web/t3/config/sdorm.xml
+sed -i 's|localhost|tfb-database|g' $IROOT/ffead-cpp-6.0-sql/web/t3/config/sdorm.xml
 
 apt remove -yqq postgresql-13 postgresql-contrib-13 gnupg lsb-release
 apt autoremove -yqq

@@ -7,7 +7,7 @@ import { sjs, attr } from 'slow-json-stringify'
  * Header `Date` is automatically added by uWebsockets
  * https://github.com/uNetworking/uWebSockets/blob/master/src/HttpResponse.h#L78
  * 
- * https://github.com/KhulnaSoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview
+ * https://github.com/khulnasoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview
  *
  * @param {import('uWebSockets.js').HttpResponse} response
  */

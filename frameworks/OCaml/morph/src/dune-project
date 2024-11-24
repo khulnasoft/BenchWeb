@@ -1,6 +1,6 @@
 (lang dune 2.6)
 
-(name morph-bw)
+(name morph-tfb)
 
 (generate_opam_files true)
 
@@ -9,7 +9,7 @@
 (maintainers "ulrik.strid@outlook.com")
 
 (package
- (name morph-bw)
+ (name morph-tfb)
  (synopsis "Framework Benchmark for Morph")
  (depends
   (ocaml

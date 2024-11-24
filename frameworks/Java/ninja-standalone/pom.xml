@@ -5,7 +5,7 @@
     <artifactId>ninja-standalone</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>ninja-standalone</name>
-    <description>Ninja test for the KhulnaSoft/BenchWeb project</description>
+    <description>Ninja test for the khulnasoft/BenchWeb project</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

@@ -83,7 +83,7 @@ const self = (module.exports = {
     ].join("")
   ),
 
-  randomBwNumber: () => Math.floor(Math.random() * 10000) + 1,
+  randomTfbNumber: () => Math.floor(Math.random() * 10000) + 1,
 
   fillArray: (value, len) => {
     const arr = [];
@@ -93,7 +93,7 @@ const self = (module.exports = {
     return arr;
   },
 
-  addBwHeaders: (res, headerType) => {
+  addTfbHeaders: (res, headerType) => {
     res.setHeader('Server', 'Node');
     res.setHeader('Content-Type', headerTypes[headerType]);
       },

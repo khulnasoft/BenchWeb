@@ -21,7 +21,7 @@
         //rdbms:server type, "postgreSQL" by default
         "rdbms": "postgreSQL",
         //host:server address,localhost by default
-        "host": "bw-database",
+        "host": "tfb-database",
         //port:server port, 5432 by default
         "port": 5432,
         //dbname:Database name

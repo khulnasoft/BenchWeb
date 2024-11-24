@@ -13,4 +13,4 @@ http = { version = "0.2.9", package = "http" }
 http_body = { version = "0.4.5", package = "http-body" }
 hyper = { version = "0.14.26", package = "hyper" }
 pavex_runtime = { version = "0.1.0", git = "https://github.com/LukeMathWalker/pavex.git", rev = "72cb987", package = "pavex_runtime" }
-bw_pavex_bp = { version = "0.1.0", path = "../blueprint", package = "bw-pavex-bp" }
+tfb_pavex_bp = { version = "0.1.0", path = "../blueprint", package = "tfb-pavex-bp" }

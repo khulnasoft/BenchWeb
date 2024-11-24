@@ -8,4 +8,4 @@ RUN RUSTFLAGS="-C target-cpu=native" cargo build --release --features raw
 
 EXPOSE 8080
 
-CMD RUST_LOG=off ./target/release/bw-anansi 0.0.0.0:8080
+CMD RUST_LOG=off ./target/release/tfb-anansi 0.0.0.0:8080

@@ -1,7 +1,7 @@
 FROM rust:1.80-slim-bullseye
 WORKDIR /ohkami_framework_benchmarks
 
-ENV DATABASE_URL=postgres://benchmarkdbuser:benchmarkdbpass@bw-database/hello_world
+ENV DATABASE_URL=postgres://benchmarkdbuser:benchmarkdbpass@tfb-database/hello_world
 ENV MAX_CONNECTIONS=56
 ENV MIN_CONNECTIONS=56
 

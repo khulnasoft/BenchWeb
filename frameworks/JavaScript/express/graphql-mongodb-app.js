@@ -8,8 +8,8 @@ const port = 8080;
 
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb://bw-database/hello_world').then(() => {
-  console.log('connected to mongo bw-database hello_world');
+mongoose.connect('mongodb://tfb-database/hello_world').then(() => {
+  console.log('connected to mongo tfb-database hello_world');
 }).catch((err) => {
   console.log('Failed connection attempt to Mongo: ', err);
 });

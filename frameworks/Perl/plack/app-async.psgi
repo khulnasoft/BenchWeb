@@ -5,7 +5,7 @@ use AnyEvent::DBI;
 use Unix::Processors;
 use List::Util qw'min max';
 
-my @dsn = ('dbi:MariaDB:database=hello_world;host=bw-database;port=3306', 'benchmarkdbuser', 'benchmarkdbpass');
+my @dsn = ('dbi:MariaDB:database=hello_world;host=tfb-database;port=3306', 'benchmarkdbuser', 'benchmarkdbpass');
 my $query = 'select randomNumber, id from World where id = ?';
 
 sub {

@@ -24,7 +24,7 @@ use db_diesel::*;
 use utils::RANGE;
 
 const DB_URL: &str =
-    "postgres://benchmarkdbuser:benchmarkdbpass@bw-database/hello_world";
+    "postgres://benchmarkdbuser:benchmarkdbpass@tfb-database/hello_world";
 
 async fn db(req: Request) -> Result<Response> {
     let mut rng = req.state::<WyRand>().unwrap();

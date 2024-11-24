@@ -26,7 +26,7 @@ async def create_db_pool():
         user='benchmarkdbuser',
         password='benchmarkdbpass',
         database='hello_world',
-        host='bw-database',
+        host='tfb-database',
         port=5432,
         min_size=MIN_POOL_SIZE,
         max_size=MAX_POOL_SIZE,

@@ -1,7 +1,7 @@
 const knex = require("knex")({
   client: "pg",
   connection: {
-    host: "bw-database",
+    host: "tfb-database",
     user: "benchmarkdbuser",
     password: "benchmarkdbpass",
     database: "hello_world"

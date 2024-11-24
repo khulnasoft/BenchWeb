@@ -35,14 +35,14 @@ public class ReactiveBenchmarkController extends AbstractBenchmarkController {
         return Mono.from(worldRepository.initDb(createWords())).then(Mono.from(fortuneRepository.initDb(createFortunes())));
     }
 
-    // https://github.com/KhulnaSoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview#single-database-query
+    // https://github.com/khulnasoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview#single-database-query
     @Get("/db")
     @SingleResult
     public Publisher<World> db() {
         return worldRepository.findById(randomId());
     }
 
-    // https://github.com/KhulnaSoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview#multiple-database-queries
+    // https://github.com/khulnasoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview#multiple-database-queries
     @Get("/queries")
     @SingleResult
     public Publisher<List<World>> queries(@QueryValue String queries) {
@@ -54,14 +54,14 @@ public class ReactiveBenchmarkController extends AbstractBenchmarkController {
         return worldRepository.findByIds(ids);
     }
 
-    // https://github.com/KhulnaSoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview#fortunes
+    // https://github.com/khulnasoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview#fortunes
     @Get(value = "/fortunes", produces = "text/html;charset=utf-8")
     @SingleResult
     public Mono<List<Fortune>> fortune() {
         return Mono.from(fortuneRepository.findAll()).map(this::prepareFortunes);
     }
 
-    // https://github.com/KhulnaSoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview#database-updates
+    // https://github.com/khulnasoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview#database-updates
     @Get("/updates")
     @SingleResult
     public Publisher<List<World>> updates(@QueryValue String queries) {

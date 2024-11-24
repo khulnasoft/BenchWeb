@@ -9,7 +9,7 @@ require 'rack'
 $pool = ConnectionPool.new(size: 1, timeout: 5) do
           PG::Connection.new({
                                  dbname:   'hello_world',
-                                 host:     'bw-database',
+                                 host:     'tfb-database',
                                  user:     'benchmarkdbuser',
                                  password: 'benchmarkdbpass'
                              })

@@ -222,7 +222,7 @@ public:
 
 		U_INTERNAL_ASSERT_POINTER(str_rnumber)
 
-		(void) es->sendPOST(U_CONSTANT_TO_PARAM("/bw/world/_search"), es_buffer1, U_QLEN+
+		(void) es->sendPOST(U_CONSTANT_TO_PARAM("/tfb/world/_search"), es_buffer1, U_QLEN+
 																			u__snprintf(es_buffer1+ U_QLEN,
 																				  sizeof(es_buffer1)-U_QLEN, U_CONSTANT_TO_PARAM("%u\"}}}"), uid));
 
@@ -236,7 +236,7 @@ public:
 		uint32_t len1 = u__snprintf(pbuffer1, 100, U_CONSTANT_TO_PARAM("%u/_update"), World::rnumber[i]),
 					len2 = u__snprintf(pbuffer2, 100, U_CONSTANT_TO_PARAM("%u\"}}"), World::rnum = u_get_num_random_range1(10000));
 
-		(void) es->sendPOST(es_buffer1, len1+U_CONSTANT_SIZE("/bw/world/"), es_buffer2, len2+U_CONSTANT_SIZE("{\"doc\":{\"_id\":\""));
+		(void) es->sendPOST(es_buffer1, len1+U_CONSTANT_SIZE("/tfb/world/"), es_buffer2, len2+U_CONSTANT_SIZE("{\"doc\":{\"_id\":\""));
 		}
 
 	static void handlerForkElasticSearch()

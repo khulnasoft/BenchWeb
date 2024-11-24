@@ -6,7 +6,7 @@ const app = new Elysia()
     server: "Elysia",
   })
   .get("/plaintext", "Hello, World!")
-  // As state on xiv in https://github.com/KhulnaSoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview#requirements
+  // As state on xiv in https://github.com/khulnasoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview#requirements
   // The serialization to JSON must not be cached;
   // the computational effort to serialize an object to JSON must occur within the scope of handling each request.
   .get("/json", () => ({ message: "Hello, World!" }))

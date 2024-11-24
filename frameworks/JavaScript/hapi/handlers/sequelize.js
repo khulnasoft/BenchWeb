@@ -5,7 +5,7 @@ const helper = require('../helper');
 
 const Sequelize = require('sequelize');
 const sequelize = new Sequelize('hello_world', 'benchmarkdbuser', 'benchmarkdbpass', {
-  host: 'bw-database',
+  host: 'tfb-database',
   dialect: 'mysql',
   logging: false
 });
@@ -32,7 +32,7 @@ const Fortunes = sequelize.define('Fortune', {
     freezeTableName: true
   });
 
-const randomWorld = () => Worlds.findOne({ where: { id: helper.randomBwNumber() } });
+const randomWorld = () => Worlds.findOne({ where: { id: helper.randomTfbNumber() } });
 
 module.exports = {
 
@@ -75,7 +75,7 @@ module.exports = {
 
     for (let i = 0; i < queries; i++) {
       const world = await randomWorld();
-      world.randomNumber = helper.randomBwNumber();
+      world.randomNumber = helper.randomTfbNumber();
       await Worlds.update(
         { randomNumber: world.randomNumber },
         { where: { id: world.id } }

@@ -1,7 +1,7 @@
 FROM perl:5.40
 
-ARG BW_TEST_NAME
-ARG BW_TEST_DATABASE
+ARG TFB_TEST_NAME
+ARG TFB_TEST_DATABASE
 
 RUN apt-get update -yqq && apt-get install -yqq nginx
 
@@ -22,8 +22,8 @@ RUN cpanm --notest --no-man-page \
 
 ADD ./ /kelp/
 
-ENV TEST_NAME=$BW_TEST_NAME
-ENV DATABASE=$BW_TEST_DATABASE
+ENV TEST_NAME=$TFB_TEST_NAME
+ENV DATABASE=$TFB_TEST_DATABASE
 ENV MAX_REQS=100000
 ENV SOCKET_FILE=/tmp/perl-kelp.sock
 

@@ -42,7 +42,7 @@ class PostgresDatabase private constructor(private val dataSource: DataSource) :
             PostgresDatabase(HikariConfig().run {
                 username = "benchmarkdbuser"
                 password = "benchmarkdbpass"
-                jdbcUrl = "jdbc:postgresql://bw-database:5432/hello_world?" +
+                jdbcUrl = "jdbc:postgresql://tfb-database:5432/hello_world?" +
                         "useSSL=false&" +
                         "jdbcCompliantTruncation=false&" +
                         "elideSetAutoCommits=true&" +

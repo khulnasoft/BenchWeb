@@ -50,7 +50,7 @@ COPY --from=compile "${H2O_PREFIX}/share" "${H2O_PREFIX}/share/"
 COPY h2o.conf "${H2O_PREFIX}/etc/"
 EXPOSE 8080
 ARG BENCHMARK_ENV
-ARG BW_TEST_DATABASE
-ARG BW_TEST_NAME
+ARG TFB_TEST_DATABASE
+ARG TFB_TEST_NAME
 
 CMD ["/opt/h2o/bin/h2o", "-c", "/opt/h2o/etc/h2o.conf"]

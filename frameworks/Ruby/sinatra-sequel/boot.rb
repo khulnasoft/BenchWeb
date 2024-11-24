@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 require 'bundler/setup'
 require 'time'
-require 'oj'
 
 MAX_PK = 10_000
 ID_RANGE = (1..MAX_PK).freeze
@@ -23,8 +22,6 @@ SERVER_STRING =
   end
 
 Bundler.require(:default) # Load core modules
-
-Oj.mimic_JSON
 
 def connect(dbtype)
   Bundler.require(dbtype) # Load database-specific modules
@@ -50,7 +47,7 @@ def connect(dbtype)
   Sequel.connect \
     '%{adapter}://%{host}/%{database}?user=%{user}&password=%{password}' % {
       :adapter=>adapters.fetch(dbtype).fetch(defined?(JRUBY_VERSION) ? :jruby : :mri),
-      :host=>'bw-database',
+      :host=>'tfb-database',
       :database=>'hello_world',
       :user=>'benchmarkdbuser',
       :password=>'benchmarkdbpass'

@@ -37,5 +37,5 @@ for index in range(WORKER_COUNT):
     create_fork()
 
 run_app()
-#sudo ./bw --mode benchmark --test socketify.py --type plaintext
-#sudo ./bw --mode benchmark --test socketify.py --type json --network=bw
+#sudo ./tfb --mode benchmark --test socketify.py --type plaintext
+#sudo ./tfb --mode benchmark --test socketify.py --type json --network=tfb

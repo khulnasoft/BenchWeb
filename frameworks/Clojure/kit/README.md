@@ -20,7 +20,7 @@ abstraction and routing.
 * [FORTUNES](src/clj/io/github/kit_clj/te_bench/web/controllers/bench.clj#L125)
 
 Requirements
-URL: https://github.com/KhulnaSoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview#general-test-requirements
+URL: https://github.com/khulnasoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview#general-test-requirements
 
 ## Test URLs
 

@@ -30,7 +30,7 @@ func init() {
 	runtime.GOMAXPROCS(runtime.NumCPU())
 
 	dsn := "benchmarkdbuser:benchmarkdbpass@tcp(%s:3306)/hello_world"
-	dbhost := "bw-database"
+	dbhost := "tfb-database"
 
 	db, err := sql.Open("mysql", fmt.Sprintf(dsn, dbhost))
 	if err != nil {

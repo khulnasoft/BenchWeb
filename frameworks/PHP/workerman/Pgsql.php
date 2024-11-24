@@ -12,7 +12,7 @@ class Pgsql extends Mysql
     public function __construct()
     {
         $this->pdo = new PDO(
-            'pgsql:host=bw-database;dbname=hello_world',
+            'pgsql:host=tfb-database;dbname=hello_world',
             'benchmarkdbuser',
             'benchmarkdbpass',
             [

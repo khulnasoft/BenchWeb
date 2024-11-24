@@ -37,7 +37,7 @@
 
         <!-- This adds automatic compression of JavaScript and CSS when in production mode. -->
         <!-- This currently breaks the resin deployment
-             (see https://github.com/KhulnaSoft/BenchWeb/pull/1816#issuecomment-167749791)
+             (see https://github.com/khulnasoft/BenchWeb/pull/1816#issuecomment-167749791)
         <dependency>
             <groupId>org.apache.tapestry</groupId>
             <artifactId>tapestry-webresources</artifactId>

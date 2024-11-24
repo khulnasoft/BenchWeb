@@ -1,6 +1,6 @@
 let pool =
   let connection_url =
-    "postgresql://benchmarkdbuser:benchmarkdbpass@bw-database:5432/hello_world?connect_timeout=15"
+    "postgresql://benchmarkdbuser:benchmarkdbpass@tfb-database:5432/hello_world?connect_timeout=15"
   in
   match Caqti_lwt.connect_pool ~max_size:10 (Uri.of_string connection_url) with
   | Ok pool -> pool

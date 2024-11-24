@@ -82,7 +82,7 @@ class Connection
     public static function init(string $driver): void
     {
         $pdo = new PDO(
-            "$driver:host=bw-database;dbname=hello_world",
+            "$driver:host=tfb-database;dbname=hello_world",
             "benchmarkdbuser",
             "benchmarkdbpass",
             [
@@ -135,7 +135,7 @@ class Connections
     {
         $config = (new PDOConfig())
             ->withDriver($driver)
-            ->withHost('bw-database')
+            ->withHost('tfb-database')
             ->withPort($driver == 'mysql' ? 3306 : 5432)
             ->withDbName('hello_world')
             ->withUsername('benchmarkdbuser')

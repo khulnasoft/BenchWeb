@@ -18,7 +18,7 @@ class Raw
     public static function init()
     {
         $pdo = new PDO(
-            'pgsql:host=bw-database;dbname=hello_world',
+            'pgsql:host=tfb-database;dbname=hello_world',
             'benchmarkdbuser',
             'benchmarkdbpass',
             [

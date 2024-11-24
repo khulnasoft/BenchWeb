@@ -32,7 +32,7 @@ The tests were run with:
  * [MongoDB](http://www.mongodb.com/)
  * [Morphia](https://morphia.dev/)
 
-Please check the versions in the install and build scripts of BW project.
+Please check the versions in the install and build scripts of TFB project.
 
 ## Test URLs
 

@@ -82,7 +82,7 @@ ENV PATH=${ULIB_ROOT}/bin:${PATH}
 ADD ./ /ulib
 WORKDIR /ulib
 
-ENV MONGODB_HOST=bw-database
+ENV MONGODB_HOST=tfb-database
 ENV UMEMPOOL="96,0,0,97,16417,-14,-20,-18,26"
 
 EXPOSE 8080

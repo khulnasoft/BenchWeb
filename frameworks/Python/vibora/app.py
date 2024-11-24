@@ -20,7 +20,7 @@ app = Vibora(template_dirs=['templates'])
 
 @app.handle(Events.BEFORE_SERVER_START)
 async def init_db(app: Vibora):
-    app.components.add(await Pool("postgresql://%s:%s@%s:5432/%s" % (os.getenv("PGUSER", "benchmarkdbuser"), os.getenv("PSPASS", "benchmarkdbpass"), os.getenv("PGADDR", "bw-database"), os.getenv("PGDB", "hello_world")), max_size=int(os.getenv("PGPOOLSIZE", DEFAULT_POOL_SIZE))))
+    app.components.add(await Pool("postgresql://%s:%s@%s:5432/%s" % (os.getenv("PGUSER", "benchmarkdbuser"), os.getenv("PSPASS", "benchmarkdbpass"), os.getenv("PGADDR", "tfb-database"), os.getenv("PGDB", "hello_world")), max_size=int(os.getenv("PGPOOLSIZE", DEFAULT_POOL_SIZE))))
 
 
 @app.handle(Events.BEFORE_SERVER_STOP)

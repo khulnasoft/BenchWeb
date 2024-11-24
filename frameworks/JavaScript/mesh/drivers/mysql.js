@@ -1,7 +1,7 @@
 const { createConnection } = require('mysql');
 
 const connection = createConnection({
-	host: 'bw-database',
+	host: 'tfb-database',
 	user: 'benchmarkdbuser',
 	password: 'benchmarkdbpass',
 	database: 'hello_world'

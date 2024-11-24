@@ -5,7 +5,7 @@ WORKDIR /httpz
 ENV PG_USER=benchmarkdbuser
 ENV PG_PASS=benchmarkdbpass
 ENV PG_DB=hello_world
-ENV PG_HOST=bw-database
+ENV PG_HOST=tfb-database
 ENV PG_PORT=5432
 
 COPY src src

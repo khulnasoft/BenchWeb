@@ -2,7 +2,7 @@
 
 The information below contains information specific to C#. 
 For further guidance, review the 
-[documentation](https://github.com/KhulnaSoft/BenchWeb/wiki).
+[documentation](https://github.com/khulnasoft/BenchWeb/wiki).
 
 ## Infrastructure Software Versions
 

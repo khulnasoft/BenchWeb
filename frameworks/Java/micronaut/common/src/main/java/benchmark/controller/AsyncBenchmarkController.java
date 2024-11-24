@@ -34,13 +34,13 @@ public class AsyncBenchmarkController extends AbstractBenchmarkController {
         return worldRepository.initDb(createWords()).thenCompose(ignore -> fortuneRepository.initDb(createFortunes()));
     }
 
-    // https://github.com/KhulnaSoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview#single-database-query
+    // https://github.com/khulnasoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview#single-database-query
     @Get("/db")
     public CompletionStage<World> db() {
         return worldRepository.findById(randomId());
     }
 
-    // https://github.com/KhulnaSoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview#multiple-database-queries
+    // https://github.com/khulnasoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview#multiple-database-queries
     @Get("/queries")
     public CompletionStage<List<World>> queries(@QueryValue String queries) {
         int count = parseQueryCount(queries);
@@ -51,13 +51,13 @@ public class AsyncBenchmarkController extends AbstractBenchmarkController {
         return worldRepository.findByIds(ids);
     }
 
-    // https://github.com/KhulnaSoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview#fortunes
+    // https://github.com/khulnasoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview#fortunes
     @Get(value = "/fortunes", produces = "text/html;charset=utf-8")
     public CompletionStage<List<Fortune>> fortune() {
         return fortuneRepository.findAll().thenApply(this::prepareFortunes);
     }
 
-    // https://github.com/KhulnaSoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview#database-updates
+    // https://github.com/khulnasoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview#database-updates
     @Get("/updates")
     public CompletionStage<List<World>> updates(@QueryValue String queries) {
         return queries(queries).thenCompose(worlds -> {

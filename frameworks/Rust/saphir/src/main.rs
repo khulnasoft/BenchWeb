@@ -11,7 +11,7 @@ mod cache;
 #[tokio::main(flavor = "multi_thread")]
 async fn main() -> Result<(), SaphirError> {
     // let mut client_options = MongoClientOptions::parse("mongodb://localhost:27017")
-    let mut client_options = MongoClientOptions::parse("mongodb://bw-database:27017")
+    let mut client_options = MongoClientOptions::parse("mongodb://tfb-database:27017")
         .await
         .map_err(|e| SaphirError::Custom(Box::new(e)))?;
 

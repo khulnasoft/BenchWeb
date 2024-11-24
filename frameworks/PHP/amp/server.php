@@ -14,7 +14,7 @@ use Amp\Promise;
 use Amp\Success;
 use Monolog\Logger;
 
-define('DB_HOST', gethostbyname('bw-database'));
+define('DB_HOST', gethostbyname('tfb-database'));
 define('CONCURRENCY_LIMIT', 102400);
 
 Amp\Loop::run(function () {

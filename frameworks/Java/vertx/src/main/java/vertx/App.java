@@ -140,7 +140,7 @@ public class App extends AbstractVerticle implements Handler<HttpServerRequest> 
     vertx.setPeriodic(1000, id -> plaintextHeaders[5] = dateString = createDateHeader());
     PgConnectOptions options = new PgConnectOptions();
     options.setDatabase(config.getString("database", "hello_world"));
-    options.setHost(config.getString("host", "bw-database"));
+    options.setHost(config.getString("host", "tfb-database"));
     options.setPort(config.getInteger("port", 5432));
     options.setUser(config.getString("username", "benchmarkdbuser"));
     options.setPassword(config.getString("password", "benchmarkdbpass"));

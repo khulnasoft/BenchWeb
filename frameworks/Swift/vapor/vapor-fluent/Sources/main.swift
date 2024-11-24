@@ -15,7 +15,7 @@ app.logger.notice("System.coreCount: \(System.coreCount)")
 app.logger.notice("System.maxConnectionsPerEventLoop: \(System.maxConnectionsPerEventLoop)")
 
 app.databases.use(.postgres(
-    hostname: "bw-database",
+    hostname: "tfb-database",
     username: "benchmarkdbuser",
     password: "benchmarkdbpass",
     database: "hello_world",

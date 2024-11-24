@@ -12,7 +12,7 @@ RUN ./scripts/download-framework.sh
 WORKDIR /suil-bench/benchmark
 RUN ../scripts/build.sh
 
-ENV POSTGRES_CONN="postgres://benchmarkdbuser:benchmarkdbpass@bw-database/hello_world"
+ENV POSTGRES_CONN="postgres://benchmarkdbuser:benchmarkdbpass@tfb-database/hello_world"
 
 EXPOSE 8080
 CMD ["/install/bin/suil-bench"]

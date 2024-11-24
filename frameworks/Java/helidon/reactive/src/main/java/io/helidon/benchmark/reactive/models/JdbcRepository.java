@@ -30,7 +30,7 @@ public class JdbcRepository implements DbRepository {
         connectOptions = new PgConnectOptions()
                 .setPort(config.get("port").asInt().orElse(5432))
                 .setCachePreparedStatements(config.get("cache-prepared-statements").asBoolean().orElse(true))
-                .setHost(config.get("host").asString().orElse("bw-database"))
+                .setHost(config.get("host").asString().orElse("tfb-database"))
                 .setDatabase(config.get("db").asString().orElse("hello_world"))
                 .setUser(config.get("username").asString().orElse("benchmarkdbuser"))
                 .setPassword(config.get("password").asString().orElse("benchmarkdbpass"));

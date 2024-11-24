@@ -31,5 +31,5 @@ You will update the opam package list and install your changes locally.
 
 ## Running tests
 
-$ bw --mode verify --test dream
+$ tfb --mode verify --test dream
 

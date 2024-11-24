@@ -9,4 +9,4 @@ RUN stack build -j$(nproc) --skip-ghc-check --no-terminal
 
 EXPOSE 8000
 
-CMD stack --allow-different-user exec yesod-mysql-mongo -- $(nproc) bw-database +RTS -A32m -N$(nproc)
+CMD stack --allow-different-user exec yesod-mysql-mongo -- $(nproc) tfb-database +RTS -A32m -N$(nproc)

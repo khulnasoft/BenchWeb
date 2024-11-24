@@ -57,7 +57,7 @@ class Db extends \Ubiquity\controllers\Controller {
 			$res[\mt_rand(1, 10000)] = 1;
 		} while (\count($res) < $count);
 
-		\ksort($res); // prevent deadlocks (see https://github.com/KhulnaSoft/BenchWeb/pull/5230#discussion_r345780701)
+		\ksort($res); // prevent deadlocks (see https://github.com/khulnasoft/BenchWeb/pull/5230#discussion_r345780701)
 
 		return \array_keys($res);
 	}

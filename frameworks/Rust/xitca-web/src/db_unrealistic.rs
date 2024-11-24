@@ -1,5 +1,5 @@
 //! this module is unrealistic. related issue:
-//! https://github.com/KhulnaSoft/BenchWeb/issues/8790
+//! https://github.com/khulnasoft/BenchWeb/issues/8790
 
 #[path = "./db_util.rs"]
 mod db_util;

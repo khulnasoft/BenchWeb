@@ -15,7 +15,7 @@ from tortoise.exceptions import OperationalError
 class TortoiseInit:
     async def process_startup(self, scope, event):
         await Tortoise.init(
-            db_url="postgres://benchmarkdbuser:benchmarkdbpass@bw-database:5432/hello_world",
+            db_url="postgres://benchmarkdbuser:benchmarkdbpass@tfb-database:5432/hello_world",
             modules={"models": ["tortoise_models"]}
         )
         await Tortoise.generate_schemas(safe=True)

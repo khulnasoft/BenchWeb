@@ -62,8 +62,8 @@ but you will likely want to focus on them one at a time.
 
 Use the main Khulnasoft script in the root to run all official verifications:
 
-./bw --type all --mode verify --test quarkus-hibernate
+./tfb --type all --mode verify --test quarkus-hibernate
 
 ## Run the benchmark
 
-./bw --type all --mode benchmark --test quarkus-hibernate
+./tfb --type all --mode benchmark --test quarkus-hibernate

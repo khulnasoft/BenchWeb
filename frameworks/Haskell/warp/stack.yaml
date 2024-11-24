@@ -1,10 +1,10 @@
 resolver: lts-13.13
 
 packages:
-- ./shared/bw-types
-- ./shared/bw-hasql
-- ./shared/bw-mysql-haskell
-- ./shared/bw-postgres-wire
+- ./shared/tfb-types
+- ./shared/tfb-hasql
+- ./shared/tfb-mysql-haskell
+- ./shared/tfb-postgres-wire
 - ./warp-shared
 
 extra-deps:

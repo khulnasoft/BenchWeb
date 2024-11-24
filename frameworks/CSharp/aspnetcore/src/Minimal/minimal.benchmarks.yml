@@ -21,11 +21,11 @@ jobs:
 
   postgresql:
     source:
-      repository: https://github.com/KhulnaSoft/BenchWeb.git
+      repository: https://github.com/khulnasoft/BenchWeb.git
       branchOrCommit: master
-      dockerFile: infrastructure/docker/databases/postgres/postgres.dockerfile
+      dockerFile: toolset/databases/postgres/postgres.dockerfile
       dockerImageName: postgres_te
-      dockerContextDirectory: infrastructure/docker/databases/postgres
+      dockerContextDirectory: toolset/databases/postgres
     readyStateText: ready to accept connections
     noClean: true
 

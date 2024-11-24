@@ -26,7 +26,7 @@ const provision = async () => {
   
   const Handler = require(`./handlers/${process.env.NODE_HANDLER}`);
 
-  // Makes routing simpler as bw routes are all GET's
+  // Makes routing simpler as tfb routes are all GET's
   // We also don't use the nifty route features that Hapi has
   // to offer such as attaching a validator
   const Route = (path, handler) =>

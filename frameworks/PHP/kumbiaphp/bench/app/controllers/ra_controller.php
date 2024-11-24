@@ -9,7 +9,7 @@ class RaController extends AppController
         View::select(null, null);
         header('Content-Type: application/json');
 
-        $this->pdo = new PDO('mysql:host=bw-database;dbname=hello_world', 'benchmarkdbuser', 'benchmarkdbpass', [
+        $this->pdo = new PDO('mysql:host=tfb-database;dbname=hello_world', 'benchmarkdbuser', 'benchmarkdbpass', [
             PDO::ATTR_PERSISTENT => true
         ]);
     }

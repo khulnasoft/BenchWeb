@@ -6,7 +6,7 @@ const h = require("./helper");
  */
 module.exports = databaseLayer => ({
   singleQuery: async (req, reply) => {
-    const world = await databaseLayer.getWorld(h.randomBwNumber());
+    const world = await databaseLayer.getWorld(h.randomTfbNumber());
 
     reply.send(world);
   },
@@ -16,7 +16,7 @@ module.exports = databaseLayer => ({
     const promisesArray = [];
 
     for (let i = 0; i < queries; i++) {
-      promisesArray.push(databaseLayer.getWorld(h.randomBwNumber()));
+      promisesArray.push(databaseLayer.getWorld(h.randomTfbNumber()));
     }
 
     const worlds = await Promise.all(promisesArray);
@@ -38,13 +38,13 @@ module.exports = databaseLayer => ({
     const worldPromises = [];
 
     for (let i = 0; i < queries; i++) {
-      worldPromises.push(databaseLayer.getWorld(h.randomBwNumber()));
+      worldPromises.push(databaseLayer.getWorld(h.randomTfbNumber()));
     }
 
     const worlds = await Promise.all(worldPromises);
 
     const worldsToUpdate = worlds.map(world => {
-      world.randomNumber = h.randomBwNumber();
+      world.randomNumber = h.randomTfbNumber();
       return world;
     });
 

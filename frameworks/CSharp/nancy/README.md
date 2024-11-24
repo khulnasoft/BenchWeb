@@ -2,7 +2,7 @@
 
 The information below contains information specific to Nancy on Mono and CoreCLR. 
 For further guidance, review the 
-[documentation](https://github.com/KhulnaSoft/BenchWeb/wiki). 
+[documentation](https://github.com/khulnasoft/BenchWeb/wiki). 
 Also note the additional information provided in the [CSharp README](../).
 
 This is the Nancy on Mono and CoreCLR portion of a [benchmarking test suite](../../) 
@@ -68,4 +68,4 @@ _There aren't any experts listed, yet. If you're an expert, add yourself!_
 ### Resources
 
 * [Source Code](https://github.com/NancyFx/Nancy)
-* [Issue #877 - Discussion regarding Event2.dll and Global.asax thread configuration](https://github.com/KhulnaSoft/BenchWeb/issues/877)
+* [Issue #877 - Discussion regarding Event2.dll and Global.asax thread configuration](https://github.com/khulnasoft/BenchWeb/issues/877)

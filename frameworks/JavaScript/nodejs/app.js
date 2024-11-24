@@ -4,17 +4,17 @@ const numCPUs = availableParallelism();
 
 process.env.NODE_HANDLER = 'postgres';
 
-if (process.env.BW_TEST_NAME === 'nodejs-mongodb') {
+if (process.env.TFB_TEST_NAME === 'nodejs-mongodb') {
   process.env.NODE_HANDLER = 'mongoose';
-} else if (process.env.BW_TEST_NAME === 'nodejs-mongodb-raw') {
+} else if (process.env.TFB_TEST_NAME === 'nodejs-mongodb-raw') {
   process.env.NODE_HANDLER = 'mongodb-raw';
-} else if (process.env.BW_TEST_NAME === 'nodejs-mysql') {
+} else if (process.env.TFB_TEST_NAME === 'nodejs-mysql') {
   process.env.NODE_HANDLER = 'sequelize';
-} else if (process.env.BW_TEST_NAME === 'nodejs-mysql-raw') {
+} else if (process.env.TFB_TEST_NAME === 'nodejs-mysql-raw') {
   process.env.NODE_HANDLER = 'mysql-raw';
-} else if (process.env.BW_TEST_NAME === 'nodejs-postgres') {
+} else if (process.env.TFB_TEST_NAME === 'nodejs-postgres') {
   process.env.NODE_HANDLER = 'sequelize-postgres';
-} else if (process.env.BW_TEST_NAME === 'nodejs-postgresjs-raw') {
+} else if (process.env.TFB_TEST_NAME === 'nodejs-postgresjs-raw') {
   process.env.NODE_HANDLER = 'postgres';
 }
 

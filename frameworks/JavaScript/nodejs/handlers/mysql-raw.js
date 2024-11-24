@@ -2,7 +2,7 @@ const h = require('../helper');
 const async = require('async');
 const mysql = require('mysql2');
 const connection = mysql.createConnection({
-  host: 'bw-database',
+  host: 'tfb-database',
   user: 'benchmarkdbuser',
   password: 'benchmarkdbpass',
   database: 'hello_world'
@@ -15,7 +15,7 @@ let cachePopulated = false;
 connection.connect();
 
 const queries = {
-  GET_RANDOM_WORLD: () => "SELECT * FROM world WHERE id = " + h.randomBwNumber(),
+  GET_RANDOM_WORLD: () => "SELECT * FROM world WHERE id = " + h.randomTfbNumber(),
   ALL_FORTUNES: "SELECT * FROM fortune",
   ALL_WORLDS: "SELECT * FROM world",
   UPDATE_WORLD: (rows) => {
@@ -50,7 +50,7 @@ const mysqlUpdateQuery = (callback) =>
   connection.query(queries.GET_RANDOM_WORLD(), (err, rows, fields) => {
     if (err) { return process.exit(1); }
 
-    rows[0].randomNumber = h.randomBwNumber();
+    rows[0].randomNumber = h.randomTfbNumber();
     const updateQuery = queries.UPDATE_WORLD(rows);
 
     connection.query(updateQuery, (err, result) => {
@@ -64,7 +64,7 @@ module.exports = {
     mysqlRandomWorld((err, result) => {
       if (err) { return process.exit(1); }
 
-      h.addBwHeaders(res, 'json');
+      h.addTfbHeaders(res, 'json');
       res.end(JSON.stringify(result));
     });
   },
@@ -75,7 +75,7 @@ module.exports = {
     async.parallel(queryFunctions, (err, results) => {
       if (err) { return process.exit(1); }
 
-      h.addBwHeaders(res, 'json');
+      h.addTfbHeaders(res, 'json');
       res.end(JSON.stringify(results));
     });
   },
@@ -84,11 +84,11 @@ module.exports = {
     populateCache(() => {
       let worlds = [];
       for (let i = 0; i < queries; i++) {
-        const key = h.randomBwNumber() + '';
+        const key = h.randomTfbNumber() + '';
         worlds.push(myCache.get(key));
       }
 
-      h.addBwHeaders(res, 'json');
+      h.addTfbHeaders(res, 'json');
       res.end(JSON.stringify(worlds));
     });
   },
@@ -99,7 +99,7 @@ module.exports = {
 
       fortunes.push(h.additionalFortune());
       fortunes.sort((a, b) => a.message.localeCompare(b.message));
-      h.addBwHeaders(res, 'html');
+      h.addTfbHeaders(res, 'html');
       res.end(h.fortunesTemplate({
         fortunes: fortunes
       }));
@@ -112,7 +112,7 @@ module.exports = {
     async.parallel(queryFunctions, (err, results) => {
       if (err) { return process.exit(1); }
 
-      h.addBwHeaders(res, 'json');
+      h.addTfbHeaders(res, 'json');
       res.end(JSON.stringify(results));
     });
   }

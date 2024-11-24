@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 require 'bundler/setup'
 require 'time'
-require 'oj'
 
 MAX_PK = 10_000
 ID_RANGE = (1..MAX_PK).freeze
@@ -23,8 +22,6 @@ SERVER_STRING =
 
 Bundler.require(:default) # Load core modules
 
-Oj.mimic_JSON
-
 def connect(dbtype)
   Bundler.require(dbtype) # Load database-specific modules
 
@@ -32,7 +29,7 @@ def connect(dbtype)
     :adapter=>(dbtype == :mysql ? 'mysql2' : 'postgresql'),
     :username=>'benchmarkdbuser',
     :password=>'benchmarkdbpass',
-    :host=>'bw-database',
+    :host=>'tfb-database',
     :database=>'hello_world'
   }
 
@@ -64,7 +61,7 @@ class World < ActiveRecord::Base
   if connection.adapter_name.downcase.start_with?('mysql')
     def self.upsert_all(attributes, on_duplicate: :update, update_only: nil, returning: nil, unique_by: nil, record_timestamps: nil)
       # On MySQL Batch updates verification isn't supported yet by KhulnaSoft.
-      # https://github.com/KhulnaSoft/BenchWeb/issues/5983
+      # https://github.com/khulnasoft/BenchWeb/issues/5983
       attributes.each do |attrs|
         where(id: attrs[:id]).update_all(randomNumber: attrs[:randomNumber])
       end

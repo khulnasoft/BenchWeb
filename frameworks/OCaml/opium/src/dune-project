@@ -5,7 +5,7 @@
 (generate_opam_files true)
 
 (source
- (github KhulnaSoft/BenchWeb))
+ (github khulnasoft/BenchWeb))
 
 (license MIT)
 

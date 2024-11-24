@@ -15,4 +15,4 @@ COPY --from=build /pekko-http/target/universal/stage /pekko-http
 
 EXPOSE 9000
 
-CMD ["/pekko-http/bin/pekko-http-benchmark", "-Dpekko.http.benchmark.mysql.dbhost=bw-database", "-J-server", "-J-Xms2g", "-J-Xmx2g", "-J-XX:NewSize=1g", "-J-XX:MaxNewSize=1g", "-J-XX:InitialCodeCacheSize=256m", "-J-XX:ReservedCodeCacheSize=256m", "-J-XX:+UseParallelGC", "-J-XX:+AlwaysPreTouch", "-J-XX:+UseNUMA"]
+CMD ["/pekko-http/bin/pekko-http-benchmark", "-Dpekko.http.benchmark.mysql.dbhost=tfb-database", "-J-server", "-J-Xms2g", "-J-Xmx2g", "-J-XX:NewSize=1g", "-J-XX:MaxNewSize=1g", "-J-XX:InitialCodeCacheSize=256m", "-J-XX:ReservedCodeCacheSize=256m", "-J-XX:+UseParallelGC", "-J-XX:+AlwaysPreTouch", "-J-XX:+UseNUMA"]

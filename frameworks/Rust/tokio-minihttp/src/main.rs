@@ -153,7 +153,7 @@ fn main() {
 
     let dbhost = match option_env!("DBHOST") {
         Some(it) => it,
-        _ => "bw-database",
+        _ => "tfb-database",
     };
     let db_url = format!(
         "postgres://benchmarkdbuser:benchmarkdbpass@{}/hello_world",

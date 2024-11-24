@@ -2,7 +2,7 @@
 
 The information below contains information specific to the Roda benchmarking
 test. For further guidance, review the
-[documentation](https://github.com/KhulnaSoft/BenchWeb/wiki). Also
+[documentation](https://github.com/khulnasoft/BenchWeb/wiki). Also
 note the additional information provided in the [Ruby README](../).
 
 This is the Ruby Roda portion of a [benchmarking test suite](../../)

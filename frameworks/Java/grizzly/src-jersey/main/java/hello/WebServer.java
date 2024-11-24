@@ -49,7 +49,7 @@ public class WebServer {
 			server.start();
 
 			System.out.println(String
-					.format("BWApplication started.%nStop the application using CTRL+C"));
+					.format("TFBApplication started.%nStop the application using CTRL+C"));
 
 			Thread.currentThread().join();
 		} catch (IOException | InterruptedException ex) {
@@ -58,7 +58,7 @@ public class WebServer {
 	}
 
 	public static ResourceConfig createApp() {
-		return new BWApplication();
+		return new TFBApplication();
 	}
 
 	private static class SimplifyAddOn implements AddOn {

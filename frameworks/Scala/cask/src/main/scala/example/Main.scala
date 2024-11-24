@@ -13,7 +13,7 @@ object Main extends cask.MainRoutes {
   override def main(args: Array[String]): Unit = {
     val server = Undertow.builder
       .addHttpListener(8080, "0.0.0.0")
-      // increase io thread count as per https://github.com/KhulnaSoft/BenchWeb/pull/4008
+      // increase io thread count as per https://github.com/khulnasoft/BenchWeb/pull/4008
       .setIoThreads(Runtime.getRuntime().availableProcessors() * 2)
       // In HTTP/1.1, connections are persistent unless declared otherwise.
       // Adding a "Connection: keep-alive" header to every response would only

@@ -54,7 +54,7 @@ templates = Jinja2Templates(directory=template_path)
 
 
 async def setup_database():
-    dsn = "postgresql+asyncpg://%s:%s@bw-database:5432/hello_world" % (
+    dsn = "postgresql+asyncpg://%s:%s@tfb-database:5432/hello_world" % (
         os.getenv("PGPASS", "benchmarkdbuser"),
         os.getenv("PGPASS", "benchmarkdbpass"),
     )
@@ -148,7 +148,7 @@ async def database_updates(queries=None):
             world = await sess.get(World, id_, populate_existing=True)
             world.randomnumber = randint(1, 10000)
             # force sqlalchemy to UPDATE entry even if the value has not changed
-            # doesn't make sense in a real application, added only for pass `bw verify`
+            # doesn't make sense in a real application, added only for pass `tfb verify`
             flag_modified(world, "randomnumber")
             data.append(world.__json__())
 

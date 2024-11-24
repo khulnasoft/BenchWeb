@@ -19,7 +19,7 @@ async def init_connection_pool() -> None:
         user=os.getenv('PGUSER', 'benchmarkdbuser'),
         password=os.getenv('PGPASS', 'benchmarkdbpass'),
         database='hello_world',
-        host='bw-database',
+        host='tfb-database',
         port=5432
     )
 

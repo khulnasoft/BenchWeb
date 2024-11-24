@@ -11,4 +11,4 @@ ENV LD_LIBRARY_PATH=/usr/lib
 
 EXPOSE 8080
 
-CMD ./compile-batch.sh BW_PGSQL 
+CMD ./compile-batch.sh TFB_PGSQL 

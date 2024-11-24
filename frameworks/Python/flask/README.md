@@ -1,7 +1,7 @@
 # [Flask](http://flask.pocoo.org/) Benchmark Test
 
 The information below is specific to Flask. For further guidance, 
-review the [documentation](https://github.com/KhulnaSoft/BenchWeb/wiki). 
+review the [documentation](https://github.com/khulnasoft/BenchWeb/wiki). 
 Also note that there is additional information that's provided in 
 the [Python README](../).
 

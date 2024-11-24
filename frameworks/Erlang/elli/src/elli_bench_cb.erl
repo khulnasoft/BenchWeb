@@ -36,7 +36,7 @@ handle('GET',[<<"db">>], Req) ->
     {ok, [{<<"Server">>, <<"elli">>}, {<<"Date">>, httpd_util:rfc1123_date()}, {<<"Content-Type">>, <<"application/json">>}], jiffy:encode(lists:nth(1,JSON))};
 
 %% TODO : Finish this function with correct logic.
-%%        Please check BW document
+%%        Please check TFB document
 %% Multiple query test route
 % handle('GET',[<<"query">>], Req) ->
 %         random:seed(erlang:now()),

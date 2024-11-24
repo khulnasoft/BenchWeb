@@ -10,13 +10,13 @@ mod db;
 mod server;
 
 fn main() {
-    //"postgres://benchmarkdbuser:benchmarkdbpass@bw-database/hello_world";
+    //"postgres://benchmarkdbuser:benchmarkdbpass@tfb-database/hello_world";
     let mut psql_config = tokio_postgres::Config::new();
     psql_config
         .user("benchmarkdbuser")
         .password("benchmarkdbpass")
         .dbname("hello_world");
-    let psql_addr = ("bw-database", 5432)
+    let psql_addr = ("tfb-database", 5432)
         .to_socket_addrs()
         .expect("must be able to resolve database hostname")
         .next()

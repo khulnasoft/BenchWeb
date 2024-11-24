@@ -1,5 +1,5 @@
 # Pronghorn
-This is the [Pronghorn Http Server](https://www.pronghorn.tech) portion of the [KhulnaSoft Framework Benchmarks](https://github.com/KhulnaSoft/BenchWeb). 
+This is the [Pronghorn Http Server](https://www.pronghorn.tech) portion of the [KhulnaSoft Framework Benchmarks](https://github.com/khulnasoft/BenchWeb). 
 
 ## About
 The Pronghorn HTTP Server is a low-level, high performance HTTP server written in [Kotlin](https://kotlinlang.org/).
@@ -10,27 +10,27 @@ v0.1.2 : [https://github.com/pronghorn-tech/server/releases/tag/0.1.2](https://g
 ## Test Types
 
 ### Plaintext
-url : `http://BW-server:8080/plaintext` 
+url : `http://TFB-server:8080/plaintext` 
 source code : [TestServer.kt](src/main/kotlin/pronghorn/TestServer.kt)
 
 ### Json Serialization
-url : `http://BW-server:8080/json`
+url : `http://TFB-server:8080/json`
 source code : [JsonHandler.kt](src/main/kotlin/pronghorn/handlers/JsonHandler.kt)
 
 ### Single Query
-url : `http://BW-server:8080/db`
+url : `http://TFB-server:8080/db`
 source code : [MongoDBRequestSingleHandler.kt](src/main/kotlin/pronghorn/handlers/MongoDBRequestSingleHandler.kt)
 
 ### Multiple Query
-url : `http://BW-server:8080/queries`
+url : `http://TFB-server:8080/queries`
 source code : [MongoDBRequestMultiHandler.kt](src/main/kotlin/pronghorn/handlers/MongoDBRequestMultiHandler.kt)
 
 ### Data Updates
-url : `http://BW-server:8080/updates`
+url : `http://TFB-server:8080/updates`
 source code : [MongoDBRequestUpdatesHandler.kt](src/main/kotlin/pronghorn/handlers/MongoDBRequestUpdatesHandler.kt)
 
 ### Fortunes
-url : `http://BW-server:8080/fortunes`
+url : `http://TFB-server:8080/fortunes`
 source code : [MongoDBRequestFortunesHandler.kt](src/main/kotlin/pronghorn/handlers/MongoDBRequestFortunesHandler.kt)
 
 ## Additional Dependencies

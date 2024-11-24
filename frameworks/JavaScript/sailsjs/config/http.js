@@ -50,7 +50,7 @@ module.exports.http = {
     ],
 
     // Replacing the x-powered-by header with the expected
-    // server header for BW
+    // server header for TFB
     disablePoweredBy: function(req, res, next) {
       res.removeHeader("x-powered-by")
       res.set('Server', 'Sails <sailsjs.org>');

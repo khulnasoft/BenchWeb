@@ -42,7 +42,7 @@ namespace Benchmarks.Utilities
 
             if (response != null)
             {
-                response.Headers.Add("Server", "BW");
+                response.Headers.Add("Server", "TFB");
             }
 
             return response;

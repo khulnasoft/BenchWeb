@@ -5,7 +5,7 @@ use List::Util qw'min max';
 
 sub {
     state $dbh = DBI->connect(
-	'dbi:MariaDB:database=hello_world;host=bw-database;port=3306',
+	'dbi:MariaDB:database=hello_world;host=tfb-database;port=3306',
 	'benchmarkdbuser', 'benchmarkdbpass',
 	+{ qw'RaiseError 0 PrintError 0' }
     ) || die $!;

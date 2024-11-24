@@ -15,10 +15,10 @@ spring:
     username: ${database.username}
     password: ${database.password}
     hikari:
-      maximum-pool-size: 256
+      maximum-pool-size: 512
 database:
   name: hello_world
-  host: bw-database
+  host: tfb-database
   port: 5432
   username: benchmarkdbuser
   password: benchmarkdbpass
@@ -32,7 +32,7 @@ spring:
     exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration,org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration
 
 spring.data.mongodb:
-  host: bw-database
+  host: tfb-database
   port: 27017
   database: hello_world
 

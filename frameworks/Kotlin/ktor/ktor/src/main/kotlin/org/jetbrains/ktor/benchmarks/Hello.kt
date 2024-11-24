@@ -157,7 +157,7 @@ fun Application.main() {
 }
 
 fun HikariConfig.configurePostgres(poolSize: Int) {
-    jdbcUrl = "jdbc:postgresql://bw-database/hello_world?useSSL=false"
+    jdbcUrl = "jdbc:postgresql://tfb-database/hello_world?useSSL=false"
     driverClassName = org.postgresql.Driver::class.java.name
 
     configureCommon(poolSize)
@@ -177,7 +177,7 @@ fun HikariConfig.configureCommon(poolSize: Int) {
 }
 
 fun HikariConfig.configureMySql(poolSize: Int) {
-    jdbcUrl = "jdbc:mysql://bw-database:3306/hello_world?useSSL=false"
+    jdbcUrl = "jdbc:mysql://tfb-database:3306/hello_world?useSSL=false"
     driverClassName = com.mysql.jdbc.Driver::class.java.name
     configureCommon(poolSize)
 }

@@ -1,3 +1,3 @@
 fun main() {
-    Http4kBenchmarkServer(PostgresDatabase()).start(BwApacheServer(9000))
+    Http4kBenchmarkServer(PostgresDatabase()).start(TfbApacheServer(9000))
 }

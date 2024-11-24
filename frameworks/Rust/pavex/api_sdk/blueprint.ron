@@ -15,7 +15,7 @@
             ),
             request_handler: (
                 callable: (
-                    registered_at: "bw-pavex-bp",
+                    registered_at: "tfb-pavex-bp",
                     import_path: "crate :: plaintext",
                 ),
                 location: (

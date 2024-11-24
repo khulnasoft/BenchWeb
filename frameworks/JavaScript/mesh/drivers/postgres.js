@@ -1,7 +1,7 @@
 const { Client } = require('pg');
 
 const client = new Client({
-	host: 'bw-database',
+	host: 'tfb-database',
   user: 'benchmarkdbuser',
   password: 'benchmarkdbpass',
   database: 'hello_world'

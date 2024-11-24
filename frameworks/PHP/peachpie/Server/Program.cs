@@ -17,12 +17,12 @@ namespace PeachpieBenchmarks.Server
             ThreadPool.GetMinThreads(out int workerThread, out int completionThread);
             ThreadPool.SetMinThreads(workerThread * 2, completionThread);
 
-            // https://github.com/KhulnaSoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview
+            // https://github.com/khulnasoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview
 
             new WebHostBuilder()
                 .UseKestrel(options =>
                 {
-                    options.AddServerHeader = true; // bw requires "Server" header
+                    options.AddServerHeader = true; // tfb requires "Server" header
                     //options.Limits.KeepAliveTimeout = Timeout.InfiniteTimeSpan; // default 2:00
                     //options.Limits.MaxConcurrentConnections = 1000;
                 })

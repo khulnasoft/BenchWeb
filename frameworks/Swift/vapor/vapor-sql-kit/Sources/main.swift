@@ -15,7 +15,7 @@ app.logger.notice("System.maxConnectionsPerEventLoop: \(System.maxConnectionsPer
 
 let pools = EventLoopGroupConnectionPool(
     source: PostgresConnectionSource(configuration: .init(
-        hostname: "bw-database",
+        hostname: "tfb-database",
         username: "benchmarkdbuser",
         password: "benchmarkdbpass",
         database: "hello_world"

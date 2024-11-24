@@ -2,7 +2,7 @@
 header('Content-Type: application/json');
 // Database connection
 // http://www.php.net/manual/en/ref.pdo-mysql.php
-$pdo = new PDO('mysql:host=bw-database;dbname=hello_world', 'benchmarkdbuser', 'benchmarkdbpass',
+$pdo = new PDO('mysql:host=tfb-database;dbname=hello_world', 'benchmarkdbuser', 'benchmarkdbpass',
     [PDO::ATTR_PERSISTENT => true,
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
     PDO::ATTR_EMULATE_PREPARES => false]

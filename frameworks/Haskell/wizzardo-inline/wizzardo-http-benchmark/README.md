@@ -7,4 +7,4 @@ Furtheremore, an experimental interface of inline-java is used, where
 handled correctly on the Haskell side.
 
 Running the benchmark requires the framework from
-https://github.com/KhulnaSoft/BenchWeb
+https://github.com/khulnasoft/BenchWeb

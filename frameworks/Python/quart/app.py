@@ -17,7 +17,7 @@ async def connect_to_db():
         user=os.getenv("PGUSER", "benchmarkdbuser"),
         password=os.getenv("PGPASS", "benchmarkdbpass"),
         database="hello_world",
-        host="bw-database",
+        host="tfb-database",
         port=5432,
     )
 

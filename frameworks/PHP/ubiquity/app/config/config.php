@@ -5,7 +5,7 @@ return array(
 			"wrapper" => "\\Ubiquity\\db\\providers\\pdo\\PDOWrapper",
 			"type" => "mysql",
 			"dbName" => "hello_world",
-			"serverName" => "bw-database", // bw-database
+			"serverName" => "tfb-database", // tfb-database
 			"port" => 3306,
 			"user" => "benchmarkdbuser", // benchmarkdbuser
 			"password" => "benchmarkdbpass", // benchmarkdbpass
@@ -18,7 +18,7 @@ return array(
 			"wrapper" => "\\Ubiquity\\db\\providers\\pdo\\PDOWrapper",
 			"type" => "pgsql",
 			"dbName" => "hello_world",
-			"serverName" => "bw-database", // bw-database
+			"serverName" => "tfb-database", // tfb-database
 			"port" => 5432,
 			"user" => "benchmarkdbuser", // benchmarkdbuser
 			"password" => "benchmarkdbpass", // benchmarkdbpass
@@ -33,7 +33,7 @@ return array(
 			"wrapper" => "\\Ubiquity\\db\\providers\\pdo\\PDOWrapper",
 			"type" => "pgsql",
 			"dbName" => "hello_world",
-			"serverName" => "bw-database", // bw-database
+			"serverName" => "tfb-database", // tfb-database
 			"port" => 5432,
 			"user" => "benchmarkdbuser", // benchmarkdbuser
 			"password" => "benchmarkdbpass", // benchmarkdbpass
@@ -46,7 +46,7 @@ return array(
 			"wrapper" => "\\Ubiquity\\db\\providers\\MongoDbWrapper",
 			"type" => "mongo",
 			"dbName" => "hello_world",
-			"serverName" => "bw-database", // bw-database
+			"serverName" => "tfb-database", // tfb-database
 			"port" => 27017,
 			"user" => "", // benchmarkdbuser
 			"password" => "", // benchmarkdbpass

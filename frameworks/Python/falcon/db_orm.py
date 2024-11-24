@@ -18,7 +18,7 @@ if _is_pypy:
 db = Database()
 db.bind(
     provider="postgres",
-    host="bw-database",
+    host="tfb-database",
     port=5432,
     user=os.getenv("PGUSER", "benchmarkdbuser"),
     password=os.getenv("PSPASS", "benchmarkdbpass"),

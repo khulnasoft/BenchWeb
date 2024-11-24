@@ -4,8 +4,8 @@ synopsis: "Rudimentary implementation of the Tech Empower Benchmark suite"
 maintainer: ["mud"]
 authors: ["Robin Bjorklin" "mud"]
 license: "MIT"
-homepage: "https://github.com/KhulnaSoft/BenchWeb"
-bug-reports: "https://github.com/KhulnaSoft/BenchWeb/issues"
+homepage: "https://github.com/khulnasoft/BenchWeb"
+bug-reports: "https://github.com/khulnasoft/BenchWeb/issues"
 depends: [
   "dune" {>= "2.7" & >= "2.7.1"}
   "conf-libev" {>= "4-11"}
@@ -35,4 +35,4 @@ build: [
     "@doc" {with-doc}
   ]
 ]
-dev-repo: "git+https://github.com/KhulnaSoft/BenchWeb.git"
+dev-repo: "git+https://github.com/khulnasoft/BenchWeb.git"

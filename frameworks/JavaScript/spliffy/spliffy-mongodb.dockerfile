@@ -6,7 +6,7 @@ WORKDIR /app
 RUN npm install
 COPY . /app
 
-ENV DB_HOST=bw-database
+ENV DB_HOST=tfb-database
 ENV DATABASE=mongodb
 
 EXPOSE 1420

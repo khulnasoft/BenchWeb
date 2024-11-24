@@ -1,7 +1,7 @@
 # [Plumber](https://www.rplumber.io/) Benchmark Test
 
 The information below is specific to Plumber. For further guidance,
-review the [documentation](https://github.com/KhulnaSoft/BenchWeb/wiki).
+review the [documentation](https://github.com/khulnasoft/BenchWeb/wiki).
 
 This is the R Plumber portion of a [benchmarking tests suite](../../)
 comparing a variety of frameworks.

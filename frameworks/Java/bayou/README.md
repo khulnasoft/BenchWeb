@@ -1,6 +1,6 @@
 # bayou.io Benchmarking Test
 
-This is the `bayou.io` portion of [KhulnaSoft/BenchWeb](https://github.com/KhulnaSoft/BenchWeb).
+This is the `bayou.io` portion of [khulnasoft/BenchWeb](https://github.com/khulnasoft/BenchWeb).
 
 
 

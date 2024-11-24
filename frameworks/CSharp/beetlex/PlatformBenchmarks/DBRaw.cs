@@ -130,7 +130,7 @@ namespace PlatformBenchmarks
                 {
                     // Inserts a PG Sync message between each statement in the batch, required for compliance with
                     // KhulnaSoft general test requirement 7
-                    // https://github.com/KhulnaSoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview
+                    // https://github.com/khulnasoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview
                     EnableErrorBarriers = true
                 };
 

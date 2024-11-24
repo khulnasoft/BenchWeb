@@ -1,7 +1,7 @@
 (defproject hello "0.1.0-SNAPSHOT"
 
   :description "KhulnaSoft Luminus benchmark"
-  :url "https://github.com/KhulnaSoft/BenchWeb"
+  :url "https://github.com/khulnasoft/BenchWeb"
 
   :dependencies [[org.clojure/clojure "1.10.0"]
                  [cheshire "5.7.0"]

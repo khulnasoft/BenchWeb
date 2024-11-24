@@ -46,7 +46,7 @@ class PgclientRepository : Repository {
     private val connectOptions =
         PgConnectOptions().apply {
             port = 5432
-            host = "bw-database"
+            host = "tfb-database"
             database = "hello_world"
             user = "benchmarkdbuser"
             password = "benchmarkdbpass"

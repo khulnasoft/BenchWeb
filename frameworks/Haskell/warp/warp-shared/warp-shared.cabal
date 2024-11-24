@@ -3,7 +3,7 @@ cabal-version:       2.4
 -- run `stack exec -- cabal --version` to find out
 name:                warp-shared
 version:             0.1.0.0
-homepage:            https://github.com/KhulnaSoft/BenchWeb/tree/master/frameworks/Haskell/warp/warp-shared
+homepage:            https://github.com/khulnasoft/BenchWeb/tree/master/frameworks/Haskell/warp/warp-shared
 license:             BSD-3-Clause
 author:              Naushadh
 maintainer:          naushadh@protonmail.com
@@ -34,21 +34,21 @@ executable warp-hasql
   main-is:
     Main.hs
   build-depends:
-      bw-types
-    , bw-hasql
+      tfb-types
+    , tfb-hasql
 
 executable warp-mysql-haskell
   import: deps
   main-is:
     Main.hs
   build-depends:
-      bw-types
-    , bw-mysql-haskell
+      tfb-types
+    , tfb-mysql-haskell
 
 executable warp-postgres-wire
   import: deps
   main-is:
     Main.hs
   build-depends:
-      bw-types
-    , bw-postgres-wire
+      tfb-types
+    , tfb-postgres-wire

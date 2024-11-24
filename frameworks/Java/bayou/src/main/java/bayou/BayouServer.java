@@ -9,7 +9,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.Collections;
 
 /**
- *  bayou.io HTTP Server for KhulnaSoft/BenchWeb
+ *  bayou.io HTTP Server for khulnasoft/BenchWeb
  */
 public class BayouServer
 {

@@ -2,7 +2,7 @@ import postgres from "postgres";
 import { Fortune, World } from "./types";
 
 const sql = postgres({
-  host: "bw-database",
+  host: "tfb-database",
   user: "benchmarkdbuser",
   password: "benchmarkdbpass",
   database: "hello_world",

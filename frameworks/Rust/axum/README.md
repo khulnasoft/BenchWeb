@@ -38,7 +38,7 @@ built with Tokio, Tower, and Hyper.
 - Streaming database queries (where supported).
 - Use of PostgreSQL prepared statements cache (where supported).
 - Use of PostgreSQL arrays to execute multi-row database updates with a single `UPDATE` query.
-  - This is permitted by the [test requirements](https://github.com/KhulnaSoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview#database-updates), step (ix).
+  - This is permitted by the [test requirements](https://github.com/khulnasoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview#database-updates), step (ix).
 - In version 0.7.6 (as yet unreleased), a native API to set TCP_NODELAY will be included.
   - https://github.com/tokio-rs/axum/pull/2653/
   - https://github.com/tokio-rs/axum/issues/2521

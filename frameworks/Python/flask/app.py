@@ -43,7 +43,7 @@ if not _use_orjson and not _use_ujson:
     from flask import jsonify
 
 DBDRV  = "postgres"
-DBHOST = "bw-database"
+DBHOST = "tfb-database"
 DBUSER = "benchmarkdbuser"
 DBPSWD = "benchmarkdbpass"
 

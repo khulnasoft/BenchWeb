@@ -60,7 +60,7 @@ fn addressAsString(address: std.net.Address) ![]const u8 {
 
 fn parsePostgresConnStr(allocator: Allocator) !ConnectionInfo {
     const pg_port = try getEnvVar(allocator, "PG_PORT", "5432");
-    // std.debug.print("bw port {s}\n", .{pg_port});
+    // std.debug.print("tfb port {s}\n", .{pg_port});
     var port = try std.fmt.parseInt(u16, pg_port, 0);
 
     if (port == 0) {

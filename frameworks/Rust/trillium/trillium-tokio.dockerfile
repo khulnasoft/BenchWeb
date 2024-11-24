@@ -10,7 +10,7 @@ EXPOSE 8080
 ENV RUSTFLAGS="-C target-cpu=native"
 ENV PORT=8080
 ENV HOST=0.0.0.0
-ENV DATABASE_URL=postgres://benchmarkdbuser:benchmarkdbpass@bw-database/hello_world
+ENV DATABASE_URL=postgres://benchmarkdbuser:benchmarkdbpass@tfb-database/hello_world
 
 RUN cargo build --release --features jemallocator,tokio
 CMD ["./target/release/trillium-khulnasoft"]

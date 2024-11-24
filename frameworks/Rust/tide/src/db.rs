@@ -3,7 +3,7 @@
 use diesel::{pg::PgConnection, r2d2};
 use std::time::Duration;
 
-const DATABASE_URL: &str = "postgres://benchmarkdbuser:benchmarkdbpass@bw-database/hello_world";
+const DATABASE_URL: &str = "postgres://benchmarkdbuser:benchmarkdbpass@tfb-database/hello_world";
 
 /// A shared pool of DB connections used across the server.
 pub type Pool = r2d2::Pool<r2d2::ConnectionManager<PgConnection>>;

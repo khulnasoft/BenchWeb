@@ -4,7 +4,7 @@ This is the Python Bottle portion of a [benchmarking tests suite](../../)
 comparing a variety of frameworks.
 
 The information below is specific to Bottle. For further guidance, 
-review the [documentation](https://github.com/KhulnaSoft/BenchWeb/wiki). 
+review the [documentation](https://github.com/khulnasoft/BenchWeb/wiki). 
 Also note that there is additional information that's provided in 
 the [Python README](../).
 

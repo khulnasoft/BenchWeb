@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.bayou</groupId>
-    <artifactId>bayou_BW</artifactId>
+    <artifactId>bayou_TFB</artifactId>
     <version>0.1</version>
 
     <properties>

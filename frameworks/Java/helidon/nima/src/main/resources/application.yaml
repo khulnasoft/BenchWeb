@@ -32,7 +32,7 @@ server:
       recv-log: false
       send-log: false
 
-host: "bw-database"
+host: "tfb-database"
 db: "hello_world"
 username: benchmarkdbuser
 password: benchmarkdbpass

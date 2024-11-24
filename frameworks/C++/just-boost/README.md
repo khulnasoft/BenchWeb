@@ -7,7 +7,7 @@ Backend using just C++(20) and Boost.
 ## Run Test
 
     cd BenchWeb/
-    ./bw --mode verify --test just-boost
+    ./tfb --mode verify --test just-boost
 
 ## Software Versions
 

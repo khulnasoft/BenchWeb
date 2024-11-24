@@ -2,7 +2,7 @@
 
 module.exports = {
 
-  randomBwNumber: () => Math.floor(Math.random() * 10000) + 1,
+  randomTfbNumber: () => Math.floor(Math.random() * 10000) + 1,
 
   getQueries: (req) => {
     let queries = req.param('queries');

@@ -2,7 +2,7 @@
 
 The information below contains information specific to Grape.
 For further guidance, review the
-[documentation](https://github.com/KhulnaSoft/BenchWeb/wiki).
+[documentation](https://github.com/khulnasoft/BenchWeb/wiki).
 Also note the additional information provided in the [Ruby README](../).
 
 This is the Ruby Grape portion of a [benchmarking test suite](../../)

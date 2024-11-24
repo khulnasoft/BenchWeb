@@ -11,7 +11,7 @@ class Mysql
     public function __construct()
     {
         $this->pdo = new PDO(
-            'mysql:host=bw-database;dbname=hello_world',
+            'mysql:host=tfb-database;dbname=hello_world',
             'benchmarkdbuser',
             'benchmarkdbpass',
             [

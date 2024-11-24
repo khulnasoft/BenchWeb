@@ -20,7 +20,7 @@ $config = [
         // since they avoid the cost of Dependency Injection.
         'db' => function() {
             return new yii\db\Connection([
-                'dsn' => 'mysql:host=bw-database;dbname=hello_world',
+                'dsn' => 'mysql:host=tfb-database;dbname=hello_world',
                 'username' => 'benchmarkdbuser',
                 'password' => 'benchmarkdbpass',
                 'charset' => 'utf8',

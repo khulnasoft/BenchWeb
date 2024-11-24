@@ -1,7 +1,7 @@
 <?php
 require_once '/ngx-php/t/lib/mysql.php';
 
-define('DB_HOST', gethostbyname('bw-database'));
+define('DB_HOST', gethostbyname('tfb-database'));
 define('DB_PORT', '3306');
 define('DB_USER', 'benchmarkdbuser');
 define('DB_PASS', 'benchmarkdbpass');

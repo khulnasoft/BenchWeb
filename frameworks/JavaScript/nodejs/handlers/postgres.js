@@ -3,7 +3,7 @@ const NodeCache = require("node-cache");
 const h = require("../helper");
 
 const sql = postgres({
-  host: "bw-database",
+  host: "tfb-database",
   user: "benchmarkdbuser",
   password: "benchmarkdbpass",
   database: "hello_world",

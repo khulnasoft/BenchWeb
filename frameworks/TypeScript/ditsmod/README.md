@@ -13,28 +13,28 @@ Information about Ditsmod can be found at https://github.com/ditsmod/ditsmod or 
 ## Test URLs
 ### JSON
 
-http://bw-server:8080/json
+http://tfb-server:8080/json
 
 ### PLAINTEXT
 
-http://bw-server:8080/plaintext
+http://tfb-server:8080/plaintext
 
 ### DB
 
-http://bw-server:8080/db
+http://tfb-server:8080/db
 
 ### QUERY
 
-http://bw-server:8080/queries?queries=10
+http://tfb-server:8080/queries?queries=10
 
 ### UPDATE
 
-http://bw-server:8080/updates?queries=10
+http://tfb-server:8080/updates?queries=10
 
 ### CACHED QUERY
 
-http://bw-server:8080/cached-queries?count=10
+http://tfb-server:8080/cached-queries?count=10
 
 ### Fortune
 
-http://bw-server:8080/fortunes
+http://tfb-server:8080/fortunes

@@ -27,7 +27,7 @@
       (postgresql-connect #:database "hello_world"
                           #:user "benchmarkdbuser"
                           #:password "benchmarkdbpass"
-                          #:server "bw-database")))))
+                          #:server "tfb-database")))))
 
 
 ;; cache ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

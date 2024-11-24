@@ -3,8 +3,8 @@ import Hummingbird
 import PostgresNIO
 
 // postgresql.conf specifies max_connections = 2000
-// https://github.com/KhulnaSoft/BenchWeb/wiki/Project-Information-Environment#citrine-self-hosted
-// https://github.com/KhulnaSoft/BenchWeb/blob/master/infrastructure/docker/databases/postgres/postgresql.conf#L64
+// https://github.com/khulnasoft/BenchWeb/wiki/Project-Information-Environment#citrine-self-hosted
+// https://github.com/khulnasoft/BenchWeb/blob/master/toolset/databases/postgres/postgresql.conf#L64
 
 extension Int {
     func bound(_ minValue: Int, _ maxValue: Int) -> Int {
@@ -40,7 +40,7 @@ func runApp() async throws {
     let serverPort = env.get("SERVER_PORT", as: Int.self) ?? 8080
 
     var postgresConfiguration = PostgresClient.Configuration(
-        host: "bw-database", 
+        host: "tfb-database", 
         username: "benchmarkdbuser", 
         password: "benchmarkdbpass", 
         database: "hello_world", 

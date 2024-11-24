@@ -1,7 +1,7 @@
 open Opium.Std
 open Lwt.Syntax
 
-module Bw_headers = struct
+module Tfb_headers = struct
   let memo_date = ref (Opi.Time.now ())
 
   let start_refreshing_date () = 
@@ -19,10 +19,10 @@ module Bw_headers = struct
       Response.add_headers_or_replace headers res
     in
 
-    Rock.Middleware.create ~name:"BW Headers" ~filter
+    Rock.Middleware.create ~name:"TFB Headers" ~filter
 end
 
-let start_refreshing_date = Bw_headers.start_refreshing_date
+let start_refreshing_date = Tfb_headers.start_refreshing_date
 
 (* lwt debugging information *)
 let dump_lwt () =
@@ -76,5 +76,5 @@ let create_app ~port =
   |> App.cmd_name "Opium"
   |> App.port port
   |> middleware Middleware.content_length
-  |> middleware Bw_headers.middleware
+  |> middleware Tfb_headers.middleware
   |> add_routes

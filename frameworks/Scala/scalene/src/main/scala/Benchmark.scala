@@ -38,7 +38,7 @@ object Main extends App {
   implicit val pool = new Pool
   val worldClient = MiniSQL.client(
     "world-client",
-    "jdbc:postgresql://bw-database:5432/hello_world",
+    "jdbc:postgresql://tfb-database:5432/hello_world",
     "benchmarkdbuser",
     "benchmarkdbpass"
   )

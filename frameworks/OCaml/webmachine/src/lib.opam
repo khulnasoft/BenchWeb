@@ -3,8 +3,8 @@ opam-version: "2.0"
 synopsis: "WIP library"
 authors: ["Robin Björklin"]
 license: "MIT"
-homepage: "https://github.com/KhulnaSoft/BenchWeb"
-bug-reports: "https://github.com/KhulnaSoft/BenchWeb/issues"
+homepage: "https://github.com/khulnasoft/BenchWeb"
+bug-reports: "https://github.com/khulnasoft/BenchWeb/issues"
 depends: [
   "dune" {>= "3.9" & >= "2.8.5"}
   "biniou" {>= "1.2.1"}
@@ -28,4 +28,4 @@ build: [
     "@doc" {with-doc}
   ]
 ]
-dev-repo: "git+https://github.com/KhulnaSoft/BenchWeb.git"
+dev-repo: "git+https://github.com/khulnasoft/BenchWeb.git"

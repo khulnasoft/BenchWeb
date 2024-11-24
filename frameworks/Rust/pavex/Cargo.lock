@@ -27,7 +27,7 @@ dependencies = [
  "http-body",
  "hyper",
  "pavex_runtime",
- "bw-pavex-bp",
+ "tfb-pavex-bp",
 ]
 
 [[package]]
@@ -562,7 +562,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "bw-pavex-bp"
+name = "tfb-pavex-bp"
 version = "0.1.0"
 dependencies = [
  "cargo_px_env",

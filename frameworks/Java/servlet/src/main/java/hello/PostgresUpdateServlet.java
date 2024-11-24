@@ -64,7 +64,7 @@ public class PostgresUpdateServlet extends HttpServlet {
 						 * Applying batch updates will lead to transaction
 						 * deadlocks. This could not be apparent on local
 						 * testing but will be visible on higher concurrencies
-						 * in the BW test environment.
+						 * in the TFB test environment.
 						 */
 					}
 				}

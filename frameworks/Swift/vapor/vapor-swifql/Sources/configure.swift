@@ -9,7 +9,7 @@ import VaporBridges
 extension DatabaseHost {
     public static var DbHost: DatabaseHost {
         return .init(
-            hostname: "bw-database",
+            hostname: "tfb-database",
             port: 5432,
             username: "benchmarkdbuser",
             password: "benchmarkdbpass"

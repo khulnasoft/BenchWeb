@@ -3,7 +3,7 @@
  *
  * Add HTTP response headers `Server` and `Date` which is required by the test suite.
  *
- * https://github.com/KhulnaSoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview
+ * https://github.com/khulnasoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview
  *
  * @param {import('hono').Context} c
  */

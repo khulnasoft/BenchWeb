@@ -17,7 +17,7 @@ web:
 pg:
   cls: pg.PG
   connection:
-    dsn: postgresql://bw-database:5432/hello_world
+    dsn: postgresql://tfb-database:5432/hello_world
     username: benchmarkdbuser
     password: benchmarkdbpass
 

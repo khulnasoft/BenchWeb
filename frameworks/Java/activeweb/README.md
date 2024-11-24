@@ -12,7 +12,7 @@ How to start locally
 
 1. Execute this script against local MySQL DB:
 
-    https://github.com/KhulnaSoft/BenchWeb/blob/master/config/create.sql
+    https://github.com/khulnasoft/BenchWeb/blob/master/config/create.sql
 
 2. Start application:
 

@@ -1,6 +1,6 @@
 # userver Benchmarking Test
 
-This is the [userver](https://github.com/userver-framework/userver) portion of a [benchmarking test suite](https://github.com/KhulnaSoft/BenchWeb) comparing a variety of web development platforms.
+This is the [userver](https://github.com/userver-framework/userver) portion of a [benchmarking test suite](https://github.com/khulnasoft/BenchWeb) comparing a variety of web development platforms.
 
 ### Test Type Implementation Source Code
 

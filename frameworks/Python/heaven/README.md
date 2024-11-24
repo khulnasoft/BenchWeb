@@ -4,7 +4,7 @@ This is the Heaven Web Framework implementation of a [benchmarking tests suite](
 comparing a variety of web development platforms.
 
 The information below is specific to Heaven Web Framework. For further guidance,
-review the [documentation](https://github.com/KhulnaSoft/BenchWeb/wiki).
+review the [documentation](https://github.com/khulnasoft/BenchWeb/wiki).
 Also note that there is additional information provided in
 the [Python README](../).
 

@@ -8,7 +8,7 @@ import           System.Environment (getArgs, lookupEnv)
 
 main :: IO ()
 main = do
-  testName <- lookupEnv "BW_TEST_NAME"
+  testName <- lookupEnv "TFB_TEST_NAME"
   putStrLn $ "Test is: " ++ show testName
   args <- getArgs
   dbHost <- case args of

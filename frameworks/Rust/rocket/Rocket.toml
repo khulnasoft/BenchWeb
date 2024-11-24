@@ -4,5 +4,5 @@ port = 8000
 log_level = "off"
 
 [default.databases.hello_world]
-url = "postgres://benchmarkdbuser:benchmarkdbpass@bw-database/hello_world"
+url = "postgres://benchmarkdbuser:benchmarkdbpass@tfb-database/hello_world"
 connect_timeout = 5

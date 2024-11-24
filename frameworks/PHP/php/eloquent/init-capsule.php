@@ -9,7 +9,7 @@ $capsule = new Capsule;
 $capsule->addConnection([
     'driver' => 'mysql',
 //    'host' => 'localhost',
-    'host' => 'bw-database',
+    'host' => 'tfb-database',
     'database' => 'hello_world',
     'username' => 'benchmarkdbuser',
     'password' => 'benchmarkdbpass',

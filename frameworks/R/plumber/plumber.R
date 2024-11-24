@@ -6,7 +6,7 @@ library(DBI)
 READ_ROW_SQL_BASE = 'SELECT "randomnumber", "id" FROM "world" WHERE id = '
 WRITE_ROW_SQL = 'UPDATE "world" SET "randomnumber"=$1 WHERE id=$2'
 
-db_con <- dbConnect(RPostgres::Postgres(), dbname = "hello_world", host="bw-database", port=5432, user="benchmarkdbuser", password="benchmarkdbpass")
+db_con <- dbConnect(RPostgres::Postgres(), dbname = "hello_world", host="tfb-database", port=5432, user="benchmarkdbuser", password="benchmarkdbpass")
 
 
 get_num_queries <- function(queries){
@@ -99,7 +99,7 @@ function(req, res) {
 #* @get /plaintext
 #* @serializer text
 function(req, res) {
-  db_con <- dbConnect(RPostgres::Postgres(), dbname = "hello_world", host="bw-database", port=5432, user="benchmarkdbuser", password="benchmarkdbpass")
+  db_con <- dbConnect(RPostgres::Postgres(), dbname = "hello_world", host="tfb-database", port=5432, user="benchmarkdbuser", password="benchmarkdbpass")
   res$headers$Server <- "example"
   'Hello, World!'
 }

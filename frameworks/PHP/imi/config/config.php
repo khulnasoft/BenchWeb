@@ -5,7 +5,7 @@ use function Imi\env;
 
 return (function() {
     $mode = App::isInited() ? App::getApp()->getType() : '';
-    $isMysql = ('mysql' === strtolower(env('BW_TEST_DATABASE', 'mysql')));
+    $isMysql = ('mysql' === strtolower(env('TFB_TEST_DATABASE', 'mysql')));
 
     return [
         // 项目根命名空间
@@ -60,7 +60,7 @@ return (function() {
             'defaultPool'   => $isMysql ? 'mysql' : 'pgsql', // 默认连接池
             'connections'   => [
                 'mysql' => [
-                    'host'                        => env('DB_HOST', 'bw-database'),
+                    'host'                        => env('DB_HOST', 'tfb-database'),
                     'username'                    => env('DB_USERNAME', 'benchmarkdbuser'),
                     'password'                    => env('DB_PASSWORD', 'benchmarkdbpass'),
                     'database'                    => 'hello_world',
@@ -68,7 +68,7 @@ return (function() {
                     'checkStateWhenGetResource'   => false,
                 ],
                 'pgsql' => [
-                    'host'                        => env('DB_HOST', 'bw-database'),
+                    'host'                        => env('DB_HOST', 'tfb-database'),
                     'username'                    => env('DB_USERNAME', 'benchmarkdbuser'),
                     'password'                    => env('DB_PASSWORD', 'benchmarkdbpass'),
                     'database'                    => 'hello_world',
@@ -94,7 +94,7 @@ return (function() {
                 ],
                 // resource也可以定义多个连接
                 'resource'    =>    [
-                    'host'        => env('DB_HOST', 'bw-database'),
+                    'host'        => env('DB_HOST', 'tfb-database'),
                     'username'    => env('DB_USERNAME', 'benchmarkdbuser'),
                     'password'    => env('DB_PASSWORD', 'benchmarkdbpass'),
                     'database'    => 'hello_world',
@@ -114,7 +114,7 @@ return (function() {
                 ],
                 // resource也可以定义多个连接
                 'resource'    =>    [
-                    'host'        => env('DB_HOST', 'bw-database'),
+                    'host'        => env('DB_HOST', 'tfb-database'),
                     'username'    => env('DB_USERNAME', 'benchmarkdbuser'),
                     'password'    => env('DB_PASSWORD', 'benchmarkdbpass'),
                     'database'    => 'hello_world',

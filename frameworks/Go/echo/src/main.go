@@ -266,7 +266,7 @@ func InitRoutes(e *echo.Echo) {
 }
 
 func InitPostgres() {
-	host := "bw-database"
+	host := "tfb-database"
 
 	var err error
 

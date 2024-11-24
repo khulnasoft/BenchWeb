@@ -38,8 +38,8 @@ sed -i 's|cmake |CC=/usr/bin/clang CXX=/usr/bin/clang++ cmake |g' $IROOT/ffead-c
 ./install_ffead-cpp-sql-raw-profiled.sh async-qw
 mv $IROOT/ffead-cpp-sql-raw $IROOT/ffead-cpp-6.0-sql
 
-sed -i 's|localhost|bw-database|g' $IROOT/ffead-cpp-6.0-sql/web/t4/config/sdorm.xml
-sed -i 's|localhost|bw-database|g' $IROOT/ffead-cpp-6.0-sql/web/t5/config/sdorm.xml
+sed -i 's|localhost|tfb-database|g' $IROOT/ffead-cpp-6.0-sql/web/t4/config/sdorm.xml
+sed -i 's|localhost|tfb-database|g' $IROOT/ffead-cpp-6.0-sql/web/t5/config/sdorm.xml
 
 apt remove -yqq postgresql-13 postgresql-contrib-13 gnupg lsb-release
 apt autoremove -yqq

@@ -1,5 +1,5 @@
 {
-  "name": "koa-bw",
+  "name": "koa-tfb",
   "version": "0.0.2",
   "description": "Koa tests for KhulnaSoft Framework Benchmarks.",
   "main": "app.js",

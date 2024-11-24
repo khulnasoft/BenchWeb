@@ -1,6 +1,6 @@
 database:
   name: hello_world
-  host: bw-database
+  host: tfb-database
   port: 5432
   username: benchmarkdbuser
   password: benchmarkdbpass
@@ -17,7 +17,7 @@ spring:
     password: ${database.password}
     url: r2dbc:postgresql://${database.host}:${database.port}/${database.name}?loggerLevel=OFF&disableColumnSanitiser=true&assumeMinServerVersion=16&sslmode=disable
     pool:
-      max-size: 256
+      max-size: 512
 
 ---
 spring:
@@ -29,5 +29,5 @@ spring:
 
   data:
     mongodb:
-      uri: mongodb://bw-database:27017/?waitQueueMultiple=200
+      uri: mongodb://tfb-database:27017/?waitQueueMultiple=200
       database: hello_world

@@ -126,7 +126,7 @@ if __name__ == "__main__":
     DBDRIVER = 'mysql'
     DBUSER = 'benchmarkdbuser'
     DBPSWD = 'benchmarkdbpass'
-    DATABASE_URI = '%s://%s:%s@bw-database:3306/hello_world?charset=utf8' % (
+    DATABASE_URI = '%s://%s:%s@tfb-database:3306/hello_world?charset=utf8' % (
         DBDRIVER, DBUSER, DBPSWD)
     SAEnginePlugin(cherrypy.engine, DATABASE_URI).subscribe()
 

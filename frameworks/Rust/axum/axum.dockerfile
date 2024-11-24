@@ -13,10 +13,10 @@ ENV RUSTFLAGS "-C target-cpu=native"
 RUN cargo build --release
 
 FROM gcr.io/distroless/cc-debian12
-ENV POSTGRES_URL=postgres://benchmarkdbuser:benchmarkdbpass@bw-database/hello_world
+ENV POSTGRES_URL=postgres://benchmarkdbuser:benchmarkdbpass@tfb-database/hello_world
 ENV POSTGRES_MIN_POOL_SIZE=56
 ENV POSTGRES_MAX_POOL_SIZE=56
-ENV MONGODB_URL=mongodb://bw-database:27017
+ENV MONGODB_URL=mongodb://tfb-database:27017
 ENV MONGODB_MIN_POOL_SIZE=28
 ENV MONGODB_MAX_POOL_SIZE=14
 COPY --from=builder /build/target/release/axum* /app/

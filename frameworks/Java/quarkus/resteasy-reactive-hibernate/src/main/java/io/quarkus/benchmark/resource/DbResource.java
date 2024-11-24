@@ -37,7 +37,7 @@ public class DbResource {
 
     @GET
     @Path("/updates")
-    //Rules: https://github.com/KhulnaSoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview#database-updates
+    //Rules: https://github.com/khulnasoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview#database-updates
     //N.B. the benchmark seems to be designed to get in deadlocks when using a "safe pattern" of updating
     // the entity within the same transaction as the one which read it.
     // We therefore need to do a "read then write" while relinquishing the transaction between the two operations, as

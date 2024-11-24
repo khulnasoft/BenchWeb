@@ -2,11 +2,11 @@
 
 # If the Webware installation is located somewhere else,
 # then set the webwareDir variable to point to it here:
-webwareDir = '/home/knewman/Development/bw-benchmark/webware/Webware'
+webwareDir = '/home/knewman/Development/tfb-benchmark/webware/Webware'
 
 # If you used the MakeAppWorkDir.py script to make a separate
 # application working directory, specify it here:
-workDir = '/home/knewman/Development/bw-benchmark/webware/Webware/WebwareTest'
+workDir = '/home/knewman/Development/tfb-benchmark/webware/Webware/WebwareTest'
 
 try:
     import os, sys

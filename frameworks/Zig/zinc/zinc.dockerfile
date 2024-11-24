@@ -15,7 +15,7 @@ RUN cp /zinc/zig-out/bin/zinc /usr/local/bin
 
 EXPOSE 3000
 ARG BENCHMARK_ENV
-ARG BW_TEST_DATABASE
-ARG BW_TEST_NAME
+ARG TFB_TEST_DATABASE
+ARG TFB_TEST_NAME
 
 CMD ["sh", "run.sh"]

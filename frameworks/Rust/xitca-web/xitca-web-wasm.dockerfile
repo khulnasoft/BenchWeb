@@ -19,8 +19,8 @@ FROM ubuntu:22.04
 
 ARG WASM_TARGET
 ARG BENCHMARK_ENV
-ARG BW_TEST_DATABASE
-ARG BW_TEST_NAME
+ARG TFB_TEST_DATABASE
+ARG TFB_TEST_NAME
 
 COPY --from=compile \
 /tmp/target/${WASM_TARGET}/release/xitca-web-wasm.wasm \

@@ -78,7 +78,7 @@ ADD ./ /ulib
 WORKDIR /ulib
 
 ENV ORM_DRIVER="mysql"
-ENV ORM_OPTION="host=bw-database user=benchmarkdbuser password=benchmarkdbpass character-set=utf8 dbname=hello_world"
+ENV ORM_OPTION="host=tfb-database user=benchmarkdbuser password=benchmarkdbpass character-set=utf8 dbname=hello_world"
 ENV UMEMPOOL="96,0,0,97,16417,-14,-20,-18,26"
 
 EXPOSE 8080

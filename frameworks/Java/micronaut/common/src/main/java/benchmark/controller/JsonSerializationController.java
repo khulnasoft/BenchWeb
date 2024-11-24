@@ -9,7 +9,7 @@ import java.util.Map;
 @Controller("/json")
 public class JsonSerializationController {
 
-    // https://github.com/KhulnaSoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview#json-serialization
+    // https://github.com/khulnasoft/BenchWeb/wiki/Project-Information-Framework-Tests-Overview#json-serialization
     @Get
     public Map<String, String> getJson() {
         final Map<String, String> map = new HashMap<>();

@@ -17,4 +17,4 @@ RUN make build
 
 EXPOSE 8080
 
-ENTRYPOINT ["_build/default/src/bin/bw.exe"]
+ENTRYPOINT ["_build/default/src/bin/tfb.exe"]

@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 const sequelize = new Sequelize('hello_world', 'benchmarkdbuser', 'benchmarkdbpass', {
-  host: 'bw-database',
+  host: 'tfb-database',
   dialect: 'mysql',
   logging: false
 });

@@ -177,7 +177,7 @@ func init() {
 	db, err = pgxpool.New(context.Background(),
 		fmt.Sprintf(
 			"host=%s port=%d user=%s password=%s dbname=%s pool_max_conns=%d",
-			"bw-database", 5432,
+			"tfb-database", 5432,
 			"benchmarkdbuser",
 			"benchmarkdbpass",
 			"hello_world",
