@@ -7,10 +7,10 @@
   "dependencies": {
     "@fastify/view": "7.4.1",
     "fastify": "4.13.0",
-    "handlebars": "4.7.6",
+    "handlebars": "4.7.7",
     "knex": "2.4.2",
     "mongodb": "6.5.0",
-    "mysql2": "3.9.7",
+    "mysql2": "3.9.8",
     "pg": "8.5.1"
   }
 }
