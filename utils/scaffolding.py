@@ -8,7 +8,7 @@ class Scaffolding:
     def __init__(self, benchmarker):
         print("""
 -------------------------------------------------------------------------------
-    This wizard is intended to help build the scaffolding required for a new
+    This wizard is intended to help build the pre-benchmarks required for a new
     test to be benchmarked.
 
     From here, you will be prompted for values related to the test you
@@ -314,7 +314,7 @@ class Scaffolding:
             valid = self.__prompt_confirmation()
 
         if self.confirmation == 'y':
-            self.__build_scaffolding()
+            self.__build_pre-benchmarks()
         else:
             print('Aborting')
 
@@ -322,7 +322,7 @@ class Scaffolding:
         self.confirmation = input("Initialize [y/n]: ").strip().lower()
         return self.confirmation == 'y' or self.confirmation == 'n'
 
-    def __build_scaffolding(self):
+    def __build_pre-benchmarks(self):
         if self.__create_test_folder():
             self.__copy_scaffold_files()
             self.__edit_scaffold_files()
