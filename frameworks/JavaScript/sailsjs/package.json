@@ -5,18 +5,18 @@
   "description": "a Sails application for BW testing",
   "keywords": [],
   "dependencies": {
-    "async": "1.5.2",
+    "async": "3.2.6",
     "bluebird": "3.4.1",
     "ejs": "3.1.10",
-    "handlebars": "4.7.6",
+    "handlebars": "4.7.7",
     "mysql": "2.16.0",
-    "mysql2": "3.9.8",
+    "mysql2": "3.20.0",
     "pg": "6.0.5",
     "pg-hstore": "2.3.2",
     "rc": "1.1.6",
     "sails": "1.5.7",
     "sails-disk": "0.10.10",
-    "sequelize": "6.29.0"
+    "sequelize": "6.37.8"
   },
   "scripts": {
     "start": "node app.js",
