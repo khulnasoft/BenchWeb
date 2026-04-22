@@ -8,7 +8,7 @@ generator_type = "cargo_workspace_binary"
 generator_name = "generate"
 
 [dependencies]
-bytes = { version = "1.4.0", package = "bytes" }
+bytes = { version = "1.11.1", package = "bytes" }
 http = { version = "0.2.9", package = "http" }
 http_body = { version = "0.4.5", package = "http-body" }
 hyper = { version = "0.14.26", package = "hyper" }
