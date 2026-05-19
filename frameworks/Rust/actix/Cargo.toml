@@ -31,7 +31,7 @@ path = "src/main_pg_deadpool.rs"
 anyhow = "1"
 actix = "0.13"
 actix-web = "4.3.1"
-actix-http = "3.3.1"
+actix-http = "3.10.0"
 actix-rt = "2"
 actix-codec = "0.4"
 actix-server = "2"
@@ -39,13 +39,13 @@ actix-service = "2"
 
 askama = "0.11"
 bytes = "1"
-diesel = { version = "1.4", features = ["postgres"] }
+diesel = { version = "2.3", features = ["postgres"] }
 env_logger = "0.9"
 futures = "0.3.7"
 http = "0.2"
 log = { version = "0.4", features = ["release_max_level_debug"] }
 num_cpus = "1.13"
-rand = { version = "0.8", features = ["small_rng"] }
+rand = { version = "0.9", features = ["small_rng"] }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 simd-json = "0.4"
@@ -55,7 +55,7 @@ tokio = { version = "1", features = ["full"] }
 tokio-util = "0.7.8"
 tokio-postgres = "0.7.5"
 deadpool-postgres = "0.10.1"
-mongodb = "2.2.0"
+mongodb = "2.8.2"
 url = "2.1"
 v_htmlescape = "0.14"
 yarte = { version = "0.15", features = ["bytes-buf"] }
